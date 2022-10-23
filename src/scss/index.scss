@@ -377,6 +377,7 @@ a.offer__btn{
 		width: 400px;
 	}
 	.rate__btn{
+		transition: background 0.15s ease-out;
 		margin: 0;
 		display: block;
 		height: 100%;
@@ -396,16 +397,27 @@ a.offer__btn{
 // collect
 
 .collect{
-	margin-top: 120px 0;
-	.container{
+	margin: 120px 0;
+	&__w{
+		display: flex;
+		background: #fff;
+		align-items: center;
 		padding: 54px 134px;
+		border-radius: 15px;
+	}
+	&__cont{
+		padding-left: 50px;
 	}
 	&__title{
 		font-size: 48px;
 	}
-	&.cta__text{
+	&__text{
 		font-size: 24px;
 		color: var(--accent);
 		margin: 10px 0 20px;
+	}
+	&__btn{
+		border: none;
+		padding: 20spx 50px;
 	}
 }
