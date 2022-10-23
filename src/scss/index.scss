@@ -1,6 +1,7 @@
 :root{
 	--accent: #0E65F3;
 	--btn-bg: #DEE8F1;
+	--hover: #656d7e;
 	--bg: #F1F2F6;
 	--fz: 16px;
 	--font: 'Proxima nova', Arial, sans-Serif;
@@ -31,11 +32,11 @@ body{
 	line-height: 1;
 	margin-bottom: 50px;
 }
-.offer__title span, .offer__subtext span,
-.start-employee__title span, .managment__title span,
-.managment__descr span
-{
-	color: var(--accent);
+.offer__title, .offer__subtext,.start-employee__title, 
+.managment__title,.managment__descr, .rate__title{	
+	span{
+		color: var(--accent);
+	}
 }
 .offer__subtext{
 	font-size: 24px;
@@ -212,9 +213,11 @@ a.offer__btn{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 80px;
+	align-items: center;
 }
 .managment__cont{
 	padding-right: 50px;
+	height: fit-content;
 }
 .managment__row:nth-child(2n+1) .managment__cont{
 	padding-left: 50px;
@@ -250,14 +253,6 @@ a.offer__btn{
 .managment__btn{
 	margin-top: 15px;
 	border: none;
-	background: var(--accent);
-	border-radius: 5px;
-	padding: 22px 35px;
-	color: #fff;
-	font-size: 20px;
-	font-weight: 600;
-	text-transform: uppercase;
-	transition: transform 0.3s ease-out;
 }
 .managment__btn:hover{
 	transform: scale(0.94);
@@ -272,4 +267,145 @@ a.offer__btn{
 .managment__w img {
 	width: 645px;
 	object-fit: contain;
+}
+
+// sites
+
+.sites{
+	background: url('@img/sites-bg.png') no-repeat center center / cover;
+	overflow: hidden;
+	height: 880px;
+	.container{
+		display: flex;
+		justify-content: space-between;
+		height: 880px;
+	}
+	&__row{
+		width: 560px;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+	&__item{
+		width: 170px;
+		height: 170px;
+		padding: 10px 20px;
+		background: #fff;
+		text-align: center;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		img{
+			display: block;
+			max-width: 146px;
+		}
+		p{
+			position: absolute;
+			bottom: 20px;
+		}
+	}
+	&__title{
+		font-size: 52px;
+	}
+	&__btn{
+		padding: 25px 50px;
+		border-radius: 5px;
+		background: transparent;
+		border: 2px solid #fff;
+		color: #fff;
+		font-size: 20px;
+	}
+}
+.sites__content{
+	margin: auto 0;
+	padding-top: 20px;
+	padding-left: 90px;
+	color: #fff;
+	.sites__list{
+		margin: 60px 0 50px;
+	}
+	.sites__el{
+		margin-top: 40px;
+		display: flex;
+		line-height: 1.3;
+		.sites__w{
+			max-width: 380px;
+		}
+		&::before{
+			content: '';
+			width: 30px;
+			height: 30px;
+			display: block;
+			margin-right: 15px;
+		}
+		&:nth-child(1)::before{
+			background: url('@img/pencil.svg') no-repeat;
+		}
+		&:nth-child(2)::before{
+			background: url('@img/speed.svg') no-repeat;
+		}
+		&:nth-child(3)::before{
+			background: url('@img/world.svg') no-repeat;
+		}
+	}
+	.sites__plus{
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+}
+
+// rate
+
+.rate{
+	padding-top: 140px;
+	&__title{
+		font-size: 70px;
+		margin: 0 auto;
+	}
+	&__w{
+		width: fit-content;
+		margin: 60px auto 0;
+		border-radius: 10px;
+		display: flex;
+		border: 2px solid var(--accent);
+		overflow: hidden;
+		box-sizing: border-box;
+		width: 400px;
+	}
+	.rate__btn{
+		margin: 0;
+		display: block;
+		height: 100%;
+		padding: 15px 20px;
+		width: 200px;
+		background: #fff;
+		text-align: center;
+		border: none;
+		font-size: var(--hover);
+		&.active{
+			background: var(--accent);
+			color: #fff;
+		}
+	}
+}
+
+// collect
+
+.collect{
+	margin-top: 120px 0;
+	.container{
+		padding: 54px 134px;
+	}
+	&__title{
+		font-size: 48px;
+	}
+	&.cta__text{
+		font-size: 24px;
+		color: var(--accent);
+		margin: 10px 0 20px;
+	}
 }

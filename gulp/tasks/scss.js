@@ -43,15 +43,15 @@ export const scss = () => {
 					)
 					// Если нужно просмотреть не сжатый файл
 					.pipe(app.gulp.dest(app.path.build.css))
-					.pipe(
-						app.plugins.if(
-							app.isBuild,
-							cleanCss()
-						)
-					)
-					.pipe(rename({
-						extname: '.min.css'
-					}))
+					// .pipe(
+					// 	app.plugins.if(
+					// 		app.isBuild,
+					// 		cleanCss()
+					// 	)
+					// )
+					// .pipe(rename({
+					// 	extname: '.min.css'
+					// }))
 					.pipe(app.gulp.dest(app.path.build.css))
 					.pipe(app.plugins.browsersync.stream())
 }

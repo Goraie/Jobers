@@ -77,14 +77,17 @@ window.addEventListener('scroll', () => {
 	const clientHeight = window.outerHeight
 	if(window.pageYOffset > clientHeight*2){
 		goTopBtn.classList.add('show')
-		goTopBtn.addEventListener('click', (e) => {
-			e.preventDefault()
-			window.scrollTo(0, 0)
-		})
+		goTopBtn.addEventListener('click', (e) => sctollTop(e))
 	} else {
 		goTopBtn.classList.remove('show')
+		goTopBtn.removeEventListener('click', (e) => sctollTop(e))
 	}
 })
+
+function sctollTop(e){
+	e.preventDefault()
+	window.scrollTo(0, 0)
+}
 
 // меню гамбургер
 const menuIcon = document.querySelector('.burger'),
@@ -100,6 +103,12 @@ setTranslateValue(mobileMenu, -mobileScrollHeight)
 
 menuIcon.addEventListener('click', () => {
 	menuIcon.classList.toggle('active')
+	if(menuIcon.classList.contains('active')){
+		mobileMenu.style.overflow = 'scroll'
+		document.querySelector('body').style.overflow = 'hidden'
+	}	else {
+		document.querySelector('body').style.overflow = 'visible'
+	}
 	setTranslateValue(mobileMenu, menuIcon.classList.contains('active') ? 0 : -mobileScrollHeight)
 });
 
