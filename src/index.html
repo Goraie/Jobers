@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('html/head.html', {"title": "Главная"})
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	@@include('html/header.html', {})
+	@@include('html/parts/email.html', {})
+	@@include('html/parts/registration.html', {})
+	<section class="offer">
+		<div class="container">
+			<div class="offer__w">
+				<h1 class="offer__title"><span>Поиск сотрудников</span> на космических скоростях</h1>
+				<p class="offer__subtext">Размещайте вакансии <span>на всех сайтах сразу</span></p>
+				<a href="/" class="offer__btn">Разместить вакансию</a>
+				<p class="offer__under">от 3151р за размещение на всех спец. сайтах</p>
+			</div>
+			<div class="offer__i"><img src="@img/main-offer-person.png" alt=""></div>
+		</div>
+	</section>
+	<section class="start-employee">
+		<div class="start-employee__w">
+			<h2 class="start-employee__title">Запустите поиск сотрудников <span>в 3 шага</span></h2>
+			<p class="start-employee__under">Среднее время размещения: 3 минуты</p>
+		</div>
+		<div class="container">
+			<div class="start-employee__card employee-card">
+				<img class="employee-card__i" src="@img/start-employee-card-1.png" alt="">
+				<h3 class="employee-card__title">Составьте текст вакансии</h3>
+				<p class="employee-card__text">который будет привлекать качественных кандидатов и отсеивать неподходящих с личным ассистентом</p>
+			</div>
+			<div class="start-employee__card employee-card">
+				<img class="employee-card__i" src="@img/start-employee-card-2.png" alt="">
+				<h3 class="employee-card__title">Заполните форму вакансии</h3>
+				<p class="employee-card__text">и объявление продублируется на все кадровые ресурсы вашего города</p>
+				<button class="employee-card__btn">Заполнить форму</button>
+			</div>
+			<div class="start-employee__card employee-card">
+				<img class="employee-card__i" src="@img/start-employee-card-3.png" alt="">
+				<h3 class="employee-card__title">Принимайте звонки и отклики</h3>
+				<p class="employee-card__text">от подходящих кандидатов со всех сайтов в едином личном кабинете</p>
+			</div>
+		</div>
+	</section>
+	<section class="ident-tasks">
+		<img src="@img/ident-tasks-person.png" alt="" class="ident-tasks__i">
+		<div class="container">
+			<h2 class="ident-tasks__title">
+				Каждый раз появляются одни и те же задачи при поиске персонала?
+			</h2>
+			<ol class="ident-tasks__list">
+				<li class="ident-tasks__item"><span class="ident-tasks__num">1</span>.<br>	Вы тратите на поиск сотрудников <strong>много времени</strong></li>
+				<li class="ident-tasks__item"><span class="ident-tasks__num">2</span>.<br>Вас <strong> удручает стоимость </strong>подбора персонала</li>
+				<li class="ident-tasks__item"><span class="ident-tasks__num">3</span>.<br>Поступает <strong>недостаточное количество </strong>откликов</li>
+				<li class="ident-tasks__item"><span class="ident-tasks__num">4</span>.<br>Кандидаты <strong>редко приходят</strong> на собеседование</li>
+				<li class="ident-tasks__item"><span class="ident-tasks__num">5</span>.<br>Ваши <strong>заявки теряются</strong> в конкурентном потоке</li>
+				<li class="ident-tasks__item"><span class="ident-tasks__num">6</span>.<br>На вакансии <strong>откликаются кто угодно</strong>, только не целевые кандидаты</li>
+			</ol>
+		</div>
+	</section>
+	<section class="managment">
+		<div class="container">
+			<h2 class="managment__title"><span>Управляйте</span> наймом в одном окне</h2>
+			<div class="managment__row">
+				<div class="managment__cont">
+					<h3 class="managment__descr">Отклики и резюме со всех сайтов <span>в едином списке</span></h3>
+					<div class="managment__item"><p class="managment__t">Jobers.ru собирает для вас все отклики и резюме с <strong>63 сайтов</strong></p></div>
+					<div class="managment__item"><p class="managment__t"><strong>Храним отклики</strong> даже после завершения публикации</p></div>
+					<div class="managment__item"><p class="managment__t"><strong>Удобный интерфейс</strong> работы с откликами</p></div>
+					<button class="managment__btn">Разместить вакансию</button>
+				</div>
+				<div class="managment__w">
+					<img src="@img/managment-1.png" alt="">
+				</div>
+			</div>
+			<div class="managment__row">
+				<div class="managment__w">
+					<img src="@img/managment-2.png" alt="">
+				</div>
+				<div class="managment__cont">
+					<h3 class="managment__descr"><span>Управляйте вакансиями</span> на всех сайтах с одной страницы</h3>
+					<div class="managment__item"><p class="managment__t">Обновление вакансии</p></div>
+					<div class="managment__item"><p class="managment__t">Редактирование вакансии</p></div>
+					<div class="managment__item"><p class="managment__t">Снятие с публикации</p></div>
+					<button class="managment__btn">Зарегистрироваться</button>
+				</div>
+			</div>
+			<div class="managment__row">
+				<div class="managment__cont">
+					<h3 class="managment__descr"><span>Анализируйте</span> размещение вакансии используя кол. трекинг</h3>
+					<div class="managment__item"><p class="managment__t"><strong>Динамика звонков</strong> за весь период размещения</p></div>
+					<div class="managment__item"><p class="managment__t"><strong>Аналитика воронки найма</strong> со стоимостью на каждом этапе</p></div>
+					<div class="managment__item"><p class="managment__t">Узнайте стоимость <strong>каждого целевого кандидата</strong></p></div>
+					<button class="managment__btn">Разместить вакансию</button>
+				</div>
+				<div class="managment__w">
+					<img src="@img/managment-3.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="sites">
+		<div class="container">
+			<div class="sites__carousel">
+				<div class="sites__row">
+					<div class="sites__item">
+						<img src="@img/hh.png" alt="">
+					</div>
+					<div class="sites__item">
+						<img src="@img/avito.png" alt="">
+					</div>
+					<div class="sites__item">
+						<img src="@img/rapotaru.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="sites__content">
+
+			</div>
+		</div>
+	</section>
+	
+	@@include('html/footer.html', {})
+	<script src="js/index.js"></script>
+</body>
+</html>

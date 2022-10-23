@@ -1,0 +1,275 @@
+:root{
+	--accent: #0E65F3;
+	--btn-bg: #DEE8F1;
+	--bg: #F1F2F6;
+	--fz: 16px;
+	--font: 'Proxima nova', Arial, sans-Serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+body{
+	font-family: var(--font);
+	background: var(--bg);
+}
+
+/* Offer */
+
+.offer{
+	padding: 150px 0;
+	background: url('@img/main-offer-bg.png') no-repeat 97% 50% / 44%, #fafafa;
+	position: relative;
+}
+.offer .container{
+	width: 1280px;
+	display: flex;
+}
+.offer__w{
+	max-width: 700px;
+}
+.offer__title{
+	font-size: 72px;
+	line-height: 1;
+	margin-bottom: 50px;
+}
+.offer__title span, .offer__subtext span,
+.start-employee__title span, .managment__title span,
+.managment__descr span
+{
+	color: var(--accent);
+}
+.offer__subtext{
+	font-size: 24px;
+	margin-bottom: 90px;
+	font-weight: 600;
+}
+a.offer__btn{
+	padding: 28px 34px;
+	background: var(--accent);
+	border-radius: 5px;
+	display: flex;
+	width: fit-content;
+	align-items: center;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #fff;
+}
+.offer__btn::after{
+	content: '';
+	width: 14px;
+	height: 14px;
+	background: url('@img/coolicon.svg') no-repeat center;
+	margin-left: 5px;
+}
+.offer__under{
+	margin-top: 15px;
+	opacity: 0.8;
+}
+.offer__i img {
+	height: 550px;
+	position: absolute;
+	top: 15%;
+	right: 10%;
+	animation: 10s personSwing infinite;
+}
+@keyframes personSwing{
+	0%{
+		transform: rotate(0);
+	}
+	25%{
+		transform: rotate(7deg);
+	}
+	50%{
+		transform: rotate(0);
+	}
+	75%{
+		transform: rotate(-7deg);
+	}
+	100%{
+		transform: rotate(0);
+	}
+}
+
+/* Запустите поиск сотрудников в 3 шага */
+
+.start-employee{
+	padding: 120px 0 200px;
+}
+.start-employee__w{
+	width: fit-content;
+	margin: 0 auto;
+	text-align: center;
+}
+.start-employee__title{
+	font-size: 72px;
+}
+.start-employee__under{
+	font-size: 24px;
+	color: var(--accent);
+	margin-bottom: 60px;
+}
+.start-employee .container{
+	display: flex;
+	justify-content: space-between;
+}
+.employee-card{
+	padding: 40px 30px;
+	background: #fff;
+	width: 360px;
+	border-radius: 15px;
+}
+.employee-card__title{
+	margin: 25px 0 15px;
+	font-size: 32px;
+}
+.employee-card__text{
+	font-size: 18px;
+	opacity: 0.8;
+}
+.employee-card__btn{
+	width: 100%;
+	padding: 20px;
+	border: none;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 25px;
+	color: var(--accent);
+	background: var(--btn-bg);
+	transition: transform 0.25s ease-out;
+}
+.employee-card__btn:hover{
+	transform: scale(.94);
+	animation: 0.4s employeeCardBtnBouncy;
+}
+
+@keyframes employeeCardBtnBouncy{
+	0%{
+		transform: scale(1);
+	}
+	60%{
+		transform: scale(0.94);
+	}
+	80%{
+		transform: scale(0.95);
+	}
+	100%{
+		transform: scale(0.94);
+	}
+}
+
+/* Ident tasks */
+
+.ident-tasks{
+	position: relative;
+	color: #fff;
+	padding: 100px 0 60px;
+	background: url('@img/identic-tasks-bg.png') no-repeat center center / cover;
+}
+.ident-tasks__title{
+	max-width: 600px;
+	font-size: 60px;
+	font-weight: 600;
+	margin-left: auto;
+	line-height: 1;
+	margin-bottom: 70px;
+}
+.ident-tasks__list{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 880px;
+	margin-left: auto;
+	justify-content: space-between;
+}
+.ident-tasks__item{
+	display: block;	
+	max-width: 250px;
+	font-size: 23px;
+	margin-bottom: 20px;
+}
+.ident-tasks__item strong{
+	font-weight: 700;
+}
+.ident-tasks__num{
+	font-size: 36px;
+}
+.ident-tasks__i{
+	position: absolute;
+	bottom: 0;
+	left: -8%;
+	filter: drop-shadow(-210px 6px 78px rgba(0, 0, 0, 0.05))	
+}
+
+/* managment */
+
+.managment{
+	padding: 120px 0;
+}
+.managment__title{
+	font-size: 72px;
+	margin-bottom: 80px;
+}
+.managment__row{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 80px;
+}
+.managment__cont{
+	padding-right: 50px;
+}
+.managment__row:nth-child(2n+1) .managment__cont{
+	padding-left: 50px;
+	padding-right: 0;
+}
+.managment__row:first-of-type .managment__descr{
+	max-width: 400px;
+}
+.managment__descr{
+	font-size: 40px;
+	max-width: 460px;
+	line-height: 1.1;
+	margin-bottom: 30px;
+}
+.managment__item{
+	font-size: 18px;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+}
+.managment__item::before{
+	content: '';
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	background: url('@img/ok.svg') no-repeat center center / 13px 11px, #fff;
+	border-radius: 30px;
+	display: block;
+}
+.managment__t{
+	max-width: 425px;
+}
+.managment__btn{
+	margin-top: 15px;
+	border: none;
+	background: var(--accent);
+	border-radius: 5px;
+	padding: 22px 35px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	transition: transform 0.3s ease-out;
+}
+.managment__btn:hover{
+	transform: scale(0.94);
+	animation: 0.4s employeeCardBtnBouncy;
+}
+.managment__w{
+	border-radius: 10px;
+	overflow: hidden;
+	width: 645px;
+	height: fit-content;
+}
+.managment__w img {
+	width: 645px;
+	object-fit: contain;
+}
