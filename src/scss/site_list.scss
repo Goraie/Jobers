@@ -1,0 +1,137 @@
+:root{
+	--accent: #0E65F3;
+	--btn-bg: #DEE8F1;
+	--hover: #656d7e;
+	--bg: #F1F2F6;
+	--fz: 16px;
+	--employeeCardBtnBouncy: employeeCardBtnBouncy;
+	--personSwing: personSwing;
+	--box-sh: 0px 17px 76px rgba(0, 0, 0, 0.05);
+	--font: 'Proxima nova', Arial, sans-Serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+body{
+	font-family: var(--font);
+	font-size: var(--fz);
+	background: #fff;
+}
+
+.sites{
+	padding: 60px 0;
+	text-align: center;
+	line-height: 1.5;
+	&__title{
+		font-size: 42px;
+		margin-bottom: 40px;
+	}
+	&__count{
+		font-weight: 300;
+		font-size: 24px;
+	}
+	&__exit{
+		padding: 10px;
+		font-size: 28px;
+		font-weight: 700;
+		position: fixed;
+		top: 30px;
+		right: 65px;
+		transition: text-shadow 0.25s ease-out;
+		&:hover{
+			text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.16);
+		}
+	}
+	&__list{
+		margin: 105px 0;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	&__item{
+		width: calc(100%/6);
+		height: 80px;
+		padding: 20px;
+		img{
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	a.sites__btn{
+		border-radius: 5px;
+		background: var(--accent);
+		padding: 20px 60px;
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: 700;
+		display: block;
+		width: fit-content;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 1200.98px){
+	.sites{
+		&__title{
+			font-size: 38px;
+		}
+		&__count{
+			font-size: 22px;
+		}
+	}
+}
+@media (max-width: 992.98px){
+	.sites{
+		padding: 20px 0  60px;
+		&__exit{
+			position: relative;
+			top: 0;
+			right: 0;
+			display: block;
+			margin-bottom: 80px;
+		}
+	}
+}
+@media (max-width: 992.98px){
+	.sites{
+		.container{
+			width: 640px;
+		}
+		&__title{
+			margin-bottom: 20px;
+		}
+		&__item{
+			width: calc(100%/3);
+		}
+		&__list{
+			margin: 45px 0;
+		}
+	}
+}
+@media (max-width: 576.98px){
+	.sites{
+		.container{
+			width: auto;
+			padding: 0 20px;
+		}
+		&__title{
+			font-size: 30px;
+		}
+		&__count{
+			font-size: 20px;
+		}
+		a.sites__btn{
+			padding: 18px 30px;
+		}
+	}
+}
+@media (max-width: 576.98px){
+	.sites{
+		&__item{
+			width: calc(100%/2);
+		}
+	}
+}

@@ -1,0 +1,108 @@
+:root{
+	--accent: #0E65F3;
+	--btn-bg: #DEE8F1;
+	--hover: #656d7e;
+	--bg: #F1F2F6;
+	--fz: 16px;
+	--employeeCardBtnBouncy: employeeCardBtnBouncy;
+	--personSwing: personSwing;
+	--box-sh: 0px 17px 76px rgba(0, 0, 0, 0.05);
+	--font: 'Proxima nova', Arial, sans-Serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+body{
+	font-family: var(--font);
+	font-size: var(--fz);
+	background: #fff;
+}
+
+.partners{
+	padding: 185px 0;
+	&__title{
+		text-align: center;
+		font-size: 82px;
+		margin-bottom: 80px;
+	}
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item{
+		width: calc(50%);
+	}
+}
+.partner-card{
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	justify-content: space-between;
+	&__w{
+		img{
+			width: 160px;
+		}
+	}
+	a{
+		color: var(--accent);
+	}
+	&__content{
+		margin-left: 40px;
+		font-size: 18px;
+		line-height: 1.55;
+		font-weight: 300;
+	}
+}
+
+@media (max-width: 1200.98px){
+	.partner-card{
+		padding: 10px;
+		&__text{
+			font-size: 16px;
+		}
+	}
+}
+@media (max-width: 992.98px){
+	.partners{
+		&__list{
+			flex-direction: column;
+		}
+		&__item{
+			width: 100%;
+			justify-content: start;
+		}
+	}
+}
+@media (max-width: 768.98px){
+	.partners{
+		&__title{
+			font-size: 72px;
+		}
+	}
+	.partner-card{
+		&__w{
+			img{
+				width: 80px;
+			}
+		}
+		&__content{
+			margin-left: 20px;
+		}
+		&__text{
+			font-size: 14px;
+		}
+	}
+}
+@media (max-width: 454.98px){
+	.partners{
+		&__title{
+			font-size: 64px;
+		}
+	}
+}
+@media (max-width: 380.98px){
+	.partners{
+		&__title{
+			font-size: 52px;
+		}
+	}
+}

@@ -1,0 +1,173 @@
+:root{
+	--accent: #0E65F3;
+	--btn-bg: #DEE8F1;
+	--hover: #656d7e;
+	--bg: #F1F2F6;
+	--fz: 16px;
+	--employeeCardBtnBouncy: employeeCardBtnBouncy;
+	--personSwing: personSwing;
+	--box-sh: 0px 17px 76px rgba(0, 0, 0, 0.05);
+	--font: 'Proxima nova', Arial, sans-Serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+body{
+	font-family: var(--font);
+	font-size: var(--fz);
+	background: #fff;
+}
+
+
+.payment{
+	padding-top: 130px;
+	padding-bottom: 40px;
+	&__text{
+		line-height: 1.55;
+		font-weight: 300;
+		a{
+			font-size: 16px;
+			line-height: 1.55;
+			text-decoration: none;
+			color: var(--accent);
+		}
+		strong{
+			font-weight: 700;
+		}
+		&_req{
+			margin-top: 30px;
+		}
+	}
+	.container{
+		width: 960px;
+	}
+	&__card{
+		display: flex;
+		margin-bottom: 60px;
+		.payment__w{
+			padding: 10px 30px 10px 5px;
+		}
+		.payment__text{
+			font-size: 18px;
+		}
+	}
+	&__list{
+		&_desc{
+			padding-left: 20px;
+			list-style: disc;
+		}
+	}
+	&__item{
+		font-weight: 300;
+		margin-bottom: 5px;
+		line-height: 1.55;
+	}
+	&__title{
+		padding-top: 50px;
+		font-size: 36px;
+		padding-bottom: 30px;
+		line-height: 1.25;
+	}
+	&__discr{
+		margin-bottom: 14px;
+		font-size: 24px;
+		line-height: 1.55;
+	}
+	&__i{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 30px 0 40px;
+		img{
+			max-width: 160px;
+		}
+		&.payment__w{
+			img{
+				max-width: 240px;
+			}
+		}
+	}
+}
+
+@media(max-width: 992.98px){
+	.payment{
+		&__title{
+			font-size: 32px;
+		}
+		&__descr{
+			font-size: 16px;
+		}
+		.container{
+			width: 720px;
+		}
+	}
+}
+
+@media(max-width: 768.98px){
+	.payment{
+		.container{
+			width: auto;
+			padding: 0 20px;
+		}
+		&__text, &__descr, &__item{
+			line-height: 1.45;
+			font-size: 16px;
+		}
+		&__i{
+			img{
+				max-width: 140px;
+			}
+			&.payment__w{
+				img{
+					max-width: 220px;
+				}
+			}
+		}
+		&__card{
+			.payment__text{
+				font-size: 16px;
+			}
+		}
+	}
+}
+@media(max-width: 576.98px){
+	.payment{
+		&__card{
+			.payment__text{
+				font-size: 14px;
+			}
+		}
+		&__i{
+			img{
+				max-width: 120px;
+			}
+			&.payment__w{
+				img{
+					max-width: 200px;
+				}
+			}
+		}
+		&__item{
+			line-height: 1.45;
+			font-size: 16px;
+		}
+	}
+}
+@media(max-width: 454.98px){
+	.payment{
+		&__title{
+			font-size: 28px;
+		}
+		&__i{
+			img{
+				max-width: none;
+				width: 30%;
+			}
+			&.payment__w{
+				img{
+					max-width: 240px;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

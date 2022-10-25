@@ -9,3 +9,14 @@ rateBtns.forEach(item => {
 		}
 	})
 })
+
+const sitesAll = document.querySelectorAll('.sites__row'),
+			desktopCarousel = document.querySelector('.sites__carousel'),
+			mobileCarousel = document.querySelector('.sites__mobile')
+
+// window.addEventListener('resize', (e) => runSitesSlider())
+
+function runSitesSlider(){
+}
+
+console.log(sitesAll);

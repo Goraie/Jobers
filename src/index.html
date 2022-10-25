@@ -6,13 +6,15 @@
 </head>
 <body>
 	@@include('html/header.html', {})
-	@@include('html/parts/email.html', {})
-	@@include('html/parts/registration.html', {})
 	<section class="offer">
 		<div class="container">
 			<div class="offer__w">
 				<h1 class="offer__title"><span>Поиск сотрудников</span> на космических скоростях</h1>
 				<p class="offer__subtext">Размещайте вакансии <span>на всех сайтах сразу</span></p>
+				<div class="offer__mobile">
+					<img class="offer__mobile_bg" src="@img/main-offer-bg.png" alt=""> 
+					<img class="offer__mobile_person" src="@img/main-offer-person.png" alt="">
+				</div>
 				<a href="/" class="offer__btn">Разместить вакансию</a>
 				<p class="offer__under">от 3151р за размещение на всех спец. сайтах</p>
 			</div>
@@ -44,19 +46,23 @@
 		</div>
 	</section>
 	<section class="ident-tasks">
-		<img src="@img/ident-tasks-person.png" alt="" class="ident-tasks__i">
 		<div class="container">
-			<h2 class="ident-tasks__title">
-				Каждый раз появляются одни и те же задачи при поиске персонала?
-			</h2>
-			<ol class="ident-tasks__list">
-				<li class="ident-tasks__item"><span class="ident-tasks__num">1</span>.<br>	Вы тратите на поиск сотрудников <strong>много времени</strong></li>
-				<li class="ident-tasks__item"><span class="ident-tasks__num">2</span>.<br>Вас <strong> удручает стоимость </strong>подбора персонала</li>
-				<li class="ident-tasks__item"><span class="ident-tasks__num">3</span>.<br>Поступает <strong>недостаточное количество </strong>откликов</li>
-				<li class="ident-tasks__item"><span class="ident-tasks__num">4</span>.<br>Кандидаты <strong>редко приходят</strong> на собеседование</li>
-				<li class="ident-tasks__item"><span class="ident-tasks__num">5</span>.<br>Ваши <strong>заявки теряются</strong> в конкурентном потоке</li>
-				<li class="ident-tasks__item"><span class="ident-tasks__num">6</span>.<br>На вакансии <strong>откликаются кто угодно</strong>, только не целевые кандидаты</li>
-			</ol>
+			<div class="ident-tasks__w">
+				<div class="ident-tasks__i"><img src="@img/ident-tasks-person.png"></div>
+				<div class="ident-tasks__cont">
+					<h2 class="ident-tasks__title">
+						Каждый раз появляются одни и те же задачи при поиске персонала?
+					</h2>
+					<ol class="ident-tasks__list">
+						<li class="ident-tasks__item"><span class="ident-tasks__num">1</span>.<br>	Вы тратите на поиск сотрудников <strong>много времени</strong></li>
+						<li class="ident-tasks__item"><span class="ident-tasks__num">2</span>.<br>Вас <strong> удручает стоимость </strong>подбора персонала</li>
+						<li class="ident-tasks__item"><span class="ident-tasks__num">3</span>.<br>Поступает <strong>недостаточное количество </strong>откликов</li>
+						<li class="ident-tasks__item"><span class="ident-tasks__num">4</span>.<br>Кандидаты <strong>редко приходят</strong> на собеседование</li>
+						<li class="ident-tasks__item"><span class="ident-tasks__num">5</span>.<br>Ваши <strong>заявки теряются</strong> в конкурентном потоке</li>
+						<li class="ident-tasks__item"><span class="ident-tasks__num">6</span>.<br>На вакансии <strong>откликаются кто угодно</strong>, только не целевые кандидаты</li>
+					</ol>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section class="managment">
@@ -102,6 +108,37 @@
 	</section>
 	<section class="sites">
 		<div class="container">
+			<div class="sites-mobile sites__content">
+				<h2 class="sites__title sites__title_mobile">Лучшие сайты для поиска сотрудников</h2>
+					<div class="sites__list sites__list_mobile">
+						<div class="sites__el">
+							<div class="sites__w">
+								<h4 class="sites__plus">Большой охват</h4>
+								<p class="sites__text">
+									Это «живые», популярные ресурсы с посещаемостью от 5000 человек в день
+								</p>
+							</div>
+						</div>
+						<div class="sites__el">
+							<div class="sites__w">
+								<h4 class="sites__plus">Мгновенное размещение</h4>
+								<p class="sites__text">
+									Мы размещаем вакансии на всех топовых сайтах по поиску кадров,
+									которые мониторят ваши потенциальные работники
+								</p>
+							</div>
+						</div>
+						<div class="sites__el">
+							<div class="sites__w">
+								<h4 class="sites__plus">Ведущие сайты</h4>
+								<p class="sites__text">
+									В их числе — rabota.ru (19 млн резюме), hh.ru
+									(53 млн резюме), zarplata.ru (7 млн резюме), avito.ru (3 млн резюме)
+								</p>
+							</div>
+						</div>
+					</div>
+			</div>
 			<div class="sites__carousel">
 				<div class="sites__row">
 					<div class="sites__item">
@@ -281,14 +318,263 @@
 			<div class="collect__w">
 				<div class="collect_i"><img src="@img/collect.png" alt=""></div>
 				<div class="collect__cont">
-					<h3 class="collect__text">Ни один из тарифов не подошёл?<h3>
-						<h2 class="collect__title">Соберите индивидуальный тариф под себя!</h2>
-						<button class="collect__btn btn">Рассчитать тариф</button>
+					<h3 class="collect__text">Ни один из тарифов не подошёл?</h3>
+					<h2 class="collect__title">Соберите индивидуальный тариф под себя!</h2>
+					<button class="collect__btn btn">Рассчитать тариф</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="download">
+		<div class="container">
+			<div class="download__w">
+				<h2 class="download__title">Скачайте коммерческое предложение</h2>
+				<p class="download__text">подробная презентация с ценами на все тарифы</p>
+				<button class="btn download__btn">Скачать pdf</button>
+				<p class="download__weight">Размер файла 1.01 МБ</p>
+			</div>
+			<div class="download__i"><img src="@img/download-person.png" alt=""></div>
+		</div> 
+	</section>
+	<section class="personal">
+		<div class="container">
+			<h2 class="personal__title"><span>И еще больше решений</span> для поиска персонала</h2>
+			<p class="personal__text">
+				Jobers.ru – это простой в использовании инструмент для поиска сотрудников
+			</p>
+			<div class="personal__w">
+				<div class="personal-card">
+					<div class="personal__cont">
+						<img src="@img/personal-card-1.png" alt="" class="personal-card__i">
+						<h3 class="personal-card__title">Размещение в соц. сетях</h3>
+						<p class="personal-card__text">
+							Многие специалисты ищут работу именно в карьерных сообществах Фейсбука, ВКонтакте, Телеграма.
+							Мы подобрали для каждой сферы деятельности релевантные группы с «живыми» подписчиками
+							и высокой активностью. В нашей базе — 865 сообществ, и она постоянно пополняется.
+						</p>
+					</div>
+					<a href="/" class="personal-card__btn more-link">Детальнее</a>
+				</div>
+				<div class="personal-card">
+					<div class="personal__cont">
+						<img src="@img/personal-card-2.png" alt="" class="personal-card__i">
+						<h3 class="personal-card__title">Рерайтинг вакансии</h3>
+						<p class="personal-card__text">
+							Опытный hr-копирайтер составит текст с элементами продающего контента, 
+							который будет выгодно выделяться на карьерных сайтах и поможет привлечь 
+							самых перспективных соискателей.
+						</p>
+					</div>
+					<a href="/" class="personal-card__btn more-link">Детальнее</a>
+				</div>
+				<div class="personal-card">
+					<div class="personal__cont">
+						<img src="@img/personal-card-3.png" alt="" class="personal-card__i">
+						<h3 class="personal-card__title">Скрининг резюме</h3>
+						<p class="personal-card__text">
+							Наносите точечные удары! Мы составим для вас список из 50 свежих резюме,
+							соответствующих вашим требованиям, чтобы ваши SMS попали точно в цель.
+						</p>
 					</div>
 				</div>
 			</div>
+		</div>
 	</section>
-
+	<section class="call-tracking">
+		<div class="container">
+			<div class="call-tracking__w">
+				<div class="call-tracking__i"><img src="@img/call-tracking.png" alt=""></div>
+				<div class="call-tracking__cont">
+					<p class="call-tracking__only">Только у нас</p>
+					<h2 class="call-tracking__title">Кол-трекинг и SMS-рассылка по подходящим кандидатам в одном пакете</h2>
+					<p class="call-tracking__text">Синергетическое усиление эффективности вашей рекрутинговой кампании</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="work-with">
+		<div class="container">
+			<h2 class="work-with__title">Работаем с <span>ведущими</span> компаниями</h2>
+			<p class="work-with__text">
+				Мы постоянно улучшаем наш сервис на основе пользовательского опыта сотен наших клиентов
+			</p>
+			<div class="work-with__cont">
+				<div class="work-with__i"><img src="@img/rosneft.jpg" alt=""></div>
+				<div class="work-with__i invert"><img src="@img/okko.png" alt=""></div>
+				<div class="work-with__i"><img src="@img/skyeng.png" alt=""></div>
+				<div class="work-with__i"><img src="@img/ivi.png" alt=""></div>
+				<div class="work-with__i"><img src="@img/okey.png" alt=""></div>
+				<div class="work-with__i"><img src="@img/vtb.png" alt=""></div>
+				<div class="work-with__i"><img src="@img/sovcom.png" alt=""></div>
+				<div class="work-with__i invert"><img src="@img/nike.png" alt=""></div>
+				<div class="work-with__i"><img src="@img/sber.png" alt=""></div>
+				<div class="work-with__i"><img src="@img/deichman.png" alt=""></div>
+				<div class="work-with__i"><img src="@img/mainbuild.jpg" alt=""></div>
+				<div class="work-with__i"><img src="@img/gazelkin.png" alt=""></div>
+			</div>
+		</div>
+	</section>
+	<section class="cases">
+		<div class="container">
+			<div class="cases__w">
+				<div class="cases__cont">
+					<h2 class="cases__title">Кейсы наших клиентов</h2>
+					<div class="cases__line">
+						<p class="cases__text">
+							За 3 года мы помогли более чем 6000 клиентам снизить стоимость кандидата в 3 раза
+						</p>
+						<a href="/" class="cases__btn more-link">Больше кейсов</a>
+					</div>
+				</div>
+				<div class="cases__list">
+					<div class="cases-card">
+						<div class="cases-card__content">
+							<div class="cases-card__i"><img src="@img/gazelkin-logo.png" alt=""></div>
+							<h3 class="cases-card__title">Газелькин</h3>
+							<p class="cases-card__text">Городские грузоперевозки.300 кандидатов по 47 рублей.</p>
+						</div>
+						<div class="cases-card__discover">
+							<div class="cases-card__w">
+								<h4 class="cases-card__pay">65 рублей</h4>
+								<p class="cases-card__price">стоимость кандидата</p>
+							</div>
+							<div class="cases-card__next">
+								<img src="@img/arrow-next.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="cases-card">
+						<div class="cases-card__content">
+							<div class="cases-card__i"><img src="@img/APT.png" alt=""></div>
+							<h3 class="cases-card__title">АРТ</h3>
+							<p class="cases-card__text">
+								Как набирать менеджеров по продажам в условиях кризиса
+							</p>
+						</div>
+						<div class="cases-card__discover">
+							<div class="cases-card__w">
+								<h4 class="cases-card__pay">11 рублей</h4>
+								<p class="cases-card__price">стоимость кандидата</p>
+							</div>
+							<div class="cases-card__next">
+								<img src="@img/arrow-next.svg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="garanties">
+		<div class="container">
+			<div class="garanties__w">
+				<div class="garanties__i"><img src="@img/bag.png" alt=""></div>
+				<div class="garanties__cont">
+					<h2 class="garanties__title">Вы получите гарантии</h2>
+					<p class="garanties__text">
+						Если вы не получите ни одного отклика на вакансию, мы предложим вам на выбор несколько вариантов:
+					</p>
+					<ul class="garanties__list">
+						<li class="garanties__item">
+							Дадим 50-процентную скидку на повторное размещение
+						</li>
+						<li class="garanties__item">
+							<p>
+								Бесплатно проведём конкурентный анализ вакансии 
+								<span>
+									(выясним, почему она не вызывает интереса и как это исправить)
+								</span>
+							</p>
+						</li>
+						<li class="garanties__item">
+							Вернём вам деньги в полном объёме
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="report">
+		<div class="container">
+			<h2 class="report__title">Что говорят наши клиенты</h2>
+			<div class="report__w">
+				<button class="report__bnt-left"></button>
+				<div class="report__slider slider">
+					<div class="report__card">
+						<div class="report__i">
+							<img src="@img/report-slide-1.png" alt="">
+						</div>
+						<div class="report__cont">
+							<h2 class="report__name">Никита Нагарнюк</h2>
+							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
+							<button class="report__btn">Смотреть отзыв</button>
+						</div>
+					</div>
+					<div class="report__card">
+						<div class="report__i">
+							<img src="@img/report-slide-1.png" alt="">
+						</div>
+						<div class="report__cont">
+							<h2 class="report__name">Никита Нагарнюк</h2>
+							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
+							<button class="report__btn">Смотреть отзыв</button>
+						</div>
+					</div>
+					<div class="report__card">
+						<div class="report__i">
+							<img src="@img/report-slide-1.png" alt="">
+						</div>
+						<div class="report__cont">
+							<h2 class="report__name">Никита Нагарнюк</h2>
+							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
+							<button class="report__btn">Смотреть отзыв</button>
+						</div>
+					</div>
+					<div class="report__card">
+						<div class="report__i">
+							<img src="@img/report-slide-1.png" alt="">
+						</div>
+						<div class="report__cont">
+							<h2 class="report__name">Никита Нагарнюк</h2>
+							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
+							<button class="report__btn">Смотреть отзыв</button>
+						</div>
+					</div>
+					<div class="report__card">
+						<div class="report__i">
+							<img src="@img/report-slide-1.png" alt="">
+						</div>
+						<div class="report__cont">
+							<h2 class="report__name">Никита Нагарнюк</h2>
+							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
+							<button class="report__btn">Смотреть отзыв</button>
+						</div>
+					</div>
+					<div class="report__card">
+						<div class="report__i">
+							<img src="@img/report-slide-1.png" alt="">
+						</div>
+						<div class="report__cont">
+							<h2 class="report__name">Никита Нагарнюк</h2>
+							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
+							<button class="report__btn">Смотреть отзыв</button>
+						</div>
+					</div>
+					<div class="report__card">
+						<div class="report__i">
+							<img src="@img/report-slide-1.png" alt="">
+						</div>
+						<div class="report__cont">
+							<h2 class="report__name">Никита Нагарнюк</h2>
+							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
+							<button class="report__btn">Смотреть отзыв</button>
+						</div>
+					</div>
+				</div>
+				<button class="report__bnt-right"></button>
+			</div>
+		</div>
+	</section>
 	@@include('html/footer.html', {})
 	<script src="js/index.js"></script>
 </body>

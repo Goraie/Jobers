@@ -97,7 +97,8 @@ const menuIcon = document.querySelector('.burger'),
 function setTranslateValue(item, valY, valX = 0){
 	item.style.transform = `translate(${valX}px,${valY}px)`
 }
-const mobileScrollHeight = mobileMenu.scrollHeight + 25
+const mobileScrollHeight = Math.max(mobileMenu.scrollHeight + 25, window.innerHeight)
+
 mobileMenu.style.height = mobileScrollHeight + 'px'
 setTranslateValue(mobileMenu, -mobileScrollHeight)
 
@@ -129,6 +130,72 @@ const loginBtn = document.querySelector('.header__login'),
 
 loginBtn.addEventListener('click', (e) => {
 	e.preventDefault()
-	console.log(loginSect);
 	loginSect.style.display = 'block'
+})
+
+// Имейл
+
+const email = document.querySelector('.cta__email'),
+			mailOverlay = document.querySelector('.mail-wrap .overlay'),
+			mailWrap = document.querySelector('.mail-wrap'),
+			mailCLose = document.querySelector('.mail-wrap__i')
+
+email.addEventListener('click', (e) => {
+	if(!mailWrap.classList.contains('active')){
+		mailWrap.classList.add('active')
+		mailOverlay.classList.add('active')
+		document.querySelector('body').style.overflow = 'hidden'
+	}
+})
+
+mailCLose.addEventListener('click', () => {
+	mailWrap.classList.remove('active')
+	mailOverlay.classList.remove('active')
+	document.querySelector('body').style.overflow = 'visible'
+})
+
+window.addEventListener('click', (e) => {
+	if(e.target.classList.contains('overlay')){
+		mailWrap.classList.remove('active')
+		mailOverlay.classList.remove('active')
+		document.querySelector('body').style.overflow = 'visible'
+	}
+})
+// callback popup
+
+const callback = document.querySelector('.cta__phone'),
+callbackWrap = document.querySelector('.callback-wrapp'),
+			callbackOverlay = document.querySelector('.callback-wrapp .overlay'),
+			callbackCLose = document.querySelector('.callback-wrap__i'),
+			headerPhone = document.querySelector('.header__phone')
+
+
+
+callback.addEventListener('click', (e) => {
+	if(!callbackWrap.classList.contains('active')){
+		callbackWrap.classList.add('active')
+		callbackOverlay.classList.add('active')
+		document.querySelector('body').style.overflow = 'hidden'
+	}
+})
+headerPhone.addEventListener('click', (e) => {
+	if(!headerPhone.classList.contains('active')){
+		callbackWrap.classList.add('active')
+		callbackOverlay.classList.add('active')
+		document.querySelector('body').style.overflow = 'hidden'
+	}
+})
+
+callbackCLose.addEventListener('click', () => {
+	callbackWrap.classList.remove('active')
+	callbackOverlay.classList.remove('active')
+	document.querySelector('body').style.overflow = 'visible'
+})
+
+window.addEventListener('click', (e) => {
+	if(e.target.classList.contains('overlay')){
+		callbackWrap.classList.remove('active')
+		callbackOverlay.classList.remove('active')
+		document.querySelector('body').style.overflow = 'visible'
+	}
 })

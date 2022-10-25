@@ -28,7 +28,7 @@ a, a:hover, a:visited{
 	color: #000;
 	text-decoration: none;
 }
-ul{
+ul, ol{
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -139,14 +139,14 @@ ul{
 
 .header{
 	position: fixed;
-	width: 100%;
+	width: 100vw;
 	top: 0;
 	left: 0;
 	background: #fff;
 	z-index: 777;
 	padding: 13px 0;
 	font-size: 16px;
-	box-shadow: 0px 4px 64px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.05);
 }
 .header .container{
 	width: 1280px;
@@ -198,6 +198,7 @@ ul{
 	margin-left: 5px;
 }
 .header__dropdown{
+	display: none;
 	position: absolute;
 	z-index: 1;
 	background: #fff;
@@ -405,6 +406,7 @@ a.header-mob__link_callback{
 /* footer */
 
 .footer{
+	background: #fff;
 	padding: 40px 0 60px;
 }
 .footer .container{
@@ -724,4 +726,125 @@ a.header-mob__link_callback{
 }
 a.callback__link{
 	text-decoration: none;
+}
+
+// cta
+
+.cta{
+	background: #fff;
+	padding-top: 100px;
+	padding-bottom: 20px;
+}
+.cta__wrap{
+	padding: 25px 60px 30px; 
+	color: #fff;
+	border-radius: 10px;
+	background: linear-gradient(86.15deg, #0363FE 0%, #5694F8 56.47%, #6E30F3 99.47%);
+}
+.cta__title{
+	font-size: 48px;
+	max-width: 800px;
+}
+.cta__totitle{
+	font-size: 22px;
+	line-height: 1.2;
+	margin-bottom: 24px;
+}
+.cta__w{
+	display: flex;
+	margin-top: auto;
+	justify-content: space-between;
+}
+.cta__text{
+	padding-top: 10px;
+}
+.cta__btn-w{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.cta__btn{
+	border: 1px solid rgba(255, 255, 255,.3);
+	padding: 15px 25px;
+	background: rgba(255, 255, 255,.2);
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+}
+.cta__btn:first-of-type{
+	margin-right: 20px;
+}
+.cta__whtsp a{
+	color: #fff;
+	display: flex;
+	align-items: center;
+}
+.cta__email button{
+	color: #fff;
+	border: none;
+	display: flex;
+	align-items: center;
+	background: transparent;
+}
+.cta__btn span{
+	margin-right: 10px;
+	background-size: cover;
+	display: block;
+}
+.cta__whtsp span{
+	width: 24px;
+	height: 24px;
+	background: url('@img/whatsapp.svg') no-repeat;
+}
+.cta__email span{
+	width: 25px;
+	height: 24px;
+	background: url('@img/mail.svg') no-repeat;
+}
+.cta__phone{
+	display: flex;
+	align-items: center;
+	border: none;
+	background: transparent;
+	color: #fff;
+	font-size: 58px;
+	line-height: 1.35;
+	font-weight: 600;
+	position: relative;
+}
+.cta__phone::before{
+	content: '';
+	background: url('@img/phone-wh.svg') no-repeat;
+	background-size: cover;
+	width: 44px;
+	height: 45px;
+	margin-right: 15px;
+}
+.cta__phone::after{
+	content: 'Обратный звонок';
+	font-size: 22px;
+	font-weight: 400;
+	position: absolute;
+	left: 65px;
+	border-bottom: 4px;
+	border-bottom: 1px solid #fff;
+	bottom: -26px;
+}
+
+// Thank you page
+
+.thanks{
+	padding: 150px 0 90px;
+	background: #fff;
+	text-align: center;
+	&__title{
+		font-size: 82px;
+		line-height: 1.2;
+	}
+	&__text{
+		font-size: 26px;
+		padding: 50px 0 9px;
+		font-weight: 300;
+		line-height: 1.45;
+	}
 }
