@@ -1,6 +1,6 @@
 # Jobers
 
-- [Главная страница](https://jobers.vercel.app/)
+[Главная страница](https://jobers.vercel.app/)
 - [База знаний](https://jobers.vercel.app/blog.html)
 - [Информация об оплате](https://jobers.ru/payment-info)
 - [Список сайтов](https://jobers.ru/spisok_saitov)
