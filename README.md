@@ -23,3 +23,11 @@
 > [Партнеры](https://jobers.ru/partners)
 
 > [Страница благодарности](https://jobers.ru/thank-you-page)
+
+# Сборка
+
+1. Установите все нужные пакеты 
+'npm install'
+
+2. Используйте следующую команду для сборки 
+'npm run build'
