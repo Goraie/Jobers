@@ -848,3 +848,49 @@ a.callback__link{
 		line-height: 1.45;
 	}
 }
+
+//privacy policy
+
+.privacy-policy{
+	background: #fff;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 1.55;
+	margin-bottom: 80px;
+	padding-top: 135px;
+	.container{
+		width: 960px;
+	}
+	&__title{
+		font-size: 36px;
+		text-align: center;
+		line-height: 1.25;
+		font-weight: 600;
+		padding-bottom: 30px;
+	}
+	&__point{
+		font-weight: 700;
+		margin: 30px 0 2px;
+		font-size: 20px;
+	}
+	&__list{
+		// &_desc{
+		// 	list-style: disc;
+		// }
+		.privacy-policy__text{
+			margin: 2px 0;
+			display: flex;
+			&::before{
+				content: '';
+				min-width: 4px;
+				margin-right: 5px;
+				margin-top: 0.8rem;
+				margin-left: 2px;
+				height: 4px;
+				display: block;
+				border-radius: 10px;
+				background: #000;
+			}
+		}
+	}
+}

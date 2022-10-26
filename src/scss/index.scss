@@ -326,6 +326,10 @@ a.offer__btn{
 		justify-content: space-between;
 		margin-bottom: 20px;
 	}
+	&__carousel{
+		overflow: hidden;
+		width: fit-content;
+	}
 	&__item{
 		width: 170px;
 		height: 170px;
@@ -402,8 +406,6 @@ a.offer__btn{
 
 .rate{
 	padding-top: 140px;
-	display: none;
-
 	&__title{
 		font-size: 70px;
 		margin: 0 auto;
@@ -433,6 +435,22 @@ a.offer__btn{
 			background: var(--accent);
 			color: #fff;
 		}
+	}
+	&__col{
+		width: 25%;
+	}
+	&__type{
+		font-size: 18px;
+		font-weight: 600;
+	}
+	&__about{
+		font-size: 14px;
+		&_large{
+			font-size: 12px;
+		}
+	}
+	&__stat{
+		padding-right: 20px;
 	}
 }
 
@@ -1227,10 +1245,18 @@ a.more-link{
 		&__carousel{
 			display: flex;
 		}
+		&__slider-w{
+			display: flex;
+			width: fit-content;
+		}
+		&__carousel{
+			margin-right: 20px;
+		}
 		&__row{
 			flex-direction: column;
 			margin-bottom: 0;
 			margin-right: 20px;
+			width: fit-content;
 		}
 		&__item{
 			margin-bottom: 15px;

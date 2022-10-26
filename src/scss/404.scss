@@ -1,0 +1,25 @@
+:root{
+	--accent: #0E65F3;
+	--btn-bg: #DEE8F1;
+	--bg: #F1F2F6;
+	--fz: 16px;
+	--font: 'Proxima nova', Arial, sans-Serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+body{
+	font-size: var(--fz);
+	background: #000;
+}
+
+.err{
+	min-height: 100vh;
+	background: url('@img/404.png') no-repeat center center / cover;
+	.container{
+		width: 1280px;
+		position: relative;
+	}
+	&__w{
+		padding: 50px 0; 
+	}
+}
