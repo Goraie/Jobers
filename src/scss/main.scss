@@ -8,6 +8,23 @@
 	--font: 'Proxima nova', Arial, sans-Serif;
 	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
+// animation
+@keyframes employeeCardBtnBouncy{
+	0%{
+		transform: scale(1);
+	}
+	60%{
+		transform: scale(0.94);
+	}
+	80%{
+		transform: scale(0.95);
+	}
+	100%{
+		transform: scale(0.94);
+	}
+}
+
+
 p{
 	margin: 0;
 	padding: 0;
@@ -35,6 +52,8 @@ ul, ol{
 }
 
 /* main styles */
+
+
 
 .container{
 	width: 1160px;
@@ -124,6 +143,7 @@ ul, ol{
 	font-size: 20px;
 	background: var(--accent);
 	border-radius: 5px;
+	width: fit-content;
 	padding: 22px 35px;
 	color: #fff;
 	font-weight: 600;
@@ -134,6 +154,25 @@ ul, ol{
 	animation: 0.4s employeeCardBtnBouncy;
 	}
 }
+.offer__btn{
+	padding: 28px 34px;
+	background: var(--accent);
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+}
+a.offer__btn{
+	color: #fff;
+}
+.offer__btn::after{
+	content: '';
+	width: 14px;
+	height: 14px;
+	background: url('@img/coolicon.svg') no-repeat center;
+	margin-left: 5px;
+}
+
 
 /* header */
 

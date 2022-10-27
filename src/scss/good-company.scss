@@ -1,0 +1,29 @@
+.good{
+	background: #fff;
+	padding: 100px 0;
+	text-align: center;
+	&__title{
+		font-size: 72px;
+	}
+	&__text{
+		font-size: 24px;
+		margin: 25px 0 40px;
+	}
+	&__running{
+		width: 100%;
+		overflow: hidden;
+		display: flex;
+	}
+	&__row{
+		display: flex;
+		margin-right: 20px;
+	}
+	&__el{
+		&, img{
+			width: 250px;
+			height: 120px;
+			border-radius: 10px;
+		}
+		margin-right: 20px;
+	}
+}

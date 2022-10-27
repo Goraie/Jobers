@@ -1,0 +1,81 @@
+.report{
+	margin-top: 60px;
+	margin-bottom: 120px;
+	.report__bnt-right, .report__bnt-left{
+		display: none;
+	}
+	&__title{
+		font-size: 72px;
+		text-align: center;
+		margin-bottom: 60px;
+	}
+	&__w{
+		overflow: hidden;
+	}
+	&__slider{
+		width: fit-content;
+		display: flex;
+	}
+	&__card{
+		margin-right: 40px;		
+		box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.05);
+		text-align: center;
+		width: 260px;
+		border-radius: 10px;
+		overflow: hidden;
+		background: #fff;
+	}
+	&__cont{
+		padding: 20px 30px;
+	}
+	&__i{
+		img{
+			width: 100%;
+		}
+	}
+	&__name{
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	&__who{
+		font-size: 14px;
+		color: #101011;
+		margin: 5px 0 30px;
+	}
+	&__btn{
+		margin-top: auto;
+		width: 100%;
+		padding: 15px;
+		font-size: 14px;
+		text-transform: uppercase;
+		border-radius: 5px;
+		border: none;
+		font-weight: 700;
+		color: var(--accent);
+		background: var(--btn-bg);
+		transition: color 0.25s ease-out, background 0.25s ease-out;
+		&:hover{
+			background: var(--accent);
+			color: #fff;
+		}
+	}
+}
+
+@media (max-width:1200.98px ) {
+	.report{
+		&__card{
+			width: 200px;
+		}
+		&__cont{
+			padding: 23px 18px;
+		}
+	}
+}
+
+@media (max-width:1100.98px ) {
+	.report__title{
+		font-size: 55px;
+		text-align: center;
+	}
+}

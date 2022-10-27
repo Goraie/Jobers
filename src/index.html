@@ -21,30 +21,7 @@
 			<div class="offer__i"><img src="@img/main-offer-person.png" alt=""></div>
 		</div>
 	</section>
-	<section class="start-employee">
-		<div class="start-employee__w">
-			<h2 class="start-employee__title">Запустите поиск сотрудников <span>в 3 шага</span></h2>
-			<p class="start-employee__under">Среднее время размещения: 3 минуты</p>
-		</div>
-		<div class="container">
-			<div class="start-employee__card employee-card">
-				<img class="employee-card__i" src="@img/start-employee-card-1.png" alt="">
-				<h3 class="employee-card__title">Составьте текст вакансии</h3>
-				<p class="employee-card__text">который будет привлекать качественных кандидатов и отсеивать неподходящих с личным ассистентом</p>
-			</div>
-			<div class="start-employee__card employee-card">
-				<img class="employee-card__i" src="@img/start-employee-card-2.png" alt="">
-				<h3 class="employee-card__title">Заполните форму вакансии</h3>
-				<p class="employee-card__text">и объявление продублируется на все кадровые ресурсы вашего города</p>
-				<button class="btn employee-card__btn">Заполнить форму</button>
-			</div>
-			<div class="start-employee__card employee-card">
-				<img class="employee-card__i" src="@img/start-employee-card-3.png" alt="">
-				<h3 class="employee-card__title">Принимайте звонки и отклики</h3>
-				<p class="employee-card__text">от подходящих кандидатов со всех сайтов в едином личном кабинете</p>
-			</div>
-		</div>
-	</section>
+	@@include('html/parts/start-search-personal.html', {})
 	<section class="ident-tasks">
 		<div class="container">
 			<div class="ident-tasks__w">
@@ -639,87 +616,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="report">
-		<div class="container">
-			<h2 class="report__title">Что говорят наши клиенты</h2>
-			<div class="report__w">
-				<button class="report__bnt-left"></button>
-				<div class="report__slider slider">
-					<div class="report__card">
-						<div class="report__i">
-							<img src="@img/report-slide-1.png" alt="">
-						</div>
-						<div class="report__cont">
-							<h2 class="report__name">Никита Нагарнюк</h2>
-							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
-							<button class="report__btn">Смотреть отзыв</button>
-						</div>
-					</div>
-					<div class="report__card">
-						<div class="report__i">
-							<img src="@img/report-slide-1.png" alt="">
-						</div>
-						<div class="report__cont">
-							<h2 class="report__name">Никита Нагарнюк</h2>
-							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
-							<button class="report__btn">Смотреть отзыв</button>
-						</div>
-					</div>
-					<div class="report__card">
-						<div class="report__i">
-							<img src="@img/report-slide-1.png" alt="">
-						</div>
-						<div class="report__cont">
-							<h2 class="report__name">Никита Нагарнюк</h2>
-							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
-							<button class="report__btn">Смотреть отзыв</button>
-						</div>
-					</div>
-					<div class="report__card">
-						<div class="report__i">
-							<img src="@img/report-slide-1.png" alt="">
-						</div>
-						<div class="report__cont">
-							<h2 class="report__name">Никита Нагарнюк</h2>
-							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
-							<button class="report__btn">Смотреть отзыв</button>
-						</div>
-					</div>
-					<div class="report__card">
-						<div class="report__i">
-							<img src="@img/report-slide-1.png" alt="">
-						</div>
-						<div class="report__cont">
-							<h2 class="report__name">Никита Нагарнюк</h2>
-							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
-							<button class="report__btn">Смотреть отзыв</button>
-						</div>
-					</div>
-					<div class="report__card">
-						<div class="report__i">
-							<img src="@img/report-slide-1.png" alt="">
-						</div>
-						<div class="report__cont">
-							<h2 class="report__name">Никита Нагарнюк</h2>
-							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
-							<button class="report__btn">Смотреть отзыв</button>
-						</div>
-					</div>
-					<div class="report__card">
-						<div class="report__i">
-							<img src="@img/report-slide-1.png" alt="">
-						</div>
-						<div class="report__cont">
-							<h2 class="report__name">Никита Нагарнюк</h2>
-							<p class="report__who">Директор компании "Агенство Российских торгов"</p>
-							<button class="report__btn">Смотреть отзыв</button>
-						</div>
-					</div>
-				</div>
-				<button class="report__bnt-right"></button>
-			</div>
-		</div>
-	</section>
+	@@include('html/parts/reports.html', {})
 	@@include('html/footer.html', {})
 	<script src="js/index.js"></script>
 </body>

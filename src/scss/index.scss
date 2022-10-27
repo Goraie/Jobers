@@ -1,3 +1,6 @@
+@import 'reports';
+@import 'start-search-personal';
+
 :root{
 	--accent: #0E65F3;
 	--btn-bg: #DEE8F1;
@@ -10,6 +13,7 @@
 	--font: 'Proxima nova', Arial, sans-Serif;
 	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
+
 
 body{
 	font-family: var(--font);
@@ -42,7 +46,7 @@ h1,h2,h3,h4{
 	line-height: 1;
 	margin-bottom: 50px;
 }
-.offer__title, .offer__subtext,.start-employee__title, 
+.offer__title, .offer__subtext, 
 .managment__title,.managment__descr, .rate__title,
 .personal__title, .work-with__title
 {	
@@ -56,22 +60,7 @@ h1,h2,h3,h4{
 	font-weight: 600;
 }
 a.offer__btn{
-	padding: 28px 34px;
-	background: var(--accent);
-	border-radius: 5px;
-	display: flex;
 	width: fit-content;
-	align-items: center;
-	font-size: 18px;
-	text-transform: uppercase;
-	color: #fff;
-}
-.offer__btn::after{
-	content: '';
-	width: 14px;
-	height: 14px;
-	background: url('@img/coolicon.svg') no-repeat center;
-	margin-left: 5px;
 }
 .offer__under{
 	margin-top: 15px;
@@ -82,8 +71,9 @@ a.offer__btn{
 	position: absolute;
 	top: 16%;
 	right: 6%;
-	animation: 10s personSwing infinite;
-	transition: margin 0.8s ease-out;
+	animation: 20s personSwing infinite;
+	filter: drop-shadow(20px 28px 63px rgba(0, 0, 0, 0.25));
+	// transition: top 0.8s ease-out, right 0.8s ease-out;
 }
 @keyframes personSwing{
 	0%{
@@ -93,95 +83,35 @@ a.offer__btn{
 		transform: rotate(8deg);
 		margin: 8px 2px 0 0;
 	}
-	40%{
+	20%{
 		transform: rotate(0);
 		margin: 0;
 	}
-	60%{
+	30%{
 		transform: rotate(-5deg);
 		margin: 0 4px -5px 0;
 	}
-	75%{
+	40%{
 		transform: rotate(-7deg);
 	}
+	50%{
+		transform: rotate(-60deg);
+	}
+	60%{
+		transform: rotate(0deg);
+	}
+	80%{
+		transform: translate(100px, 120px);
+	}
+	99%{
+		transform: translate(0,0);
+	}
 	100%{
-		transform: rotate(0);
-		margin: 0;
+		transform: rotate(360deg);
 	}
 }
 .offer__mobile{
 	display: none;
-}
-
-
-/* Запустите поиск сотрудников в 3 шага */
-
-.start-employee{
-	padding: 120px 0 200px;
-}
-.start-employee__w{
-	width: fit-content;
-	margin: 0 auto;
-	text-align: center;
-}
-.start-employee__title{
-	font-size: 72px;
-	text-align: center;
-}
-.start-employee__under{
-	font-size: 24px;
-	color: var(--accent);
-	margin-bottom: 60px;
-}
-.start-employee .container{
-	display: flex;
-	justify-content: space-between;
-}
-.employee-card{
-	box-shadow: var(--box-sh);
-	padding: 40px 30px;
-	background: #fff;
-	width: 360px;
-	border-radius: 15px;
-}
-.employee-card__title{
-	margin: 25px 0 15px;
-	font-size: 32px;
-}
-.employee-card__text{
-	font-size: 18px;
-	opacity: 0.8;
-}
-.employee-card__btn{
-	width: 100%;
-	padding: 20px;
-	border: none;
-	font-size: 18px;
-	font-weight: 700;
-	text-transform: uppercase;
-	margin-top: 25px;
-	color: var(--accent);
-	background: var(--btn-bg);
-	transition: transform 0.25s ease-out;
-}
-.employee-card__btn:hover{
-	transform: scale(.94);
-	animation: 0.4s employeeCardBtnBouncy;
-}
-
-@keyframes employeeCardBtnBouncy{
-	0%{
-		transform: scale(1);
-	}
-	60%{
-		transform: scale(0.94);
-	}
-	80%{
-		transform: scale(0.95);
-	}
-	100%{
-		transform: scale(0.94);
-	}
 }
 
 /* Ident tasks */
@@ -775,72 +705,7 @@ a.more-link{
 	}
 }
 
-// reports
 
-
-.report{
-	margin-top: 60px;
-	margin-bottom: 120px;
-	.report__bnt-right, .report__bnt-left{
-		display: none;
-	}
-	&__title{
-		font-size: 72px;
-		text-align: center;
-		margin-bottom: 60px;
-	}
-	&__w{
-		overflow: hidden;
-	}
-	&__slider{
-		width: fit-content;
-		display: flex;
-	}
-	&__card{
-		margin-right: 40px;		
-		box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.05);
-		text-align: center;
-		width: 260px;
-		border-radius: 10px;
-		overflow: hidden;
-		background: #fff;
-	}
-	&__cont{
-		padding: 20px 30px;
-	}
-	&__i{
-		img{
-			width: 100%;
-		}
-	}
-	&__name{
-		font-size: 20px;
-		font-weight: 600;
-		text-transform: uppercase;
-	}
-	&__who{
-		font-size: 14px;
-		color: #101011;
-		margin: 5px 0 30px;
-	}
-	&__btn{
-		margin-top: auto;
-		width: 100%;
-		padding: 15px;
-		font-size: 14px;
-		text-transform: uppercase;
-		border-radius: 5px;
-		border: none;
-		font-weight: 700;
-		color: var(--accent);
-		background: var(--btn-bg);
-		transition: color 0.25s ease-out, background 0.25s ease-out;
-		&:hover{
-			background: var(--accent);
-			color: #fff;
-		}
-	}
-}
 
 @media(max-width: 1300.98px){
 	.offer{
@@ -895,10 +760,6 @@ a.more-link{
 				top: 16%;
 			}
 		}
-	}
-	.employee-card{
-		width: 300px;
-		padding: 30px 20px 15px;
 	}
 	.ident-tasks{
 		.container{
@@ -970,18 +831,10 @@ a.more-link{
 			margin: 0;
 		}
 	}
-	.report{
-		&__card{
-			width: 200px;
-		}
-		&__cont{
-			padding: 23px 18px;
-		}
-	}
 }
 @media(max-width: 1100.98px){
-	.start-employee__title, .offer__title, .managment__title, .download__title,
-	.personal__title, .work-with__title, .report__title, .rate__title{
+	.offer__title, .managment__title, .download__title,
+	.personal__title, .work-with__title, .rate__title{
 		font-size: 55px;
 		text-align: center;
 	}
@@ -1034,7 +887,7 @@ a.more-link{
 	}
 }
 @media(max-width: 992.98px){
-	.start-employee__title, .offer__title, .managment__title, .download__title,
+	.offer__title, .managment__title, .download__title,
 	.personal__title, .work-with__title, .report__title{
 		text-align: center;
 	}
@@ -1091,24 +944,6 @@ a.more-link{
 				width: 500px;
 				position: relative;
 				animation: 10s personSwing infinite;
-			}
-		}
-	}
-	.start-employee{
-		&__w{
-			max-width: 600px;
-		}
-		&__under{
-			margin: 20px 0 60px;
-		}
-		.container{
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-		&__card{
-			&:not(:last-of-type){
-				margin-bottom: 40px;
 			}
 		}
 	}

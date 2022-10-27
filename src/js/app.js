@@ -199,3 +199,46 @@ window.addEventListener('click', (e) => {
 		document.querySelector('body').style.overflow = 'visible'
 	}
 })
+
+const indexRunning = document.querySelector('.sites__slider-w'),
+			findRunning = document.querySelector('.good__running')
+
+function animateSlider(el, duration, dir, searchEls, numClone = 1) {
+  const innerEl = el.querySelector(searchEls);
+  const innerWidth = innerEl.offsetWidth;
+	const clones = []
+	for(let i = 0; i < numClone; i++){
+		clones.push(innerEl.cloneNode(true))
+		el.appendChild(clones[i])
+	}
+  let start = performance.now();
+  let progress;
+  let translateX;
+  let translateY;
+  requestAnimationFrame(function step(now) {
+    progress = (now - start) / duration;
+    if (progress > 1) {
+    	progress %= 1;
+      start = now;
+    }
+    translateX = innerWidth * progress;
+    translateY = innerHeight * progress;
+    if(dir === 'v'){
+			innerEl.style.transform = `translate3d(0,-${translateY}px , 0)`;
+			clones.forEach(item => {
+				item.style.transform = `translate3d(0,-${translateY}px , 0)`;
+			})
+		} else if(dir ==='h'){
+			innerEl.style.transform = `translate3d(-${translateX}px, 0 , 0)`;
+			clones.forEach(item => {
+				item.style.transform = `translate3d(-${translateX}px, 0 , 0)`;
+			})
+		}
+    requestAnimationFrame(step);
+  });
+}
+
+if(indexRunning)
+	animateSlider(indexRunning, 20000, window.innerWidth > 992 ? 'v' : 'h', '.sites__carousel');
+if(findRunning)
+	animateSlider(findRunning, 22000, 'h', '.good__row', 3);

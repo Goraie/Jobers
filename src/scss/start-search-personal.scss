@@ -1,0 +1,91 @@
+.start-employee__title{	
+	span{
+		color: var(--accent);
+	}
+}
+.start-employee{
+	padding: 120px 0 200px;
+}
+.start-employee__w{
+	width: fit-content;
+	margin: 0 auto;
+	text-align: center;
+}
+.start-employee__title{
+	font-size: 72px;
+	text-align: center;
+}
+.start-employee__under{
+	font-size: 24px;
+	color: var(--accent);
+	margin-bottom: 60px;
+}
+.start-employee .container{
+	display: flex;
+	justify-content: space-between;
+}
+.employee-card{
+	box-shadow: var(--box-sh);
+	padding: 40px 30px;
+	background: #fff;
+	width: 360px;
+	border-radius: 15px;
+}
+.employee-card__title{
+	margin: 25px 0 15px;
+	font-size: 32px;
+}
+.employee-card__text{
+	font-size: 18px;
+	opacity: 0.8;
+}
+.employee-card__btn{
+	width: 100%;
+	padding: 20px;
+	border: none;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 25px;
+	color: var(--accent);
+	background: var(--btn-bg);
+	transition: transform 0.25s ease-out;
+}
+.employee-card__btn:hover{
+	transform: scale(.94);
+	animation: 0.4s employeeCardBtnBouncy;
+}
+
+@media (max-width: 1200.98px){
+	.employee-card{
+		width: 300px;
+		padding: 30px 20px 15px;
+	}
+}
+@media (max-width: 1100.98px){
+	.start-employee__title{
+		font-size: 55px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 992.98px){
+	.start-employee{
+		&__w{
+			max-width: 600px;
+		}
+		&__under{
+			margin: 20px 0 60px;
+		}
+		.container{
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		&__card{
+			&:not(:last-of-type){
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
