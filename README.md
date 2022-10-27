@@ -9,13 +9,13 @@
 - [Информация об оплате](https://jobers.vercel.app/payment-info.html)
 - [Политика конфиденциальности](https://jobers.vercel.app/privacy_policy.html)
 
-- [Список сайтов](https://jobers.ru/spisok_saitov)
-- [Тариф "Максимальный"](https://jobers.ru/tariff_maximum)
-- [Тариф "Максимальный с обновлением"](https://jobers.ru/tariff_maximum-with-auto-update)
-- [Тариф "Оптимальный"](https://jobers.ru/tariff_advanced)
-- [Тариф "Минимальный"](https://jobers.ru/tariff_starting)
-- [Тариф "Оптимальный с обновлением"](https://jobers.ru/tariff_advanced-with-auto-update)
-- [Тариф "Минимальный с обновлением"](https://jobers.ru/tariff_starting-with-auto-update)
+- [Список сайтов](https://jobers.vercel.app/spisok_saitov.html)
+- [Тариф "Максимальный"](https://jobers.vercel.app/tariff_maximum.html)
+- [Тариф "Максимальный с обновлением"](https://jobers.vercel.app/tariff_maximum-with-auto-update.html)
+- [Тариф "Оптимальный"](https://jobers.vercel.app/tariff_advanced.html)
+- [Тариф "Минимальный"](https://jobers.vercel.app/tariff_starting.html)
+- [Тариф "Оптимальный с обновлением"](https://jobers.vercel.app/tariff_advanced-with-auto-update.html)
+- [Тариф "Минимальный с обновлением"](https://jobers.vercel.app/tariff_starting-with-auto-update.html)
 
 # Сборка
 
