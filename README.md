@@ -2,13 +2,12 @@
 
 - [Главная страница](https://jobers.vercel.app/)
 - [База знаний](https://jobers.vercel.app/blog.html)
-- [Информация об оплате](https://jobers.ru/payment-info)
 - [Рерайтинг компании](https://jobers.vercel.app/rewriting.html)
-- [Партнеры](https://jobers.ru/partners)
-- [Страница благодарности](https://jobers.ru/thank-you-page)
-- [404](https://jobers.ru/404)
-- [Информация об оплате](https://jobers.ru/payment-info.html)
-- [Политика конфиденциальности](https://jobers.ru/privacy_policy.html)
+- [Партнеры](https://jobers.vercel.app/partners.html)
+- [Страница благодарности](https://jobers.vercel.app/thank-you-page.html)
+- [404](https://jobers.vercel.app/404.html)
+- [Информация об оплате](https://jobers.vercel.app/payment-info.html)
+- [Политика конфиденциальности](https://jobers.vercel.app/privacy_policy.html)
 
 - [Список сайтов](https://jobers.ru/spisok_saitov)
 - [Тариф "Максимальный"](https://jobers.ru/tariff_maximum)
