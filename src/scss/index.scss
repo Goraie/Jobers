@@ -71,43 +71,23 @@ a.offer__btn{
 	position: absolute;
 	top: 16%;
 	right: 6%;
-	animation: 20s personSwing infinite;
-	filter: drop-shadow(20px 28px 63px rgba(0, 0, 0, 0.25));
-	// transition: top 0.8s ease-out, right 0.8s ease-out;
+	animation: 10s personSwing infinite;
 }
 @keyframes personSwing{
 	0%{
 		transform: rotate(0);
 	}
-	15%{
+	25%{
 		transform: rotate(8deg);
-		margin: 8px 2px 0 0;
-	}
-	20%{
-		transform: rotate(0);
-		margin: 0;
-	}
-	30%{
-		transform: rotate(-5deg);
-		margin: 0 4px -5px 0;
-	}
-	40%{
-		transform: rotate(-7deg);
 	}
 	50%{
-		transform: rotate(-60deg);
-	}
-	60%{
 		transform: rotate(0deg);
 	}
-	80%{
-		transform: translate(100px, 120px);
-	}
-	99%{
-		transform: translate(0,0);
+	75%{
+		transform: rotate(-9deg);
 	}
 	100%{
-		transform: rotate(360deg);
+		transform: rotate(0);
 	}
 }
 .offer__mobile{

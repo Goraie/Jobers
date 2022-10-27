@@ -375,6 +375,12 @@ h1,h2,h3,h4{
 	}
 }
 @media (max-width: 992.98px){
+	.offer, .rewriting, .find{
+		.container{
+			width: 100%;
+			padding: 0 30px;
+		}
+	}
 	.offer{
 		padding-bottom: 60px;
 		.container{
@@ -385,12 +391,17 @@ h1,h2,h3,h4{
 		&__title{
 			text-align: center;
 			font-size: 65px;
+			line-height: 1;
+			margin-bottom: 20px;
 		}
 		&__text{
 			text-align: center;
 			width: 375px;
 			font-size: 20px;
+			margin-left: auto;
+			margin-right: auto;
 			max-width: none;
+			margin-bottom: 20px;
 		}
 		&__i{
 			display: none;
@@ -451,10 +462,26 @@ h1,h2,h3,h4{
 		display: none;
 	}
 	.find{
+		&__title{
+			margin: 0 auto;
+			text-align: center;
+			max-width: none;
+		}
+		&__text{
+			max-width: 470px;
+			font-size: 20px;
+			line-height: 1.5;
+			text-align: center;
+			margin: 30px auto;
+		}
 		&__list{
 			flex-direction: column;
+			width: fit-content;
+			margin-left: 20px;
+			margin-right: 30px;
 		}
 		&__card{
+			width: 220px;
 			margin-right: 0;
 			&:not(:first-of-type){
 				margin-top: 20px;
@@ -465,6 +492,7 @@ h1,h2,h3,h4{
 		}
 		&__wr{
 			display: flex;
+			justify-content: center;
 		}
 		&__i{
 			display: none;
@@ -474,6 +502,46 @@ h1,h2,h3,h4{
 					height: 760px;
 				}
 			}
+		}
+	}
+}
+@media (max-width: 768.98px){
+	.offer{
+		padding-top: 120px;
+		&-item{
+			&__text{
+				width: 220px;
+			}
+		}
+	}
+	.rewriting{
+		&__item{
+			width: 520px;
+			margin: 20px auto 0;
+		}
+		&__title{
+			width: 100%;
+		}
+	}
+	.find{
+		&__wr{
+			width: 100%;
+		}
+		&__list{
+			margin-right: 0;
+		}
+		&__i{
+			&_w{
+				img{
+					height: 500px;
+				}
+			}
+		}
+		&__topic{
+			font-size: 22px;
+		}
+		&__card{
+			width: 180px;
 		}
 	}
 }
