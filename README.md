@@ -4,7 +4,7 @@
 - [База знаний](https://jobers.vercel.app/blog.html)
 - [Рерайтинг компании](https://jobers.vercel.app/rewriting.html)
 - [Партнеры](https://jobers.vercel.app/partners.html)
-- [Страница благодарности](https://jobers.vercel.app/thank-you-page.html)
+- [Страница благодарности](https://jobers.vercel.app/thank-you.html)
 - [404](https://jobers.vercel.app/404.html)
 - [Информация об оплате](https://jobers.vercel.app/payment-info.html)
 - [Политика конфиденциальности](https://jobers.vercel.app/privacy_policy.html)
