@@ -1,0 +1,163 @@
+.timetopublic{
+	background: #fff;
+	padding: 115px 0 120px;
+	&__title{
+		text-align: center;
+		font-size: 72px;
+		line-height: 1;
+		margin-bottom: 60px;
+	}
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__item{
+		display: flex;
+		border: 2px solid #ececec;
+		border-radius: 10px;
+		width: 540px;
+		margin-bottom: 20px;
+		&:nth-child(2n + 1){
+			margin-right: 40px;
+		}
+	}
+	&__i{
+		padding: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #0E65F3;
+		border-radius: 10px;
+		img{
+			height: 64px;
+			width: 64px;
+			display: block;
+		}
+	}
+	&__content{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 20px 30px;
+	}
+	&__topic{
+		max-width: 300px;
+		font-size: 36px;
+		line-height: 1;
+		margin-bottom: 15px;
+	}
+	&__text{
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 1200.98px) {
+	.timetopublic{
+		.container{
+			width: 1000px;
+		}
+		&__item{
+			width: 480px;
+			&:nth-child(2n + 1){
+				margin-right: 0;
+			}
+		}
+		&__content{
+			padding: 20px;
+		}
+	}
+}
+@media (max-width: 1040.98px) {
+	.timetopublic{
+		.container{
+			width: 960px;
+		}
+		&__item{
+			width: 460px;
+		}
+	}
+}
+@media (max-width: 992.98px) {
+	.timetopublic{
+		.container{
+			width: 100%;
+			padding: 0 30px;
+		}
+		&__title{
+			font-size: 55px;
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&__list{
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		&__item{
+			width: 520px;
+			height: 160px;
+		}
+		&__topic{
+			font-size: 30px;
+			max-width: none;
+		}
+	}
+}
+@media (max-width: 768.98px) {
+	.timetopublic{
+		&__title{
+			font-size: 44px;
+		}
+		&__text{
+			font-size: 16px;
+		}
+		&__i{
+			img{
+				height: 48px;
+				width: 48px;
+			}
+		}
+	}
+}
+@media (max-width: 576.98px){
+	.timetopublic{
+		&__item{
+			width: 100%;
+		}
+	}
+}
+@media (max-width: 520.98px){
+	.timetopublic{
+		&__title{
+			font-size: 33px;
+		}
+		&__item{
+			flex-direction: column;
+			width: 360px;
+			height: auto;
+			text-align: center;
+		}
+		&__content{
+			padding: 20px 10px;
+		}
+	}
+}
+@media (max-width: 454.98px){
+	.timetopublic{
+		.container{
+			padding: 0 5px;
+		}
+		&__item{
+			width: 360px;
+		}
+	}
+}
+@media (max-width: 400.98px){
+	.timetopublic{
+		&__item{
+			width: 100%;
+		}
+	}
+}

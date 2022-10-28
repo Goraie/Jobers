@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		@@include('html/head.html', {"title": "Публикация вакансий в Telegram"})
+	</head>
+	<link rel="stylesheet" href="css/publication_vkontakte.css">
+<body>
+	@@include('html/header.html', {})
+
+	<section class="offer">
+		<div class="container">
+			<div class="offer__w">
+				<h1 class="offer__title">Публикация вакансий в <span>Telegram</span></h1>
+				<p class="offer__text">Разместим вашу вакансию <strong>во всех тематических сообществах</strong> по работе в вашем городе</p>
+				<div class="offer__i_m"><img src="@img/vk-offer-person.png" alt=""></div>
+				<a href="/" class="offer__btn btn">Разместить вакансию</a>
+			</div>
+			<div class="offer__i"><img src="@img/vk-offer-person.png" alt=""></div>
+		</div>
+	</section>
+	<section class="timetopublic">
+		<div class="container">
+			<h2 class="timetopublic__title">Когда необходимо публиковать вакансии в Telegram?</h2>
+			<div class="timetopublic__list">
+				<div class="timetopublic__item">
+					<div class="timetopublic__i"><img src="@img/timetopublic-1.svg" alt=""></div>
+					<div class="timetopublic__content">
+						<h3 class="timetopublic__topic">Мало откликов с работных сайтов</h3>
+						<p class="timetopublic__text">Вы хотели получать больше откликов и звонков от соискателей</p>
+					</div>
+				</div>
+				<div class="timetopublic__item">
+					<div class="timetopublic__i"><img src="@img/timetopublic-2.svg" alt=""></div>
+					<div class="timetopublic__content">
+						<h3 class="timetopublic__topic">Узкая специализация</h3>
+						<p class="timetopublic__text">В соц. сетях достаточно просто найти подходящую аудиторию для вашей вакансии</p>
+					</div>
+				</div>
+				<div class="timetopublic__item">
+					<div class="timetopublic__i"><img src="@img/timetopublic-3.svg" alt=""></div>
+					<div class="timetopublic__content">
+						<h3 class="timetopublic__topic">Необходимо срочный поиск</h3>
+						<p class="timetopublic__text">Вам нужно за минимальные сроки вывести сотрудника на работу</p>
+					</div>
+				</div>
+				<div class="timetopublic__item">
+					<div class="timetopublic__i"><img src="@img/timetopublic-4.svg" alt=""></div>
+					<div class="timetopublic__content">
+						<h3 class="timetopublic__topic">Массовый подбор</h3>
+						<p class="timetopublic__text">Вам необходимо много сотрудников, поэтому стоит охватить все источники</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	@@include('html/parts/start-search-personal.html', {})
+	<section class="postEx">
+		<div class="container">
+			<div class="postEx__l">
+				<h2 class="postEx__title">Примеры постов в <span>Telegram</span></h2>
+				<p class="postEx__text">
+					Многие специалисты ищут работу именно в карьерных сообществах Telegram. Мы подобрали релевантные группы с «живыми» подписчиками и высокой активностью.
+					В нашей базе более 100 сообществ, и она постоянно пополняется
+				</p>
+			</div>
+			<div class="postEx__swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="@img/vk-slider-1.png" alt=""></div>
+						<div class="swiper-slide"><img src="@img/vk-slider-2.png" alt=""></div>
+						<div class="swiper-slide"><img src="@img/vk-slider-3.png" alt=""></div>
+						<div class="swiper-slide"><img src="@img/vk-slider-4.png" alt=""></div>
+						<div class="swiper-slide"><img src="@img/vk-slider-1.png" alt=""></div>
+						<div class="swiper-slide"><img src="@img/vk-slider-2.png" alt=""></div>
+						<div class="swiper-slide"><img src="@img/vk-slider-3.png" alt=""></div>
+						<div class="swiper-slide"><img src="@img/vk-slider-4.png" alt=""></div>
+						<div class="swiper-slide"><img src="@img/vk-slider-1.png" alt=""></div>
+						<div class="swiper-slide"><img src="@img/vk-slider-2.png" alt=""></div>
+						<div class="swiper-slide"><img src="@img/vk-slider-3.png" alt=""></div>
+						<div class="swiper-slide"><img src="@img/vk-slider-4.png" alt=""></div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="postEx__btn-prev"><img src="@img/arrow-more.svg" alt=""></div>
+					<div class="postEx__btn-next"><img src="@img/arrow-more.svg" alt=""></div>
+			</div>
+		</div>
+	</section>
+	@@include('html/parts/posts-examples.html', {})
+	<section class="tariftoplace">
+		<div class="container">
+			<h2 class="tariftoplace__title"><span>Тарифы</span> на размещение вакансий</h2>
+			<p class="tariftoplace__text">Выберите город размещения</p>
+			<div class="tariftoplace__btn-w">
+				<button class="tariftoplace__btn active">Москва</button>
+				<button class="tariftoplace__btn">Санкт-Петербург</button>
+			</div>
+			<div class="tariftoplace__mobile">
+				<select class="tariftoplace__select">
+					<option value="Москва">Москва</option>
+					<option value="Санкт-Петербург">Санкт-Петербург</option>
+				</select>
+			</div>
+			<div class="tariftoplace__list">
+				<div class="tariftoplace__item">
+					<div class="tariftoplace__content">
+						<div class="tariftoplace__head">
+							<h4 class="tariftoplace__name">Минимальный</h4>
+							<p class="tariftoplace__descr">Более 1 000 000 подписчиков</p>
+						</div>
+						<div class="tariftoplace__main">
+							<p class="tariftoplace__point">Дополнительный услуги</p>
+							<label class="tariftoplace__label">
+								<input type="checkbox" class="tariftoplace__input">
+								<div class="tariftoplace__mask"><img src="@img/ok-gray.svg" alt=""></div>
+								<p class="tariftoplace__placeholder">Рерайтинг вакансии</p>
+							</label>
+							<p class="tariftoplace__point">Размещение</p>
+							<div class="tariftoplace__icon"><img src="@img/tg-icon.svg" alt=""><span class="tariftoplace__span"></span></div>
+							<div class="tariftoplace__places">
+								<img src="@img/tariftoplace-icon-1.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-2.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-3.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-4.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-5.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-3.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-4.jpg" alt="" class="tariftoplace__i">
+							</div>
+						</div>
+					</div>
+					<div class="tariftoplace__bottom">
+						<div class="tariftoplace__prices">
+							<p class="tariftoplace__sale">Скидка 10%</p>
+							<p class="tariftoplace__price">2750 ₽</p>
+						</div>
+						<a class="tariftoplace__buy btn">Заказать за 2480 ₽</a>
+					</div>
+				</div>
+				<div class="tariftoplace__item">
+					<div class="tariftoplace__content">
+						<div class="tariftoplace__head">
+							<h4 class="tariftoplace__name">Оптимальный</h4>
+							<p class="tariftoplace__descr">Более 1 500 000 подписчиков</p>
+						</div>
+						<div class="tariftoplace__main">
+							<p class="tariftoplace__point">Дополнительный услуги</p>
+							<label class="tariftoplace__label">
+								<input type="checkbox" class="tariftoplace__input">
+								<div class="tariftoplace__mask"><img src="@img/ok-gray.svg" alt=""></div>
+								<p class="tariftoplace__placeholder">Рерайтинг вакансии</p>
+							</label>
+							<p class="tariftoplace__point">Размещение</p>
+							<div class="tariftoplace__icon"><img src="@img/tg-icon.svg" alt=""><span class="tariftoplace__span"></span></div>
+							<div class="tariftoplace__places">
+								<img src="@img/tariftoplace-icon-1.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-2.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-3.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-4.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-3.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-5.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-4.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-3.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-4.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-5.jpg" alt="" class="tariftoplace__i">
+							</div>
+						</div>
+					</div>
+					<div class="tariftoplace__bottom">
+						<div class="tariftoplace__prices">
+							<p class="tariftoplace__sale">Скидка 10%</p>
+							<p class="tariftoplace__price">2750 ₽</p>
+						</div>
+						<a class="tariftoplace__buy btn">Заказать за 2480 ₽</a>
+					</div>
+				</div>
+				<div class="tariftoplace__item">
+					<div class="tariftoplace__content">
+						<div class="tariftoplace__head">
+							<h4 class="tariftoplace__name">Максимальный</h4>
+							<p class="tariftoplace__descr">Более 3 000 000 подписчиков</p>
+						</div>
+						<div class="tariftoplace__main">
+							<p class="tariftoplace__point">Дополнительный услуги</p>
+							<label class="tariftoplace__label">
+								<input type="checkbox" class="tariftoplace__input">
+								<div class="tariftoplace__mask"><img src="@img/ok-gray.svg" alt=""></div>
+								<p class="tariftoplace__placeholder">Рерайтинг вакансии</p>
+							</label>
+							<p class="tariftoplace__point">Размещение</p>
+							<div class="tariftoplace__icon"><img src="@img/tg-icon.svg" alt=""><span class="tariftoplace__span"></span></div>
+							<div class="tariftoplace__places">
+								<img src="@img/tariftoplace-icon-1.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-2.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-3.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-4.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-5.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-5.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-2.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-3.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-4.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-3.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-4.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-3.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-4.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-3.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-4.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-3.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-4.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-3.jpg" alt="" class="tariftoplace__i">
+								<img src="@img/tariftoplace-icon-4.jpg" alt="" class="tariftoplace__i">
+							</div>
+						</div>
+					</div>
+					<div class="tariftoplace__bottom">
+						<div class="tariftoplace__prices">
+							<p class="tariftoplace__sale">Скидка 10%</p>
+							<p class="tariftoplace__price">2750 ₽</p>
+						</div>
+						<a class="tariftoplace__buy btn">Заказать за 2480 ₽</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	@@include('html/parts/good-company.html', {})
+	@@include('html/parts/reports.html', {})
+	@@include('html/footer.html', {})
+	<script src="js/swiper.js"></script>
+	<script src="js/public_vac.js"></script>
+</body>
+</html>

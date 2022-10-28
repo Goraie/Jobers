@@ -27,3 +27,49 @@
 		margin-right: 20px;
 	}
 }
+
+@media (max-width: 1199.98px){
+	.good{
+		&__title{
+			font-size: 60px;
+		}
+	}
+}
+@media (max-width: 992.98px){
+	.good{
+		&__title{
+			font-size: 55px;
+		}
+		&__text{
+			font-size: 22px;
+		}
+	}
+}
+@media (max-width: 768.98px){
+	.good{
+		padding-bottom: 40px;
+		.container{
+			padding: 0 15px;
+		}
+	}
+}
+@media (max-width: 576.98px){
+	.good{
+		&__title{
+			font-size: 55px;
+		}
+		&__text{
+			font-size: 20px;
+		}
+	}
+}
+@media (max-width: 454.98px){
+	.good{
+		&__title{
+			font-size: 37px;
+		}
+		&__text{
+			font-size: 16px;
+		}
+	}
+}

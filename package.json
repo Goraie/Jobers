@@ -1,7 +1,7 @@
 {
   "name": "Jobers",
   "version": "1.0.0",
-  "description": "",
+  "description": "Develop by Earch",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
@@ -41,10 +41,10 @@
     "gulp-webpcss": "latest",
     "gulp-zip": "latest",
     "sass": "latest",
-    "swiper": "latest",
+    "swiper": "^8.4.4",
     "vinyl-ftp": "latest",
     "webp-converter": "2.2.3",
     "webpack": "latest",
-    "webpack-stream":"latest"
+    "webpack-stream": "latest"
   }
 }

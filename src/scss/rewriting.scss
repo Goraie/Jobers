@@ -285,6 +285,7 @@ h1,h2,h3,h4{
 		line-height: 1;
 		min-width: 150px;
 		font-weight: 600;
+		
 	}
 }
 
@@ -458,9 +459,6 @@ h1,h2,h3,h4{
 			display: block;
 		}
 	}
-	.good{
-		display: none;
-	}
 	.find{
 		&__title{
 			margin: 0 auto;
@@ -486,6 +484,9 @@ h1,h2,h3,h4{
 			&:not(:first-of-type){
 				margin-top: 20px;
 			}
+			&:not(:last-of-type) {
+				margin-right: 0;
+			}
 		}
 		&__w{
 			display: block;
@@ -508,6 +509,9 @@ h1,h2,h3,h4{
 @media (max-width: 768.98px){
 	.offer{
 		padding-top: 120px;
+		&__title{
+			margin-top: 30px;
+		}
 		&-item{
 			&__text{
 				width: 220px;
@@ -515,8 +519,12 @@ h1,h2,h3,h4{
 		}
 	}
 	.rewriting{
+		.container{
+			width: 100%;
+			padding: 0 30px;
+		}
 		&__item{
-			width: 520px;
+			width: 100%;
 			margin: 20px auto 0;
 		}
 		&__title{
@@ -526,6 +534,9 @@ h1,h2,h3,h4{
 	.find{
 		&__wr{
 			width: 100%;
+		}
+		&__title{
+			font-size: 55px;
 		}
 		&__list{
 			margin-right: 0;
@@ -542,6 +553,144 @@ h1,h2,h3,h4{
 		}
 		&__card{
 			width: 180px;
+		}
+	}
+}
+@media (max-width: 576.98px){
+	.offer{
+		&__title{
+			font-size: 56px;
+			margin-top: 20px;
+		}
+		&__text{
+			font-size: 16px;
+			width: 300px;
+			line-height: 1.2;
+		}
+		&__advantges{
+			position: relative;
+			width: 100%;
+			align-items: flex-start;
+		}
+		&__cont{
+			padding-top: 40px;
+		}
+		&__you{
+			font-size: 24px;
+			line-height: 1;
+		}
+		&-item{
+			width: fit-content;
+			&__span{
+				height: 45px;
+				width: 45px;
+				padding: 15px;
+				font-size: 12px;
+				margin-right: 10px;
+			}
+			&__text{
+				font-size: 13px;
+				width: 140px;
+			}
+		}
+		&__cont{
+			position: relative;
+			z-index: 2;
+		}
+		&__btn{
+			width: 320px;
+			text-align: center;
+			padding: 20px;
+		}
+		&__i{
+			&-m{
+				position: absolute;
+				z-index: 0;
+				right: 0;
+				bottom: -40px;
+			}
+		}
+	}
+	.rewriting{
+		.container{
+			padding: 0 15px;
+		}
+		&__title{
+			font-size: 37px;
+		}
+	}
+	.find{
+		.container{
+			padding: 0 10px;
+		}
+		&__text{
+			font-size: 16px;
+		}
+		&__wr{
+			justify-content: end;
+			padding-top: 20px;;
+		}
+		&__cont{
+			position: relative;
+		}
+		&__list{
+			position: relative;
+			z-index: 0;
+		}
+		&__i{
+			&_w{
+				position: absolute;
+				z-index: 2;
+				left: -100px;
+				bottom: 0;
+				img{
+					height: 580px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 454.98px){
+	.offer{
+		overflow: hidden;
+		.container{
+			padding: 0 15px;
+		}
+		&__i{
+			&-m{
+				position: absolute;
+				z-index: 0;
+				right: -50px;
+				bottom: -40px;
+			}
+		}
+		&__title{
+			margin-top: 0;
+		}
+		&__btn{
+			width: 100%;
+			max-width: 350px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&__advantges{
+			display: block;
+		}
+	}
+	.find{
+		&__card{
+			width: 160px;
+		}
+		&__topic{
+			font-size: 20px;
+		}
+		&__i{
+			&_w{
+				left: -160px;
+				img{
+					height: 580px;
+				}
+			}
 		}
 	}
 }

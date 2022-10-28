@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		@@include('html/head.html', {"title": "Публикация вакансий во Вконтакте"})
+	</head>
+	<link rel="stylesheet" href="css/publication_vkontakte.css">
+<body>
+	@@include('html/header.html', {})
+
+	<section class="offer">
+		<div class="container">
+			<div class="offer__w">
+				<h1 class="offer__title">Публикация вакансий во <span>Вконтакте</span></h1>
+				<p class="offer__text">Разместим вашу вакансию <strong>во всех тематических группах</strong> по работе в вашем городе</p>
+				<div class="offer__i_m"><img src="@img/vk-offer-person.png" alt=""></div>
+				<a href="/" class="offer__btn btn">Разместить вакансию</a>
+			</div>
+			<div class="offer__i"><img src="@img/vk-offer-person.png" alt=""></div>
+		</div>
+	</section>
+
+	@@include('html/parts/timetopublic.html', {})
+	@@include('html/parts/start-search-personal.html', {})
+	@@include('html/parts/posts-examples.html', {})
+	@@include('html/parts/tarif-to-place-v.html', {})
+	@@include('html/parts/good-company.html', {})
+	@@include('html/parts/reports.html', {})
+	@@include('html/footer.html', {})
+	<script src="js/swiper.js"></script>
+	<script src="js/public_vac.js"></script>
+</body>
+</html>

@@ -19,9 +19,6 @@ function isWebp() {
 
 isWebp()
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
-
-
 const menu = document.querySelectorAll('.header__item')
 
 function menuSelect() {
