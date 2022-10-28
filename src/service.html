@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('html/head.html', {"title": "О сервисе"})
+	<link rel="stylesheet" href="css/service.css">
+</head>
+<body>
+	@@include('html/header.html', {})
+
+	<section class="offer">
+		<div class="container-w">
+			<div class="container">
+				<h1 class="offer__title">О компани Jobers.<span>ru</span></h1>
+				<p class="offer__text">Наша массия - упростить поиск персонала для рекрутеров и предпринимателей</p>
+				<img src="@img/service-bg.png" class="offer__i" alt="">
+			</div>
+			<div class="offer__bar-w">
+				<div class="offer__bar">
+					<p class="offer__p">Наши соц. сети</p>
+					<div class="offer__btns">
+						<a href="/" class="offer__btn offer__fb"></a>
+						<a href="/" class="offer__btn offer__tg"></a>
+						<a href="/" class="offer__btn offer__wtsp"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="system">
+		<div class="container">
+			<div class="system__l">
+				<div class="system__item">
+					<h3 class="system__subtitle">Представьте ситуацию</h3>
+					<p class="system__text">
+						В вашей компании появилась вакансия, и у вас есть буквально пара дней
+						на поиск нового сотрудника. Вы начинаете размещать объявления
+						на бесплатных работных сайтах, <strong>но не получаете откликов!</strong>
+					</p>
+					<p class="system__text">
+						<strong>В отчаянии вы покупаете подписку на платном ресурсе</strong>, но на предложение
+						отзываются 2-3 нерелевантных кандидата. Вы перебираете другие рекламные
+						каналы и после нескольких попыток находите нужного претендента.
+					</p>
+					<p class="system__text">
+						<strong>Результат такой кампании</strong> - крупные расходы и десятки часов потраченного времени.
+					</p>
+				</div>
+				<div class="system__item">
+					<h3 class="system__subtitle">Почему такой подход <span>неэффективен</span>?</h3>
+					<p class="system__text">
+						— <strong>сложно оценить</strong>, какой именно ресурс дал нужный результат;
+					</p>
+					<p class="system__text">
+						— <strong>много времени</strong> уходит на адаптацию объявления к определенному интерфейсу;
+					</p>
+					<p class="system__text">
+						— <strong>необходимость экономить</strong>, бюджет не позволяет размещать вакансию более чем в 2-3 источниках;
+					</p>
+					<p class="system__text">
+						— <strong>ответы кандидатов рассеяны</strong> по нескольким личным кабинетам, не всегда удается вовремя их обработать;
+					</p>
+					<p class="system__text">
+						— <strong>нет возможности собрать нужную статистику</strong>, чтобы выявить наиболее подходящий работный сайт.					</p>
+				</div>
+				<div class="system__item">
+					<h3 class="system__subtitle">Миссия Jobers.<span>ru</span></h3>
+					<p class="system__text">
+						<strong>Предоставить сотрудникам HR-служб возможность работать со всеми
+							 лучшими кадровыми ресурсами</strong>, размещать вакансии за 5 минут на 
+							 десятках сайтов и собирать все отклики и статистику в один личный кабинет.
+					</p>
+					<p class="system__text">
+						<strong>Мы помогаем быстро найти лучших сотрудников и минимизировать расходы на привлечение персонала.</strong>
+					</p>
+				</div>
+			</div>
+			<div class="system-r">
+				<h1 class="system__title">Мы делаем систему автоматизации</h1>
+				<img src="@img/system-we.png" class="system__i" alt="">
+			</div>
+		</div>
+	</section>
+	<section class="now">
+		<div class="container">
+			<h2 class="now__title">Jobers сегодня:</h2>
+			<div class="now__list">
+				<div class="now__item">
+					<h3 class="now__num">2500+</h3>
+					<hr>
+					<p class="now__point">Размещаем вакансий в год</p>
+				</div>
+				<div class="now__item">
+					<h3 class="now__num">5</h3>
+					<hr>
+					<p class="now__point">Минут уходит на публикацию</p>
+				</div>
+				<div class="now__item">
+					<h3 class="now__num">63</h3>
+					<hr>
+					<p class="now__point">Сайта интегрировано</p>
+				</div>
+			</div>
+			<div class="now__good">
+				<div class="now__i"><img src="@img/service-now.png" alt=""></div>
+				<div class="now__content">
+					<h3 class="now__heading">У нас хорошо получается</h3>
+					<p class="now__text">
+						<strong>С 2018 года мы помогаем предпринимателям и рекрутерам</strong> находить сотрудников
+						быстрее за счет автоматизации процесса размещения.
+					</p>
+					<p class="now__text">
+						<strong>Наша цель - стать компанией №1</strong> среди систем автоматизации hr процессов
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	@@include('html/footer.html', {})
+	<script src="js/swiper.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>

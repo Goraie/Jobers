@@ -20,6 +20,7 @@
 			background: url('../img/arrow-more-white.svg') no-repeat center center / 12px,#0E65F3;
 		}
 		&.swiper-button-disabled{
+			cursor: default;
 			opacity: 0;
 		}
 	}
