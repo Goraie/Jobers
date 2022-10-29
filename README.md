@@ -2,6 +2,7 @@
 
 - [Главная страница](https://jobers.vercel.app/)
 - [База знаний](https://jobers.vercel.app/blog.html)
+- [Подбор персонала](https://jobers.vercel.app/recruiting.html)
 - [Рерайтинг компании](https://jobers.vercel.app/rewriting.html)
 - [Партнеры](https://jobers.vercel.app/partners.html)
 - [Страница благодарности](https://jobers.vercel.app/thank-you.html)
