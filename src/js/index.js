@@ -1,25 +1,28 @@
 const rateBtns = document.querySelectorAll('.rate__btn')
+const tariff = document.querySelectorAll('.rate__tariff .rate__flex .rate__once')
+console.log(tariff);
+function changeTariffData() {
+	for(let i =0 ; i < tariff.length; i++){
+		tariff[i].classList.toggle('none')
+	}
+}
 
 rateBtns.forEach(item => {
 	item.addEventListener('click', () => {
 		if(!item.classList.contains('active')){
 			rateBtns.forEach(elem => {
 				elem.classList.toggle('active')
+				tariff.forEach(item => {
+					if(item.classList.contains('none')){
+						item.classList.remove('none')
+					} else {
+						item.classList.add('none')
+					}
+				})
 			})
 		}
 	})
 })
-
-// const sitesAll = document.querySelectorAll('.sites__row'),
-// 			desktopCarousel = document.querySelector('.sites__carousel'),
-// 			mobileCarousel = document.querySelector('.sites__mobile')
-
-// // window.addEventListener('resize', (e) => runSitesSlider())
-
-// function runSitesSlider(){
-// }
-
-// // 
 
 function animateSlider(el, duration, dir) {
   const innerEl = el.querySelector('.sites__carousel');
@@ -48,4 +51,4 @@ function animateSlider(el, duration, dir) {
     requestAnimationFrame(step);
   });
 }
-animateSlider(document.querySelector('.sites__slider-w'), 20000, window.innerWidth > 992 ? 'v' : 'h' );
+animateSlider(document.querySelector('.sites__slider-w'), window.innerWidth > 992 ? 20000 : 50000 , window.innerWidth > 992 ? 'v' : 'h' );

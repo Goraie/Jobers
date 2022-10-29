@@ -235,7 +235,12 @@ function animateSlider(el, duration, dir, searchEls, numClone = 1) {
   });
 }
 
-if(indexRunning)
-	animateSlider(indexRunning, 20000, window.innerWidth > 992 ? 'v' : 'h', '.sites__carousel');
+if(indexRunning){
+	if(window.innerWidth > 992){
+		animateSlider(indexRunning, 20000,'v', '.sites__carousel');
+	} else {
+		animateSlider(indexRunning, 40000,'h', '.sites__carousel');
+	}
+}
 if(findRunning)
 	animateSlider(findRunning, 22000, 'h', '.good__row', 3);

@@ -38,33 +38,39 @@
 	&__p{
 		color: var(--hover);
 		font-size: 22px;
-		display: flex;
-		align-items: center;
-		margin-right: 180px;
-		writing-mode: vertical-rl; 
-		&::before{
-			content: '';
-			transform: rotate(-90deg);
-			margin-right: 40px;
-			display: block;
-			width: 70px;
-			height: 8px;
-			background: url('@img/arrow-long-gray.svg') no-repeat center center;
-		}
+		width: 200px;
+		transform: rotate(-90deg);
+		top: 0;
+		left: 0;
 	}
 	&__btns{
 		width: fit-content;
 	}
+	&__deg{
+		position: relative;
+		height: 400px;
+		width: 40px;
+	}
+	&__soc{
+		writing-mode: vertical-lr;
+		margin-bottom: 40px;
+		color: var(--hover);
+		font-size: 22px;
+		transform: rotate(180deg);
+	}
 	&__bar{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		&-w{
 			position: absolute;
 			right: 0;
-			width: 40px;
-			top: 30%;
+			top: 20%;
 		}
 		height: 600px;
-		display: flex;
-		flex-direction: column;
+		img{
+			display: block;
+		}
 	}
 	&__btn{
 		margin-top: 40px;
@@ -161,6 +167,7 @@
 		width: 140px;
 		margin: 0 auto;
 		display: block;
+		height: 2px;
 	}
 	&__num{
 		line-height: 1;
@@ -170,5 +177,397 @@
 	}
 	&__point{
 		font-size: 24px;
+	}
+	&__good{
+		box-shadow: 0px 17px 76px rgba(0, 0, 0, 0.05);
+		margin-top: 30px;
+		background: #fff;
+		border-radius: 15px;
+		padding: 50px 30px;
+		position: relative;
+	}
+	&__i{
+		position: absolute;
+		bottom: 0;
+		left: 20px;
+		img{
+			height: 400px;
+		}
+	}
+	&__content{
+		margin-left: auto;
+		max-width: 780px;
+	}
+	&__heading{
+		margin-bottom: 40px;
+		font-size: 64px;
+		line-height: 1;
+		font-weight: 600;
+	}
+	&__text{
+		font-size: 22px;
+		line-height: 1.5;
+		strong{
+			font-weight: 600;
+		}
+	}
+}
+
+// appreciate
+
+.appreciate{
+	padding: 40px 0;
+	background: #fff;
+	&__w{
+		align-items: center;
+		display: flex;
+	}
+	&__text{
+		font-size: 18px;
+		margin-top: 20px;
+		line-height: 1.4;
+		strong{
+			font-weight: 700;
+		}
+		span{
+			color: var(--accent);
+		}
+	}
+	&__title{
+		font-size: 72px;
+		margin-bottom: 60px;
+		line-height: 1;
+		font-weight: 600;
+	}
+	&__l{
+		.appreciate__text{
+			font-size: 22px;
+			margin-top: 30px;
+		}
+	}
+	&__i{
+		&_m{
+			display: none;
+		}
+		img{
+			height: 720px;
+		}
+	}
+}
+
+@media (max-width: 1300px){
+	.offer{
+		.container-w{
+			width: 1150px;
+		}
+	}
+}
+@media (max-width: 1200px){
+	.offer{
+		.container-w{
+			width: fit-content;
+		}
+		&__title{
+			font-size: 72px;
+		}
+		&__bar{
+			&-w{
+				display: none;
+			}
+		}
+	}
+	
+	.system{
+		&__title{
+			font-size: 60px;
+			line-height: 1.2;
+		}
+		&__l{
+			padding-right: 0;
+		}
+		&__r{
+			padding-left: 20px;
+		}
+		&__i{
+			margin-top: 60px;
+			height: 600px;
+		}
+	}
+	.now{
+		&__title{
+			font-size: 60px;
+		}
+		&__num{
+			font-size: 80px;
+		}
+		&__item{
+			padding: 28px 15px;
+			width: 300px;
+		}
+		&__heading{
+			font-size: 50px;
+		}
+		&__content{
+			max-width: 650px;
+		}
+		&__text{
+			font-size: 20px;
+		}
+		&__point{
+			font-size: 20px;
+		}
+
+	}
+}
+
+@media (max-width: 992.98px) {
+	.system{
+		.container{
+			flex-direction: column-reverse;
+			align-items: center;
+			justify-content: center;
+			width: 520px;
+			padding: 0;
+		}
+		&__r{
+			padding: 0;
+		}
+		&__title{
+			text-align: center;
+			font-size: 55px;
+		}
+	}
+	.now{
+		.container{
+			width: 620px;
+			padding: 0;
+		}
+		&__list{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__item{
+			height: 220px;
+			text-align: center;
+			&:first-of-type{
+				margin-bottom: 20px;
+				margin-right: 50px;
+				margin-left: 50px;
+			}
+			&:last-of-type{
+				margin-left: 20px;
+			}
+		}
+		&__good{
+			padding: 20px;
+		}
+		&__content{
+			width: 300px;
+		}
+		&__heading{
+			margin-top: 40px;
+			font-size: 40px;
+		}
+		&__text{
+			font-size: 16px;
+		}
+	}
+	.appreciate{
+		.container{
+			width: 600px;
+		}
+		&__title{
+			text-align: center;
+			font-size: 55px;
+			margin-bottom: 20px;
+		}
+		&__i{
+			display: none;
+			&_m{
+				display: block;
+				img{
+					display: block;
+					margin: 0 auto;
+					height: 500px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768.98px){
+	.offer{
+		padding-top: 135px;
+		&__title{
+			font-size: 44px;
+		}
+		&__text{
+			font-size: 16px;
+		}
+	}
+	.system{
+		&__title{
+			font-size: 44px;
+		}
+		&__i{
+			height: 500px;
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+	}
+	.now{
+		.container{
+			width: 560px;
+		}
+		&__title{
+			font-size: 44px;
+			margin-bottom: 60px;
+		}
+		&__list{
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		&__item{
+			height: 220px;
+			text-align: center;
+			margin-top: 40px;
+			&:first-of-type{
+				margin: 0;
+			}
+			&:last-of-type{
+				margin-left: 0;
+			}
+		}
+		&__good{
+			flex-direction: column;
+			width: 310px;
+			padding-top: 160px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 40px;
+		}
+		&__i{
+			top: 0;
+			left: 45px;
+			z-index: 0;
+			img{
+				height: 320px;
+			}
+		}
+		&__content{
+			position: relative;
+			padding-top: 40px;
+			background: rgb(255,255,255);
+			background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 62%, rgba(255,255,255,0.6951155462184874) 80%, rgba(255,255,255,0) 100%);
+			z-index: 2;
+			width: 100%;
+		}
+		&__heading{
+			margin-top: 10px;
+			text-align: center;
+		}
+	}
+	.appreciate{
+		.container{
+			width: 560px;
+		}
+		&__title{
+			font-size: 44px;
+		}
+		&__i{
+			&_m{
+				img{
+					height: 400px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576.98px){
+	.offer{
+		&__title{
+			font-size: 55px;
+			line-height: 1;
+		}
+	}
+	.system{
+		.container{
+			width: 100%;
+			padding: 0 30px;
+		}
+		&__title{
+			font-size: 37px;
+		}
+		&__subtitle, &__topic{
+			font-size: 28px;
+		}
+		&__i{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.now{
+		&__title{
+			font-size: 44px;
+		}
+		.container{
+			width: 100%;
+			padding: 0 30px;
+		}
+		&__text{
+			font-size: 14px;
+		}
+	}
+	.appreciate{
+		.container{
+			width: 100%;
+			padding: 0 30px;
+		}
+		&__w{
+			.appreciate__text{
+				font-size: 16px;
+			}
+		}
+		.appreciate__text{
+			font-size: 16px;
+		}
+	}
+}
+@media (max-width: 454.98px){
+	.offer{
+		.container{
+			padding: 0;
+		}
+		&__text{
+			font-size: 15px;
+		}
+	}
+	.system{
+		.container{
+			padding: 0 15px;
+		}
+	}
+	.now{
+		padding-top: 80px;
+		.container{
+			padding: 0;
+		}
+		&__title{
+			font-size: 37px;
+		}
+	}
+	.appreciate{
+		&__i{
+			&_m{
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
 	}
 }

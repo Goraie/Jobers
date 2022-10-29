@@ -61,6 +61,7 @@ h1,h2,h3,h4{
 }
 a.offer__btn{
 	width: fit-content;
+	font-weight: 600;
 }
 .offer__under{
 	margin-top: 15px;
@@ -305,7 +306,7 @@ a.offer__btn{
 			background: url('@img/world.svg') no-repeat;
 		}
 	}
-	.sites__plus{
+	&__plus{
 		font-size: 24px;
 		font-weight: 600;
 		margin-bottom: 10px;
@@ -330,10 +331,11 @@ a.offer__btn{
 		box-sizing: border-box;
 		width: 400px;
 	}
-	.rate__btn{
+	&__btn{
 		transition: background 0.15s ease-out;
 		margin: 0;
 		display: block;
+		font-weight: 600;
 		height: 100%;
 		padding: 15px 20px;
 		width: 200px;
@@ -345,6 +347,12 @@ a.offer__btn{
 			background: var(--accent);
 			color: #fff;
 		}
+		&_m{
+			display: none;
+		}
+		&:focus-visible{
+			outline: none;
+		}
 	}
 	&__col{
 		width: 25%;
@@ -352,15 +360,206 @@ a.offer__btn{
 	&__type{
 		font-size: 18px;
 		font-weight: 600;
+		line-height: 1;
+		margin: 0;
+		display: block;
 	}
 	&__about{
 		font-size: 14px;
+		margin-top: auto;
+		display: block;
+		line-height: 1;
 		&_large{
 			font-size: 12px;
 		}
 	}
+	&__flex{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 	&__stat{
-		padding-right: 20px;
+		margin-top: 30px;
+		width: 200px;
+	}
+	&__place{
+		width: 100%;
+		margin-top: 40px;
+		position: relative;
+		z-index: 2;
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	&__item{
+		height: 68px;
+		padding: 8px 0 12px;
+		width: 220px;
+		margin: 0 auto;
+		&:not(:last-of-type){
+			&.rate__item_info{
+				&::after{
+					content: '';
+					margin-top: 10px;
+					position: absolute;
+					z-index: 2;
+					display: block;
+					background: var(--btn-bg);
+					width: 100%;
+					height: 2px;
+				}
+			}
+		}
+		.rate__site{
+			height: 100%;
+			max-width: 120px;
+			display: block;
+			object-fit: contain;
+		}
+	}
+	&__tariff{
+		width: 240px;
+		text-align: center;
+		padding: 30px 0;
+		position: relative;
+		border-radius: 15px;
+		z-index: 4;
+		transition: background 0.2s ease-out, box-shadow 0.2s ease-out;
+		&:hover{
+			box-shadow: var(--box-sh);
+			background: #fff;
+		}
+	}
+	&__name{
+
+	}
+	&__link{
+
+	}
+	&__price{
+
+		&.rate__once{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	&__decision{
+		height: 16px;
+		display: block;
+		margin: auto;
+		font-size: 14px;
+		line-height: 1.3;
+	}
+	&__once{
+		display: flex;
+	}
+	.none{
+		display: none;
+	}
+	&__buy{
+		&-w{
+			margin-top: 20px;
+			height: auto;
+		}
+		color: var(--accent);
+		background: var(--btn-bg);
+		border-radius: 5px;
+		font-size: 16px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 15px 10px;
+		margin: 20px auto 0;
+		height: 50px;
+		display: block;
+		width: 100%;
+		transition: background 0.25s ease-out, color 0.25s ease-out;
+		&:hover{
+			background: #026fc2;
+			color: #fff;
+		}
+	}
+	&__select{
+		padding: 5px 15px;
+		border: 1px solid #979797;
+		background: #fff;
+		width: 100%;
+		margin: 0 auto;
+		color: #101011;
+		border-radius: 5px;
+		font-size: 16px;
+		&:focus-visible{
+			outline: none;
+		}
+	}
+	&-m{
+		display: none;
+		width: 500px;
+		margin: 0 auto;
+		margin-top: 50px;
+		&__card{
+			border-radius: 10px;
+			background: #fff;
+			padding: 30px 20px;
+			margin-top: 40px;	
+		}
+		&__name{
+			font-size: 30px;
+			color: var(--accent);
+		}
+		&__price{
+			font-weight: 700;
+			font-size: 46px;
+			line-height: 1;
+			display: block;
+		}
+		&__undertext{
+			font-size: 16px;
+			color: var(--hover);
+			margin-bottom: 30px;
+			display: block;
+		}
+		&__topic{
+			font-size: 20px;
+			color: var(--hover);
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			&::before{
+				content: '';
+				margin-right: 10px;
+				width: 20px;
+				height: 20px;
+				background: url('@img/ok.svg') no-repeat center center / contain;
+			}
+			&.no{
+				&::before{
+					background: url('@img/not-ok.svg') no-repeat center center / contain;
+				}
+			}
+		}
+		&__inf{
+			width: 20px;
+			height: 20px;
+			display: block;
+			margin-left: 10px;
+			background: url('@img/sign-cond.svg') no-repeat center center / contain;
+		}
+		&__text{
+			font-size: 16px;
+			color: var(--hover);
+			margin: 5px 0 20px;
+		}
+		.rate__item{
+			margin-top: 30px;
+			width: 100%;
+		}
+		.rate__buy{
+			font-size: 13px;
+			height: auto;
+			padding: 30px;
+		}
 	}
 }
 
@@ -445,6 +644,7 @@ a.offer__btn{
 	&__text{
 		font-size: 24px;
 		margin: 21px 0 60px;
+		font-weight: 600;
 	}
 	&__w{
 		display: flex;
@@ -506,6 +706,8 @@ a.more-link{
 	}
 	&__only{
 		font-size: 24px;
+		color: var(--accent);
+		font-weight: 600;
 		margin-bottom: 10px;
 	}
 	&__title{
@@ -926,6 +1128,22 @@ a.more-link{
 				animation: 10s personSwing infinite;
 			}
 		}
+		&__place{
+			display: none;
+			&_m{
+				display: block;
+			}
+		}
+	}
+	.start-employee{
+		&__title{
+			font-size: 55px;
+		}
+	}
+	.employee-card{
+		&__title{
+			font-size: 30px;
+		}
 	}
 	.ident-tasks{
 		&__i{
@@ -933,7 +1151,7 @@ a.more-link{
 		}
 		&__cont{
 			margin: 0;
-			width: 100vw;
+			width: 100%;
 		}
 		&__title{
 			text-align: center;
@@ -952,6 +1170,7 @@ a.more-link{
 		&__item{
 			max-width: none;
 			width: 250px;
+			font-size: 20px;
 		}
 	}
 	.managment{
@@ -961,7 +1180,8 @@ a.more-link{
 		}
 		&__descr{
 			text-align: center;
-			margin: 0 auto 30px
+			margin: 0 auto 30px;
+			font-size: 24px;
 		}
 		&__btn{
 			display: block;
@@ -987,6 +1207,14 @@ a.more-link{
 		}
 		&__w{
 			margin-bottom: 30px;
+		}
+	}
+	.sites{
+		&__plus{
+			font-size: 20px;
+		}
+		&__text{
+			font-size: 14px;
 		}
 	}
 	.download{
@@ -1042,6 +1270,27 @@ a.more-link{
 	.ident-tasks{
 		.container{
 			width: 100vw;
+		}
+		&__num{
+			font-size: 20px;
+		}
+	}
+	.rate{
+		&__place{
+			display: none;
+			&_m{
+				display: block;
+			}
+		}
+		&__btn{
+			display: none;
+			width: 100%;
+			text-align: left;
+			&_m{
+				display: block;
+			}
+		}
+		&-m{
 		}
 	}
 	.sites{
@@ -1099,6 +1348,47 @@ a.more-link{
 			margin: 20px auto 80px;
 		}
 	}
+	.collect{
+		&__title{
+			font-size: 38px;
+		}
+		&__text{
+			font-size: 22px;
+		}
+	}
+	.call-tracking{
+		&__title{
+			font-size: 36px;
+			line-height: 1;
+		}
+		&__text{
+			font-size: 18px;
+		}
+		&__i{
+			padding-right: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img{
+				display: block;
+				margin: auto;
+				height: 120px;
+			}
+		}
+	}
+	.work-with{
+		margin-bottom: 60px;
+		&__i{
+			img {
+				filter: none;
+			}
+		}
+	}
+	.cases{
+		&__text{
+			font-size: 20px;
+		}
+	}
 	.personal{
 		&__w{
 			flex-direction: column;
@@ -1110,16 +1400,518 @@ a.more-link{
 				margin-bottom: 40px;
 			}
 		}
+		&__text{
+			font-size: 20px;
+			max-width: 400px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.garanties{
+		&__w{
+			flex-direction: column;
+			padding: 40px;
+			text-align: left;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+		&__i{
+			margin-bottom: 20px;
+			img{
+				height: 120px;
+			}
+		}
+		&__title{
+			font-size: 44px;
+		}
+		&__cont{
+			margin-left: 0;
+		}
 	}
 }
 @media(max-width: 768.98px){
-
+	.offer__title, .start-employee__title, .mail__title, .sites__title, .download__title,
+	.personal__title, .work-with__title, .cases__title, .rate__title {
+		font-size: 44px;
+	}
+	.offer{
+		&__mobile{
+			width: 490px;
+			height: 490px;
+			&_bg, &_person{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&__btn{
+			font-size: 20px;
+		}
+		&__title{
+			margin-bottom: 30px;
+		}
+		&__subtext{
+			font-size: 16px;
+		}
+		&__under{
+			font-size: 12px;
+		}
+	}
+	.ident-tasks{
+		&__title{
+			width: 100%;
+			font-size: 42px;
+		}
+		&__list{
+			width: 100%;
+			max-height: 400px;
+		}
+		&__item{
+			width: 240px;
+			font-size: 16px;
+		}
+	}
+	.managment{
+		&__w{
+			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.rate{
+		&-m{
+			&__price{
+				font-size: 46px;
+			}
+		}
+	}
+	.collect{
+		&__w{
+			flex-direction: column;
+		}
+		&_i{
+			margin-bottom: 20px;
+			img{
+				height: 100px;
+			}
+		}
+		&__text{
+			font-size: 20px;
+		}
+		&__title{
+			font-size: 34px;
+		}
+		&__btn{
+			font-size: 18px;
+		}
+		&__cont{
+			padding: 0;
+			text-align: center;
+		}
+	}
+	.download{
+		.container{
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			text-align: center;
+			padding: 0 30px;
+		}
+		&__title{
+			text-align: center;
+		}
+		&__text{
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&__weight{
+			margin-right: 0;
+		}
+		&__i{
+			width: 100%;
+			img{
+				width: 100%;
+				height: 100%;
+				margin: 0;
+			}
+		}
+	}
+	.personal{
+		&__text{
+			font-size: 16px;
+		}
+	}
+	.call-tracking{
+		&__w{
+			padding: 20px;
+			flex-direction: column;
+			text-align: center;
+			justify-content: center;
+		}
+		&__title{
+			font-size: 32px;
+		}
+		&__text{
+			font-size: 16px;
+		}
+	}
+	.work-with{
+		&__text{
+			font-size: 16px;
+		}
+	}
+	.cases{
+		&__cont{
+			width: 100%;
+		}
+		&__text{
+			font-size: 18px;
+		}
+		&__list{
+			width: 100%;
+			flex-direction: column;
+		}
+		&-card{
+			margin: 20px auto 0;
+		}
+	}
+	.garanties{
+		&__i{
+			display: none;
+		}
+		&__titw{
+			display: flex;
+			align-items: flex-end;
+			.garanties__i{
+				margin-right: 30px;
+				display: block;
+			}
+		}
+		&__text{
+			font-size: 16px;
+		}
+		&__item{
+			font-size: 14px;
+		}
+	}
+	.call-tracking{
+		&__cont{
+			max-width: none;
+		}
+	}
+	.work-with{
+		&__text{
+			max-width: none;
+		}
+	}
 }
 @media(max-width: 576.98px){
-
+	.offer__title, .start-employee__title, .mail__title, .sites__title, .download__title,
+	.personal__title, .work-with__title, .cases__title, .rate__title {
+		font-size: 37px;
+	}
+	.offer{
+		&__mobile{
+			width: 400px;
+			height: 400px;
+		}
+		&__btn{
+			font-size: 22px;
+		}
+		&__under{
+			font-size: 15px;
+		}
+	}
+	.managment{
+		padding: 60px 0;
+		&__title{
+			font-size: 35px;
+		}
+	}
+	.start-employee{
+		&__under{
+			font-size: 16px;
+		}
+	}
+	.ident-tasks{
+		&__title{
+			font-size: 30px;
+			text-align: left;
+			margin-bottom: 30px;
+		}
+		&__list{
+			max-height: none;
+			flex-direction: column;
+			width: 100%;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		&__item{
+			width: 100%;
+		}
+		&__num{
+			font-size: 18px;
+		}
+	}
+	.sites{
+		&__title{
+			font-size: 29px;
+			width: 100%;
+		}
+		&__text{
+			font-size: 12px;
+		}
+		.sites__content .sites__el .sites__w {
+			max-width: 320px;
+		}
+		&-mobile{
+			width: 100%;
+		}
+		&__plus{
+			font-size: 16px;
+		}
+		&__item{
+			width: 120px;
+			height: 120px;
+			img{
+				max-width: 110px;
+			}
+			p{
+				bottom: 10px;
+			}
+		}
+		&__btn{
+			font-size: 18px;
+		}
+	}
+	.rate{
+		&-m{
+			width: 100%;
+			&__name{
+				font-size: 18px;
+			}
+			&__text{
+				font-size: 12px;
+			}
+			&__topic{
+				font-size: 18px;
+			}
+		}
+	}
+	.collect{
+		&__text{
+			font-size: 16px;
+		}
+		&__title{
+			font-size: 35px;
+		}
+	}
+	.download{
+		&__text{
+			font-size: 16px;
+		}
+		&__btn{
+			font-size: 18px;
+			padding: 20px;
+		}
+		&__weight{
+			font-size: 12px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.personal{
+		&__text{
+			font-size: 14px;
+		}
+		&-card{
+			&__title{
+				font-size: 20px;
+			}
+			&__text{
+				font-size: 14px;
+			}
+			&__btn{
+				font-weight: 600;
+			}
+		}
+	}
+	.call-tracking{
+		&__only{
+			font-size: 22px;
+		}
+		&__title{
+			font-size: 25px;
+		}
+		&__text{
+			font-size: 16px;
+		}
+	}
+	.work-with{
+		&__title{
+			font-size: 33px;
+		}
+		&__text{
+			max-width: 250px;
+			font-size: 14px;
+		}
+		&__i{
+			width: 150px;
+			height: 72px;
+			margin-bottom: 10px;
+		}
+	}
+	.cases{
+		&__title{
+			text-align: left;
+		}
+		&__text{
+			text-align: left;
+			max-width: 240px;
+			font-size: 16px;
+		}
+		&__line{
+			justify-content: start;
+			align-items: start;
+		}
+		&-card{
+			padding: 40px;
+			&__title{
+				font-size: 25px;
+			}
+			&__text{
+				font-size: 16px;
+			}
+		}
+	}
+	.garanties{
+		&__titw{
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		&__title{
+			font-size: 25px;
+		}
+		&__text{
+			font-size: 16px;
+		}
+		&__item{
+			font-size: 13px;
+		}
+	}
 }
 @media(max-width: 454.98px){
-
+	.offer__title, .start-employee__title, .mail__title, .sites__title, .download__title,
+	.personal__title, .work-with__title, .cases__title, .rate__title {
+		font-size: 35px;
+	}
+	.offer{
+		padding: 120px 0 60px;
+		.container{
+			padding: 0 5px;
+		}
+		&__mobile{
+			width: 310px;
+			height: 310px;
+		}
+		&__btn{
+			font-size: 18px;
+		}
+	}
+	.start-employee{
+		.container{
+			padding: 0 5px;
+		}
+		&__title{
+			text-align: center;
+		}
+	}
+	.managment{
+		&__btn{
+			font-size: 16px;
+			padding: 20px;
+		}
+	}
+	.sites{
+		.container{
+			padding: 0 5px;
+		}
+		&__text{
+			width: 270px;
+		}
+		.sites__content .sites__el::before {
+			width: 20px;
+			height: 20px;
+			margin-right: 10px;
+			background-size: contain;
+		}
+		&__btn{
+			padding: 20px;
+		}
+	}
+	.rate{
+		&__w{
+			width: 100%;
+		}
+		&-m{
+			.rate__buy{
+				padding: 15px 20px;
+			}
+		}
+	}
+	.collect{
+		.container{
+			padding: 0 5px;
+		}
+		&__w{
+			padding: 20px;
+		}
+		&__btn{
+			padding: 20px 35px;
+		}
+		&__title{
+			font-size: 27px;
+		}
+	}
+	.personal{
+		.container{
+			padding: 0 5px;
+		}
+	}
+	.call-tracking{
+		padding: 0;
+		.container{
+			padding: 0 5px;
+		}
+	}
+	.work-with{
+		.container{
+			padding: 0 5px;
+		}
+	}
+	.cases{
+		.container{
+			padding: 0 5px;
+		}
+		&__cont{
+			padding: 20px;
+		}
+		&-card{
+			width: 310px;
+		}
+	}
+	.garanties{
+		.container{
+			padding: 0 5px;
+		}
+		&__w{
+			padding: 20px;
+		}
+		&__text{
+			text-align: center;
+		}
+	}
 }
 @media(max-width: 320.98px){
 

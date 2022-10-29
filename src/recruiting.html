@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('html/head.html', {"title": "О сервисе"})
+	<link rel="stylesheet" href="css/recruiting.css">
+</head>
+<body>
+	@@include('html/header.html', {})
+
+	<section class="offer">
+		<div class="container">
+			<h1 class="offer__title">Кадровое агентство Jobers.<span>ru</span></h1>
+			<p class="offer__text">Полностью берем на себя весь процесс поиска и подбора персонала</p>
+			<div class="offer__form">
+				<p class="offer__crt">Узнайте условия и стоимость подбора сотрудника по вашим критериям:</p>
+				<div class="offer__w">
+					<input type="text" placeholder="Имя" class="offer__input input">
+					<input type="tel" placeholder="Телефон" class="offer__input input">
+					<button class="offer__button">Узнать подробности</button>
+				</div>
+			</div>
+		</div>
+		<div class="offer__i-w">
+			<img src="@img/rectuiting-offer-bg.jpg" class="offer__i">
+		</div>
+	</section>
+	<section class="who">
+		<div class="container">
+			<h2 class="who__title">Кто к нам обращется за подбором сотрудников</h2>
+			<div class="who__list">
+				<div class="who__item">
+					<div class="who__i-w"><img class="who__i" src="@img/rectuiting-card-1.png" alt=""></div>
+					<h3 class="who__name">Собственники и директора</h3>
+					<p class="who__text">
+						небольших компаний для подбора результативных сотрудников
+					</p>
+				</div>
+				<div class="who__item">
+					<div class="who__i-w"><img class="who__i" src="@img/rectuiting-card-2.png" alt=""></div>
+					<h3 class="who__name">Малый и средний бизнес</h3>
+					<p class="who__text">
+						для найма руководителей и линейных сотрудников
+					</p>
+				</div>
+				<div class="who__item">
+					<div class="who__i-w"><img class="who__i" src="@img/rectuiting-card-3.png" alt=""></div>
+					<h3 class="who__name">Руководители отдела</h3>
+					<p class="who__text">
+						подбирающие сотрудников к себе в команду
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="price">
+		<div class="container">
+			<h2 class="price__title">Сколько будет стоить подбор <span>1 сотрудника?</span></h2>
+			<div class="price__wrap">
+				<div class="price__i"><img src="@img/rectuiting-price.jpg" alt=""></div>
+				<div class="price__content">
+					<h4 class="price__condition">Стоимость зависит от:</h4>
+					<ul class="price__list">
+						<li class="price__item">1. Конкретной позиции</li>
+						<li class="price__item">2. Деятельности компании</li>
+						<li class="price__item">3. Условий работы</li>
+					</ul>
+					<div class="price__form offer__form">
+						<p class="price__crt">Оставьте заявку на расчет стоимости подбора сотрудника</p>
+						<div class="price__w">
+							<input type="name" placeholder="Имя" class="price__input input">
+							<input type="tel" placeholder="Телефон" class="price__input input">
+							<button class="price__btn">Узнать подробности</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="work">
+		<div class="container">
+			<h2 class="work__title">Как мы работаем?</h2>
+			<div class="work__w">
+				<div class="work__list">
+					<div class="work__item">
+						<h3 class="work__heading">1. Кандидатов найдено <span>(отклики + холодных поиск)</span></h3>
+						<p class="work__text">
+							Активный прозвон кандидатов с размещенных вакансий, прозвон кандидатов по открытым и закрытым базам резюме.
+						</p>
+					</div>
+					<div class="work__item">
+						<h3 class="work__heading">2. Прошло отсев по первичным критериям</h3>
+						<p class="work__text">
+							Телефонные интервью, предварительные онлайн тестирования и приглашение лучших на личную встречу.
+						</p>
+					</div>
+					<div class="work__item">
+						<h3 class="work__heading">3. Записано на собеседование</h3>
+						<p class="work__text">
+							Запись кандидатов, прошедших первичный отбор на собеседование.
+						</p>
+					</div>
+					<div class="work__item">
+						<h3 class="work__heading">4. Прошли собеседование, переданы заказчику</h3>
+						<p class="work__text">
+							С помощью интервью по компетенциям с возможным применением кейсов и дополнительных тестов проводим собеседование.
+						</p>
+					</div>
+					<div class="work__item">
+						<h3 class="work__heading">5. Сотрудник вышел на работу</span></h3>
+						<p class="work__text">
+							Выбор и предоставление клиенту лучших кандидатов с развёрнутыми комментариями и пояснениями. Помощь в совершении окончательного выбора.
+						</p>
+					</div>
+				</div>
+				<div class="work__i">
+					<img src="@img/some-thong.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	@@include('html/footer.html', {})
+	<script src="js/index.js"></script>
+</body>
+</html>
