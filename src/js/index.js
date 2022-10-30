@@ -1,6 +1,5 @@
 const rateBtns = document.querySelectorAll('.rate__btn')
 const tariff = document.querySelectorAll('.rate__tariff .rate__flex .rate__once')
-console.log(tariff);
 function changeTariffData() {
 	for(let i =0 ; i < tariff.length; i++){
 		tariff[i].classList.toggle('none')

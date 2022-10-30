@@ -25,22 +25,26 @@ function menuSelect() {
 	menu.forEach(item => {
 		if(item.querySelector('.header__dropdown')){
 			let el = item.querySelector('.header__dropdown')
-			item.addEventListener('mouseenter', () => {
+			item.addEventListener('mouseenter', (e) => {
+				const target = e.target, x = e.x, y = e.y
+				console.dir(target);
 				el.style.display = 'block'
 				el.classList.add('active')
 			})
-			item.addEventListener('mouseleave', () => {
+			item.addEventListener('mouseleave' ,() => {
 				el.classList.remove('active')
-				setTimeout(()=>{
-					el.style.display = 'none'
-				}, 120)
-				// el.style.display = 'none'
+				el.style.display = 'none'
 			})
+			// setTimeout(() => {
+			// 	item.addEventListener('mouseleave', () => {
+			// 		el.classList.remove('active')
+			// 		el.style.display = 'none'
+			// 		// el.style.display = 'none'
+			// 	})
+			// }, 120)
 		}
 	})
 }
-
-
 menuSelect()
 
 const blogCategories = document.querySelectorAll('.categories__btn')
@@ -244,3 +248,41 @@ if(indexRunning){
 }
 if(findRunning)
 	animateSlider(findRunning, 22000, 'h', '.good__row', 3);
+
+
+const clickableImages = document.querySelectorAll('.report__i'),
+			reportBtns = document.querySelectorAll('.report__btn'),
+			reportOverlay = document.querySelector('.report .overlay'),
+			reportIframe = document.querySelector('.report__iframe')
+
+const reportIframeLinks = [
+	'0dZVAxEMnro','ouIgCNyO960','P58_YI2Ncaw','0IQty8jOyTc',
+	'Y4v9pmz1xD0','yQPhY3XY6JA','zYU8B_pORfo'
+]
+
+clickableImages.forEach((item, i) => {
+	item.addEventListener('click', () => showIframe(i))
+})
+reportBtns.forEach((item, i) => {
+	item.addEventListener('click', () => showIframe(i))
+})
+
+function addRemoveReportsClass(move, i){
+	if(move){
+		reportIframe.src = `https://www.youtube.com/embed/${reportIframeLinks[i]}`
+		reportOverlay.classList.add('active')
+		reportIframe.classList.add('active')
+	} else {
+		reportIframe.src = `https://www.youtube.com/embed/`
+		reportOverlay.classList.remove('active')
+		reportIframe.classList.remove('active')
+	}
+}
+
+function showIframe(i){
+	addRemoveReportsClass(true, i)
+	window.addEventListener('click', (e) => {
+		if(e.target.classList.value === 'report__place' || e.target.classList.value === 'report__exit')
+			addRemoveReportsClass(false , i)
+	})
+}

@@ -1,6 +1,14 @@
+:root{
+	--minH: 63px;
+	--minW: 112px;
+	--n: 8;
+}
+
+
 .report{
 	margin-top: 60px;
 	margin-bottom: 120px;
+	position: relative;
 	.report__bnt-right, .report__bnt-left{
 		// display: none;
 		background: url('../img/arrow-more.svg') no-repeat center center / 12px,#fff;
@@ -14,8 +22,6 @@
 		align-items: center;
 		box-shadow: 0 0 5px rgba(0,0,0,.09);
 		opacity: 1;
-		transition: opacity 0.3s ease-out;
-		transition: background 0.3s ease-out;
 		&:hover{
 			background: url('../img/arrow-more-white.svg') no-repeat center center / 12px,#0E65F3;
 		}
@@ -25,10 +31,12 @@
 		}
 	}
 	.report__bnt-right{
+		transition: opacity 0.2s ease-out, background 0.2s ease-out;
 		right: -70px;
 		top: 40%;
 	}
 	.report__bnt-left{
+		transition: opacity 0.2s ease-out, background 0.2s ease-out;
 		left: -70px;
 		top: 40%;
 		transform: rotate(180deg);
@@ -50,18 +58,27 @@
 		display: flex;
 	}
 	&__card{
+		height: 100%;
 		margin-right: 40px;		
 		box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.05);
 		text-align: center;
 		width: 260px;
+		height: 460px;
 		border-radius: 10px;
 		overflow: hidden;
 		background: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 	&__cont{
 		padding: 20px 30px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
 	}
 	&__i{
+		cursor: pointer;
 		img{
 			width: 100%;
 		}
@@ -84,6 +101,8 @@
 		text-transform: uppercase;
 		border-radius: 5px;
 		border: none;
+		margin-top: auto;
+		display: block;
 		font-weight: 700;
 		color: var(--accent);
 		background: var(--btn-bg);
@@ -93,7 +112,54 @@
 			color: #fff;
 		}
 	}
+	.overlay{
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		height: 100vh;
+		background: rgba(0,0,0,.5);
+		opacity: 0;
+		width: 100vw;
+		transition: opacity 0.15s ease-out;
+		&.active{
+			opacity: 1;
+			z-index: 1000;
+		}
+	}
+	&__place{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+	.overlay.active &__exit{
+		cursor: pointer;
+	}
+	&__iframe{
+		width: 0;
+		height: 0;
+		opacity: 0;
+		transition: opacity 0.1s ease-out;
+		&.active{
+			opacity: 1;
+			width: calc(var(--n)*var(--minW));
+			height: calc(var(--n)*var(--minH));
+		}
+	}
+	&__exit{
+		font-size: 36px;
+		position: fixed;
+		width: 32px;
+		height: 32px;
+		line-height: 1;
+		background: url('../img/close-white.svg') no-repeat center center / cover;
+		top: 30px;
+		right: 30px;
+	}
 }
+
 
 @media (max-width:1200.98px ) {
 	.report{

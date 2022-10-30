@@ -183,7 +183,7 @@ a.offer__btn{
 	left: 0;
 	background: #fff;
 	z-index: 777;
-	padding: 13px 0;
+	// padding: 13px 0;
 	font-size: 16px;
 	box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.05);
 }
@@ -208,14 +208,14 @@ a.offer__btn{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 40px;
+	// height: 40px;
 }
 .header__item{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	position: relative;
-	padding: 10px 0;
+	padding: 25px 0;
 } 
 .header__item:not(:last-of-type){
 	margin-right: 20px;
@@ -237,6 +237,10 @@ a.offer__btn{
 	margin-left: 5px;
 }
 .header__dropdown{
+	&-wrapper{
+		padding-top: 5px;
+		background: #000;
+	}
 	display: none;
 	position: absolute;
 	z-index: 1;
@@ -244,7 +248,7 @@ a.offer__btn{
 	border-radius: 5px;
 	padding: 16px;
 	opacity: 0;
-	top: 40px;
+	top: 74px;
 	left: -10px;
 	transition: opacity 0.05s ease-out;
 	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);

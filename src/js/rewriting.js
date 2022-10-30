@@ -1,7 +1,6 @@
 const rewrAcc = document.querySelectorAll('.rewriting-acc__el');
 rewrAcc.forEach(item => {
 	item.addEventListener('click', () => {
-		console.log(item);
 		let open = item.nextElementSibling
 		if(item.classList.contains('active')){
 			open.style.maxHeight = 0
