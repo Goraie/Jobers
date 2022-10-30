@@ -118,13 +118,13 @@
 		left: 0;
 		z-index: -1;
 		height: 100vh;
-		background: rgba(0,0,0,.5);
+		background: rgba(0,0,0,.7);
 		opacity: 0;
 		width: 100vw;
 		transition: opacity 0.15s ease-out;
 		&.active{
 			opacity: 1;
-			z-index: 1000;
+			z-index: 100000;
 		}
 	}
 	&__place{
@@ -187,6 +187,9 @@
 	}
 }
 @media (max-width:992.98px ) {
+	:root{
+		--n: 6;
+	}
 	.report{
 		&__slider, &__w, &-w{
 			width: 700px;
@@ -203,6 +206,9 @@
 	}
 }
 @media (max-width:798.98px ) {
+	:root{
+		--n: 5;
+	}
 	.report{
 		&__slider, &__w, &-w{
 			width: 510px;
@@ -217,12 +223,29 @@
 	}
 }
 @media (max-width:576.98px ) {
+	:root{
+		--n: 4;
+	}
 	.report{
 		&__slider, &__w, &-w{
 			width: 280px;
 		}
 		&__title{
 			font-size: 33px;
+		}
+		&__iframe{
+			&.active{
+				width: calc(var(--n)*var(--minH));
+				height: calc(var(--n)*var(--minW));
+			}
+		}
+		&__exit{
+			width: 24px;
+			height: 24px;
+			line-height: 1;
+			background: url('../img/close-white.svg') no-repeat center center / cover;
+			top: 30px;
+			right: 30px;
 		}
 	}
 }
@@ -231,5 +254,10 @@
 		&__slider, &__w, &-w{
 			width: 240px;
 		}
+	}
+}
+@media (max-width: 400.98px){
+	:root{
+		--n: 3;
 	}
 }

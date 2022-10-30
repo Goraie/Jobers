@@ -272,10 +272,12 @@ function addRemoveReportsClass(move, i){
 		reportIframe.src = `https://www.youtube.com/embed/${reportIframeLinks[i]}`
 		reportOverlay.classList.add('active')
 		reportIframe.classList.add('active')
+		document.querySelector('body').style.overflow = 'hidden'
 	} else {
 		reportIframe.src = `https://www.youtube.com/embed/`
 		reportOverlay.classList.remove('active')
 		reportIframe.classList.remove('active')
+		document.querySelector('body').style.overflow = 'visible'
 	}
 }
 
