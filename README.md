@@ -1,4 +1,6 @@
 # Jobers
+## Страница на [Vercell](https://vercel.com/goraie/jobers)
+
 
 - [Главная страница](https://jobers.vercel.app/)
 - [База знаний](https://jobers.vercel.app/blog.html)
