@@ -740,6 +740,10 @@ a.header-mob__link_callback{
 	padding: 0 20px;
 	border-radius: 5px;
 	border: 1px solid #656d7e;
+	&:focus-visible{
+		outline: var(--accent);
+		border: 1px solid var(--accent);
+	}
 }
 .mail__textarea{
 	width: 100%;
@@ -747,9 +751,21 @@ a.header-mob__link_callback{
 	border-radius: 5px;
 	padding: 20px;
 	height: 100px;
+	&:focus-visible{
+		outline: none;
+		border: 1px solid var(--accent);
+	}
 }
 .mail__item:not(:last-of-type){
 	margin-bottom: 25px;
+}
+.mail__cont{
+	font-size: 14px;
+	max-width: 480px;
+	margin: 0 auto;
+	a{
+		color: var(--accent);
+	}
 }
 .callback__btn{
 	width: 100%;
@@ -813,6 +829,7 @@ a.callback__link{
 	border-radius: 5px;
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 }
 .cta__btn:first-of-type{
 	margin-right: 20px;

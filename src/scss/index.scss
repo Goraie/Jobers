@@ -268,10 +268,13 @@ a.offer__btn{
 	&__btn{
 		padding: 25px 50px;
 		border-radius: 5px;
+		display: block;
 		background: transparent;
 		border: 2px solid #fff;
-		color: #fff;
 		font-size: 20px;
+	}
+	a.sites__btn{
+		color: #fff;
 	}
 }
 .sites__content{
@@ -326,7 +329,7 @@ a.offer__btn{
 		margin: 60px auto 0;
 		border-radius: 10px;
 		display: flex;
-		border: 2px solid var(--accent);
+		border: 1px solid var(--accent);
 		overflow: hidden;
 		box-sizing: border-box;
 		width: 400px;
@@ -348,7 +351,22 @@ a.offer__btn{
 			color: #fff;
 		}
 		&_m{
+			transition: background 0.15s ease-out;
+			margin: 0;
+			display: block;
+			font-weight: 600;
+			height: 100%;
+			padding: 15px 20px;
+			width: 200px;
+			color: #fff;
+			background: var(--accent);
+			text-align: center;
+			border: none;
+			font-size: var(--hover);
 			display: none;
+			&:focus-visible{
+				outline: none;
+			}
 		}
 		&:focus-visible{
 			outline: none;
@@ -434,8 +452,10 @@ a.offer__btn{
 	&__name{
 
 	}
-	&__link{
-
+	a.rate__link{
+		font-size: 14px;
+		text-decoration: underline;
+		color: var(--accent);
 	}
 	&__price{
 
@@ -612,16 +632,20 @@ a.offer__btn{
 		margin: 40px 0 45px;
 		font-weight: 700;
 	}
-	&__btn{
+	a.download__btn{
 		width: 100%;
 		text-align: center;
 		padding: 28px;
+		display: block;
 		border-radius: 10px;
 		margin-bottom: 10px;
 		text-transform: uppercase;
 		font-weight: 700;
 		border: 2px solid #fff;
 		background: transparent;
+		&:hover{
+			color: #fff;
+		}
 	}
 	&__weight{
 		text-align: center;
@@ -883,6 +907,11 @@ a.more-link{
 		span{
 			display: block;
 			color: var(--hover);
+		}
+	}
+	&__titw{
+		.garanties__i{
+			display: none;
 		}
 	}
 }
@@ -1287,6 +1316,8 @@ a.more-link{
 			width: 100%;
 			text-align: left;
 			&_m{
+				width: 100%;
+				text-align: left;
 				display: block;
 			}
 		}
