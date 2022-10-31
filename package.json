@@ -14,7 +14,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "intl-tel-input": "^17.0.19"
   },
   "devDependencies": {
     "browser-sync": "latest",
