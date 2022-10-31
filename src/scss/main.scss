@@ -31,7 +31,7 @@ p{
 }
 body{
 	font-family: var(--font);
-	
+	color: #101011;
 	background: var(--bg);
 	line-height: 1.2;
 }
@@ -42,7 +42,7 @@ h1,h2,h3,h4{
 	font-weight: 600;
 }
 a, a:hover, a:visited{
-	color: #000;
+	color: #101011;
 	text-decoration: none;
 }
 ul, ol{
@@ -953,4 +953,5 @@ a.callback__link{
 			}
 		}
 	}
+	
 }
