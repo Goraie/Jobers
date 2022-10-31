@@ -26,21 +26,14 @@
 		position: relative;
 	}
 	&__exit{
+		display: none;
+		position: absolute;
+		cursor: pointer;
+		top: 30px;
+		right: 30px;
 		width: 32px;
 		height: 32px;
-		background: url('@img/');
-	}
-	&__wrapp.active{
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		background: #fff;
-		z-index: 200000;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		top: 0;
-		left: 0;
+		background: url('../img/close.svg') no-repeat center center / cover;
 	}
 	.swiper-wrapper{
 		overflow: hidden;
@@ -67,8 +60,9 @@
 			border-radius: 30px;
 			top: 40%;
 			background: #fff;
+			opacity: 1;
 			z-index: 1100;
-			transition: filter 0.8s ease-out;
+			transition: filter 0.8s ease-out, opacity 0.2s ease-out;
 			filter: grayscale(0);
 			img{
 				width: 18px;
@@ -78,6 +72,9 @@
 					filter: grayscale(1);
 				}
 			}
+			&.swiper-button-disabled{
+				opacity: 0;
+			}
 		}
 		&-next{
 			right: -40px;
@@ -86,6 +83,36 @@
 			left: -40px;
 			img{
 				transform: rotate(180deg);
+			}
+		}
+	}
+	&__wrapp.active{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		z-index: 200000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: 0;
+		.swiper-wrapper{
+			position: unset;
+		}
+		.postEx__swiper{
+			position: unset;
+		}
+		.postEx__exit{
+			display: block;
+		}
+		.postEx__btn{
+			&-prev, &-next{
+			&-next{
+				right: 40px;
+			}
+			&-prev{
+				left: 40px;
 			}
 		}
 	}
