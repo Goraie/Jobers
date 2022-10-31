@@ -25,6 +25,23 @@
 		height: 500px;
 		position: relative;
 	}
+	&__exit{
+		width: 32px;
+		height: 32px;
+		background: url('@img/');
+	}
+	&__wrapp.active{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		z-index: 200000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: 0;
+	}
 	.swiper-wrapper{
 		overflow: hidden;
 	}
