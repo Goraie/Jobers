@@ -121,10 +121,10 @@ ul, ol{
 }
 
 .go-top{
-	width: 40px;
-	height: 40px;
+	width: 50px;
+	height: 50px;
 	background: #fff;
-	border-radius: 20px;
+	border-radius: 25px;
 	position: fixed;
 	bottom: 30px;
 	left: 20px;
@@ -137,6 +137,10 @@ ul, ol{
 .go-top.show{
 	cursor: pointer;
 	opacity: 1;
+	transition: background 0.3s ease-out;
+	&:hover{
+		background: url('@img/go-top-w.svg') no-repeat center, var(--accent);
+	}
 }
 
 .btn{
@@ -299,8 +303,8 @@ a.header-drop__link:hover{
 	align-items: center;
 	height: fit-content;
 	padding: 5px 18px;
-	border-right: 2px solid #E4E4E4;
-	border-left: 2px solid #E4E4E4;
+	border-right: 1px solid #E4E4E4;
+	border-left: 1px solid #E4E4E4;
 }
 .header__profile{
 	display: flex;
