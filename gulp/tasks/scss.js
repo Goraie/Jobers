@@ -20,29 +20,29 @@ export const scss = () => {
 					.pipe(sass({
 						outputStyle: 'expanded'
 					}))
-					// .pipe(app.plugins.if(
-					// 	app.isBuild,
-					// 	groupCssMediaQuaries()
-					// ))
-					// .pipe(app.plugins.if(
-					// 	app.isBuild,
-					// 	webpcss({
-					// 		webpClass: '.webp',
-					// 		noWebpClass: '.no-webp'
-					// 	})
-					// ))
-					// .pipe(
-					// 	app.plugins.if(
-					// 		app.isBuild,
-					// 		autoprefixer({
-					// 			grid: true,
-					// 			overrideBrowserlist: ['last 3 version'],
-					// 			cascade: true,
-					// 		})
-					// 	)
-					// )
+					.pipe(app.plugins.if(
+						app.isBuild,
+						groupCssMediaQuaries()
+					))
+					.pipe(app.plugins.if(
+						app.isBuild,
+						webpcss({
+							webpClass: '.webp',
+							noWebpClass: '.no-webp'
+						})
+					))
+					.pipe(
+						app.plugins.if(
+							app.isBuild,
+							autoprefixer({
+								grid: true,
+								overrideBrowserlist: ['last 3 version'],
+								cascade: true,
+							})
+						)
+					)
 					// Если нужно просмотреть не сжатый файл
-					// .pipe(app.gulp.dest(app.path.build.css))
+					.pipe(app.gulp.dest(app.path.build.css))
 					// .pipe(
 					// 	app.plugins.if(
 					// 		app.isBuild,

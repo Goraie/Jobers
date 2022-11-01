@@ -1,3 +1,5 @@
+
+
 .postEx{
 	padding: 120px 0;
 	background: #fff;
@@ -86,7 +88,6 @@
 			}
 		}
 	}
-}
 	&__wrapp.active{
 		position: fixed;
 		width: 100%;
@@ -108,7 +109,6 @@
 			display: block;
 		}
 		.postEx__btn{
-			&-prev, &-next{
 			&-next{
 				right: 40px;
 			}

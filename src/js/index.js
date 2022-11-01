@@ -1,5 +1,6 @@
 const rateBtns = document.querySelectorAll('.rate__btn')
-const tariff = document.querySelectorAll('.rate__tariff .rate__flex .rate__once')
+const tariff = document.querySelectorAll('.rate__tariff .rate__once')
+
 function changeTariffData() {
 	for(let i =0 ; i < tariff.length; i++){
 		tariff[i].classList.toggle('none')
@@ -11,14 +12,8 @@ rateBtns.forEach(item => {
 		if(!item.classList.contains('active')){
 			rateBtns.forEach(elem => {
 				elem.classList.toggle('active')
-				tariff.forEach(item => {
-					if(item.classList.contains('none')){
-						item.classList.remove('none')
-					} else {
-						item.classList.add('none')
-					}
-				})
 			})
+			changeTariffData()
 		}
 	})
 })

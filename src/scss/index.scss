@@ -388,7 +388,6 @@ a.offer__btn{
 	}
 	&__about{
 		font-size: 14px;
-		margin-top: auto;
 		display: block;
 		line-height: 1;
 		&_large{
@@ -399,7 +398,11 @@ a.offer__btn{
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: center;
+	}
+	&__i{
+		width: fit-content;
+		position: relative;
 	}
 	&__stat{
 		margin-top: 30px;
@@ -415,7 +418,7 @@ a.offer__btn{
 	}
 	
 	&__item{
-		height: 68px;
+		height: 78px;
 		padding: 8px 0 12px;
 		width: 220px;
 		margin: 0 auto;
@@ -462,7 +465,9 @@ a.offer__btn{
 		color: var(--accent);
 	}
 	&__price{
-
+		color: var(--accent);
+		font-weight: 700;
+		font-size: 32px;
 		&.rate__once{
 			display: block;
 			margin: 0 auto;
@@ -585,6 +590,50 @@ a.offer__btn{
 			padding: 30px;
 		}
 	}
+	.tooltip {
+		position: absolute;
+		top: -5px;
+		right: -15px;
+		display: block;
+		width: 12px;
+		height: 12px;
+		background: url('../img/questiob.svg') no-repeat center center / cover;
+	}
+	.tooltip .tooltiptext {
+		visibility: hidden;
+		width: 120px;
+		background-color: black;
+		color: #fff;
+		text-align: left;
+		padding: 10px;
+		position: absolute;
+		z-index: 100000;
+		width: 280px;
+    bottom: 100%;
+    left: 50%;
+		font-size: 16px;
+    margin-left: -140px; 
+		transition: visibility 0.3s ease-out;
+		strong{
+			margin-bottom: 10px;
+			font-weight: 600;
+			display: block;
+			font-size: 20px;
+		}
+	}
+	.tooltip:hover .tooltiptext {
+		visibility: visible;
+	}
+	&__i{
+		&_text{
+			.tooltip {
+				top: 2px;
+				right: -20px;
+				width: 14px;
+				height: 14px;
+			}
+		}
+	}
 }
 
 // collect
@@ -596,7 +645,7 @@ a.offer__btn{
 		display: flex;
 		background: #fff;
 		align-items: center;
-		padding: 54px 134px;
+		padding: 54px 134px 34px;
 		border-radius: 15px;
 	}
 	&__cont{
@@ -805,7 +854,7 @@ a.more-link{
 		align-items: center;
 	}
 	&__cont{
-		width: 370px;
+		width: 430px;
 		padding: 20px 0;
 	}
 	&__title{
@@ -837,13 +886,14 @@ a.more-link{
 	justify-content: space-between;
 	box-shadow: 0px 17px 76px 0px rgb(0, 0, 0, 0.1);
 	&__i{
+		margin-left: 10px;
 		img{
 			height: 90px;
 		}
 	}
 	&__title{
 		margin-top: 25px;
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 		font-size: 30px;
 	}
 	&__text{
