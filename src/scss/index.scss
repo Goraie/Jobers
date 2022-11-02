@@ -323,6 +323,7 @@ a.offer__btn{
 	padding-top: 140px;
 	&__title{
 		font-size: 70px;
+		text-align: center;
 		margin: 0 auto;
 	}
 	&__w{
@@ -331,11 +332,11 @@ a.offer__btn{
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
-		border: 1px solid var(--accent);
+		border: 2px solid var(--accent);
 		overflow: hidden;
 		box-sizing: content-box;
 		height: 60px;
-		width: 400px;
+		width: 440px;
 	}
 	&__btn{
 		transition: background 0.15s ease-out;
@@ -344,15 +345,16 @@ a.offer__btn{
 		font-weight: 400;
 		height: 60px;
 		padding: 15px 20px;
-		width: 200px;
+		width: 220px;
 		background: #fff;
+		color: var(--hover);
 		text-align: center;
 		border: none;
-		font-size: var(--hover);
+		font-size: 18px;
 		&.active{
 			background: var(--accent);
 			color: #fff;
-			font-weight: 700;
+			font-weight: 600;
 		}
 		&_m{
 			transition: background 0.15s ease-out;
@@ -385,6 +387,7 @@ a.offer__btn{
 		line-height: 1;
 		margin: 0;
 		display: block;
+		margin-bottom: 4px;
 	}
 	&__about{
 		font-size: 14px;
@@ -467,7 +470,7 @@ a.offer__btn{
 	&__price{
 		color: var(--accent);
 		font-weight: 700;
-		font-size: 32px;
+		font-size: 36px;
 		&.rate__once{
 			display: block;
 			margin: 0 auto;
@@ -498,7 +501,7 @@ a.offer__btn{
 		font-weight: 700;
 		text-transform: uppercase;
 		text-align: center;
-		padding: 15px 10px;
+		padding: 15px 3px;
 		margin: 20px auto 0;
 		height: 50px;
 		display: block;
@@ -605,14 +608,14 @@ a.offer__btn{
 		background-color: black;
 		color: #fff;
 		text-align: left;
-		padding: 10px;
+		padding: 20px;
 		position: absolute;
 		z-index: 100000;
-		width: 280px;
-    bottom: 100%;
+		width: 300px;
+    bottom: 20px;
     left: 50%;
 		font-size: 16px;
-    margin-left: -140px; 
+    margin-left: -150px; 
 		transition: visibility 0.3s ease-out;
 		strong{
 			margin-bottom: 10px;
@@ -623,6 +626,16 @@ a.offer__btn{
 	}
 	.tooltip:hover .tooltiptext {
 		visibility: visible;
+	}
+	.tooltip .tooltiptext::after {
+		content: " ";
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: black transparent transparent transparent;
 	}
 	&__i{
 		&_text{
@@ -683,7 +696,8 @@ a.offer__btn{
 	&__text{
 		font-size: 24px;
 		margin: 40px 0 45px;
-		font-weight: 700;
+		max-width: 405px;
+		font-weight: 600;
 	}
 	a.download__btn{
 		width: 100%;

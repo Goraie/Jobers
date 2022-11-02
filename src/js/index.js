@@ -7,6 +7,34 @@ function changeTariffData() {
 	}
 }
 
+const rateCols = document.querySelectorAll('.rate__tariff')
+
+function getPrice(col){
+	const btn = col.querySelector('.rate__buy')
+	col.querySelectorAll('.rate__price').forEach(el => {
+		if(!el.classList.contains('none')){
+			const num = el.innerText.replace(' руб','').replace(' ','')
+			btn.innerText = `Подключить за ${mainPrice(+num,getNumEls(col))} ₽`
+		}
+	});
+}
+
+function setPrice(){
+	rateCols.forEach(col => {
+		getPrice(col)
+		const select = col.querySelector('.rate__select')
+		col.addEventListener('click', () => getPrice(col))
+		select.addEventListener('change', () => getPrice(col))
+	})
+}
+function mainPrice(price, num){
+	return Math.round(price*num*(1- ( num == 10 ? 0.15 : num >= 5 ? 0.1 : 0)))
+}
+function getNumEls(col){
+	const select = col.querySelector('.rate__select')
+	return select.value
+}
+
 rateBtns.forEach(item => {
 	item.addEventListener('click', () => {
 		if(!item.classList.contains('active')){
@@ -14,6 +42,7 @@ rateBtns.forEach(item => {
 				elem.classList.toggle('active')
 			})
 			changeTariffData()
+			setPrice()
 		}
 	})
 })
