@@ -47,7 +47,8 @@
 	&__title{
 		font-size: 72px;
 		text-align: center;
-		margin-bottom: 60px;
+		margin-bottom: 90px;
+		line-height: 1.23;
 	}
 	&__w{
 		overflow: hidden;
@@ -180,6 +181,7 @@
 	.report__title{
 		font-size: 55px;
 		text-align: center;
+		margin-bottom: 45px;
 	}
 	.report{
 		&__slider, &__w, &-w{

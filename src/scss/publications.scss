@@ -10,7 +10,8 @@
 	--btn-bg: #DEE8F1;
 	--bg: #F1F2F6;
 	--fz: 16px;
-	--font: 'Proxima nova', Arial, sans-Serif;
+	--box-sh: 0px 17px 76px 0px rgb(0 0 0 / 10%);
+	--font: 'ProximaNova', Arial, sans-Serif;
 	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
 
@@ -32,10 +33,13 @@ body{
 			color: var(--accent);
 		}
 	}
+	&__w{
+		padding-bottom: 170px;
+	}
 	&__text{
 		font-size: 22px;
 		line-height: 1.5;
-		margin: 50px 0;
+		margin: 60px 0;
 		strong{
 			font-weight: 600;
 		}
@@ -43,13 +47,33 @@ body{
 	&__i{
 		margin-top: -50px;
 		img{
-			height: 710px;
+			height: 730px;
 		}
 		&_m{
 			display: none;
 		}
 	}
 }
+.start-employee{
+	&__w{
+		max-width: 1030px;
+		margin-bottom: 60px;
+	}
+	&__under{
+		display: none;
+	}
+	padding-bottom: 120px;
+}
+.employee-card{
+	min-height: 450px;
+	&.public{
+		display: block;
+	}
+	&.notpublic{
+		display: none;
+	}
+}
+
 
 @media (max-width: 1199.98px){
 	.offer{
@@ -159,6 +183,22 @@ body{
 			font-size: 16px;
 			padding: 20px 34px;
 			margin-top: 20px;
+		}
+	}
+}
+@media (max-width: 454px){
+	.offer{
+		.container{
+			padding: 0;
+		}
+		&__w{
+			padding: 0 15px;
+		}
+		&__btn{
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			justify-content: center;
 		}
 	}
 }

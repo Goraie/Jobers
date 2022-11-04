@@ -1,44 +1,27 @@
-// popups
+const blogCategories = document.querySelectorAll('.categories__btn'),
+			blog = document.querySelectorAll('.blog-card')
 
-// popups
-
-// function addPopup(elememt, wrapAndOverlay, addOrRemove, overlayCondition = false){
-// 	elememt.addEventListener('click', (e) => {
-// 		if(overlayCondition && e.target.classList.contains('overlay'))
-// 			addPopupClasses(wrapAndOverlay, addOrRemove)
-// 		else 
-// 			addPopupClasses(wrapAndOverlay, addOrRemove)
-// 	})
-// }
-// function addPopupClasses(elmts, addOrNot){
-// 	elmts.forEach(element => {
-// 		console.log(element, 'add or remove:		', addOrNot);
-// 	});
-// }
-
-// // email popup
-
-// const email = document.querySelector('.cta__email'),
-// 			mailWrapAndOverlay = [document.querySelector('.mail-wrap'), document.querySelector('.mail-wrap .overlay')],
-// 			mailCLose = document.querySelector('.mail-wrap__i')
-
-// addPopup(email, mailWrapAndOverlay, true)
-// addPopup(mailCLose, mailWrapAndOverlay, false)
-// addPopup(window, mailWrapAndOverlay, false, true)
-
-// // callback popup 
-
-// // const elementsOpeningPopup = [document.querySelector('.cta__phone') , document.querySelector('.header__phone')],
-// // 			callbackOverlay = document.querySelector('.callback-wrapp .overlay'),
-// // 			callbackWrap = document.querySelector('.callback-wrapp'),
-// // 			callbackCLose = document.querySelector('.callback-wrap__i')
-
-// // elementsOpeningPopup.forEach(item => {
-// // 	addPopup(item, [callbackWrap, callbackOverlay], true)
-// // })
-
-// // addPopup(callbackCLose, [callbackWrap, callbackOverlay], false)
-// // addPopup(window, [callbackWrap, callbackOverlay], false, true)
-
-
-
+blogCategories.forEach(el => {
+	el.addEventListener('click', (e) => {
+		if(!el.classList.contains('active')){
+			blogCategories.forEach(item => item.classList.remove('active'))
+			el.classList.add('active')
+			if(el.dataset.categories != 0){
+				blog.forEach(item => {
+					if(item.classList.contains(el.dataset.categories)){
+						item.classList.remove('none')
+					} else {
+						item.classList.add('none')
+					}
+				})
+			} else {
+				blog.forEach(item => {
+					if(item.classList.contains('none')){
+						item.classList.remove('none')
+					}
+				})
+			}
+		}
+	})
+	console.log();
+})

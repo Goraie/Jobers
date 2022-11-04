@@ -1,5 +1,5 @@
 .tariftoplace{
-	padding: 120px 0;
+	padding: 120px 0 110px;
 	&__title{
 		font-size: 72px;
 		line-height: 1;
@@ -13,7 +13,7 @@
 		color: rgb(101, 109, 126);
 		text-align: center;
 		font-size: 24px;
-		margin-bottom: 40px;
+		margin-bottom: 50px;
 	}
 	&__list{
 		display: flex;
@@ -47,6 +47,7 @@
 	&__item{
 		background: #fff;
 		width: 340px;
+		min-height: 525px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -66,6 +67,10 @@
 	&__descr{
 		font-weight: 600;
 		font-size: 14px;
+		display: block;
+		&.toggle{
+			display: none;
+		}
 	}
 	&__main{
 		padding: 20px 30px 0;
@@ -126,6 +131,9 @@
 	&__places{
 		display: flex;
 		flex-wrap: wrap;
+		&.toggle{
+			display: none;
+		}
 	}
 	&__i{
 		margin-top: 10px;
@@ -136,7 +144,7 @@
 	}
 	&__bottom{
 		margin-top: auto;
-		padding: 30px;
+		padding: 0 30px 30px;
 	}
 	&__prices{
 		padding: 15px 0;
@@ -154,6 +162,7 @@
 		font-weight: 600;
 		padding: 0 5px;
 		position: relative;
+		display: block;
 		&::after{
 			content: '';
 			width: 100%;
@@ -163,6 +172,9 @@
 			bottom: 10px;
 			height: 1px;
 			background: #f35050;
+		}
+		&.toggle{
+			display: none;
 		}
 	}
 	&__buy{

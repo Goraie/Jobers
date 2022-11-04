@@ -1,19 +1,60 @@
-const btns = document.querySelectorAll('.tariftoplace__btn')
+// const btns = document.querySelectorAll('.tariftoplace__btn')
+const tarifItems = document.querySelectorAll('.tariftoplace__item'),
+			tarifToggle = document.querySelectorAll('.tarif__toggle'),
+			tarifBtns = document.querySelectorAll('.tariftoplace__btn')
 
-function el(btns){
-	btns.forEach(item => {
-		item.addEventListener('click', () => {
-			if(!item.classList.contains('active')){
-				btns.forEach(el => {
-					el.classList.toggle('active')
-				})
-			}
-		})
+
+// tarifItems.forEach(card => {
+// 	console.log(card.querySelectorAll('.tariftoplace__places.tarif__toggle'))
+
+// 	// console.log(Array.from(card.querySelectorAll('.tariftoplace__places')).filter(el => {return !el.classList.contains('toggle')})[0].querySelectorAll('.tariftoplace__i').length);
+// 	card.querySelector('.tariftoplace__span').innerText = `(${Array.from(card.querySelectorAll('.tariftoplace__places.tarif__toggle')).filter(el => {return !el.classList.contains('toggle')})[0].querySelectorAll('.tariftoplace__i').length})`
+// })
+tarifBtns.forEach(btn => {
+	setCountImages(tarifItems)
+	calcPrice(tarifItems)
+	btn.addEventListener('click', () => {
+		if(!btn.classList.contains('active')){
+			tarifBtns.forEach(el => {
+				el.classList.toggle('active')
+			})
+			tarifToggle.forEach(item => {
+				item.classList.toggle('toggle')
+			})
+			setCountImages(tarifItems)
+			calcPrice(tarifItems)
+		}
+	})
+})
+
+
+function calcPrice(cards){
+	cards.forEach(card => {
+		const price = Array.from(card.querySelectorAll('.tariftoplace__price')).filter((elem) => {return !elem.classList.contains('toggle')})[0].innerText.replace(' ₽','')
+		const btn = card.querySelector('.tariftoplace__buy')
+		btn.innerText = `Заказать за ${(+price)*0.9} ₽`
+	})
+}
+function setCountImages(cards){
+	cards.forEach(card => {
+		card.querySelector('.tariftoplace__span').innerText = `(${Array.from(card.querySelectorAll('.tariftoplace__places')).filter(el => {return !el.classList.contains('toggle')})[0].querySelectorAll('.tariftoplace__i').length})`
 	})
 }
 
-if(btns.length)
-	el(btns)
+// function el(btns){
+// 	btns.forEach(item => {
+// 		item.addEventListener('click', () => {
+// 			if(!item.classList.contains('active')){
+// 				btns.forEach(el => {
+// 					el.classList.toggle('active')
+// 				})
+// 			}
+// 		})
+// 	})
+// }
+
+// if(btns.length)
+// 	el(btns)
 
 const tarifToPlaces = document.querySelectorAll('.tariftoplace__item')
 tarifToPlaces.forEach(item => {

@@ -204,12 +204,17 @@ h1,h2,h3,h4{
 	&-acc{
 		background: #fff;
 		margin-bottom: 20px;
-		padding: 20px 30px 0;
+		padding: 20px 20px 0;
 		&__el{
 			padding-bottom: 20px;
 			display: flex;
 			justify-content: space-between;
 			cursor: pointer;
+			&.active{
+				.rewriting-acc__span{
+					transform: rotate(-45deg);
+				}
+			}
 		}
 		&__title{
 			display: block;
@@ -217,9 +222,11 @@ h1,h2,h3,h4{
 			color: var(--accent);
 		}
 		&__span{
-			width: 24px;
-			height: 24px;
-			
+			width: 22px;
+			height: 22px;
+			transition: transform 0.25s ease-out;
+			display: block;
+			background: url('@img/exit.svg') no-repeat center center/ cover;
 		}
 		&__open{
 			max-height: 0;
@@ -256,7 +263,7 @@ h1,h2,h3,h4{
 			display: none;
 		}
 		img{
-			height: 800px;
+			height: 870px;
 		}
 	}
 	&__text{
@@ -287,6 +294,11 @@ h1,h2,h3,h4{
 		font-weight: 600;
 		
 	}
+}
+
+.report{
+	margin: 0;
+	padding: 120px 0 210px;
 }
 
 @media ( max-width: 1299.98px ){
@@ -371,9 +383,6 @@ h1,h2,h3,h4{
 			width: 360px;
 		}
 	}
-	.report{
-		display: none;
-	}
 }
 @media (max-width: 992.98px){
 	.offer, .rewriting, .find{
@@ -440,6 +449,9 @@ h1,h2,h3,h4{
 				height: 55px;
 			}
 		}
+	}
+	.cta{
+		padding-top: 30px;
 	}
 	.rewriting{
 		.container{
@@ -660,7 +672,7 @@ h1,h2,h3,h4{
 			&-m{
 				position: absolute;
 				z-index: 0;
-				right: -50px;
+				right: 0;
 				bottom: -40px;
 			}
 		}
@@ -690,6 +702,22 @@ h1,h2,h3,h4{
 				img{
 					height: 580px;
 				}
+			}
+		}
+	}
+	.report{
+		padding-bottom: 120px;
+		&__title{
+			font-size: 30px;
+		}
+	}
+}
+
+@media (max-width: 400px){
+	.offer{
+		&__i{
+			&-m{
+				right: -45px;
 			}
 		}
 	}

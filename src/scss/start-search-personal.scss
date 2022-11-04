@@ -4,7 +4,7 @@
 	}
 }
 .start-employee{
-	padding: 120px 0 200px;
+	padding: 120px 0 180px;
 }
 .start-employee__w{
 	width: fit-content;
@@ -30,6 +30,9 @@
 	background: #fff;
 	width: 360px;
 	border-radius: 15px;
+	&.public{
+		display: none;
+	}
 }
 .employee-card__title{
 	margin: 25px 0 15px;
@@ -59,7 +62,7 @@
 @media (max-width: 1200.98px){
 	.employee-card{
 		width: 300px;
-		padding: 30px 20px 15px;
+		padding: 30px 20px;
 	}
 }
 @media (max-width: 1100.98px){

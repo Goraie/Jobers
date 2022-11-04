@@ -46,16 +46,6 @@ function menuSelect() {
 }
 menuSelect()
 
-const blogCategories = document.querySelectorAll('.categories__btn')
-blogCategories.forEach(el => {
-	el.addEventListener('click', (e) => {
-		if(!el.classList.contains('active')){
-			blogCategories.forEach(item => item.classList.remove('active'))
-			el.classList.add('active')
-		}
-	})
-})
-
 // Аккордион в футере на мобильной версии
 const acc = document.querySelectorAll('.footer-mobile__acc');
 acc.forEach(item => {

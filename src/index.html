@@ -415,8 +415,8 @@
 				<button type="button" class="rate__btn active">Единоразовая</button>
 				<button type="button" class="rate__btn">С автообновлением</button>
 				<select type="button" class="rate__btn_m">
-					<option value="Единоразовая">Единоразовая</option>
-					<option value="С автообновлением">С автообновлением</option>
+					<option value="0">Единоразовая</option>
+					<option value="1">С автообновлением</option>
 				</select>
 			</div>
 			<div class="rate__place">
@@ -537,7 +537,7 @@
 					<div class="rate__item">
 						<div class="rate__flex">
 							<h4 class="rate__price rate__once">3 685 руб</h4>
-							<h4 class="rate__price rate__once none">7854 руб</h4>
+							<h4 class="rate__price rate__once none">7 854 руб</h4>
 							<p class="rate__about">на месяц</p>
 						</div>
 					</div>
@@ -637,7 +637,7 @@
 							<option value="9">9 шт.</option>
 							<option value="10">от 10 шт. скидка 15%</option>
 						</select>
-						<a href="/registration.html" class="rate__buy ">Подключить за 3685 ₽</a>
+						<a href="/registration.html" class="rate__buy">Подключить за 3685 ₽</a>
 					</div>
 				</div>
 				<div class="rate__col rate__tariff">
@@ -868,7 +868,8 @@
 			<div class="rate__place_m rate-m">
 				<div class="rate-m__card">
 					<h4 class="rate-m__name">Минимальный</h4>
-					<span class="rate-m__price">3 685 руб</span>
+					<span class="rate__price rate-m__price rate__once ">3 685 руб</span>
+					<span class="rate__price rate-m__price rate__once none">7 854 руб</span>
 					<span class="rate-m__undertext">на месяц</span>
 					<div class="rate-m__list">
 						<div class="rate-m__item">
@@ -877,43 +878,53 @@
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">hh.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Стандарт + вакансия, обновление раз в 3 дня</p>
 						</div>
 						<div class="rate-m__item">
-							<p class="rate-m__topic ">rabota.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__topic">rabota.ru</p>
+							<p class="rate-m__text rate__once">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Оптимальная вакансия, автообновление раз в 3 дня</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">zarplata.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация Бизнес, ежедневное обновление</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">wiweb.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Поднятие каждые 7 дней</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic no">youla.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация вакансий на 30 дней</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic no">superjob.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Бизнес вакансия, автообновление каждые 7 дней</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic no">avito.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация с услугой "X5" (до 5 раз больше просмотров)</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic no">irr.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация вакансий на 30 дней</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic no">vk.com</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация в популярной группе вашего города</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">подбор резюме</p>
-							<p class="rate-m__text">Подбор до 30 резюме по вашим критериям с работных сайтов и смс рассылка с приглашением по ним</p>
+							<p class="rate-m__text rate__once ">Подбор до 30 резюме по вашим критериям с работных сайтов и смс рассылка с приглашением по ним</p>
+							<p class="rate-m__text rate__once none">Подбор до 50 резюме по вашим критериям с работных сайтов и смс рассылка с приглашением по ним</p>
 						</div>
 						<div class="rate__item rate__buy-w">
 							<select class="rate__select"  name="" id="">
@@ -928,13 +939,14 @@
 								<option value="9">9 шт.</option>
 								<option value="10">от 10 шт. скидка 15%</option>
 							</select>
-							<a href="/registration.html" class="rate__buy ">Подключить за 3685 ₽</a>
+							<a href="/registration.html" class="rate__buy">Подключить за 3685 ₽</a>
 						</div>
 					</div>
 				</div>
 				<div class="rate-m__card">
 					<h4 class="rate-m__name">Оптимальный</h4>
-					<span class="rate-m__price">6 302 руб</span>
+					<span class="rate__price rate-m__price rate__once ">6 302 руб</span>
+					<span class="rate__price rate-m__price rate__once none">11 816 руб</span>
 					<span class="rate-m__undertext">на месяц</span>
 					<div class="rate-m__list">
 						<div class="rate-m__item">
@@ -943,43 +955,53 @@
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">hh.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Стандарт + вакансия, обновление раз в 3 дня</p>
 						</div>
 						<div class="rate-m__item">
-							<p class="rate-m__topic ">rabota.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__topic">rabota.ru</p>
+							<p class="rate-m__text rate__once">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Оптимальная вакансия, автообновление раз в 3 дня</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">zarplata.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация Бизнес, ежедневное обновление</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">wiweb.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Поднятие каждые 7 дней</p>
 						</div>
 						<div class="rate-m__item">
-							<p class="rate-m__topic ">youla.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__topic">youla.ru</p>
+							<p class="rate-m__text rate__once">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация вакансий на 30 дней</p>
 						</div>
 						<div class="rate-m__item">
-							<p class="rate-m__topic ">superjob.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__topic">superjob.ru</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Бизнес вакансия, автообновление каждые 7 дней</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic no">avito.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация с услугой "X5" (до 5 раз больше просмотров)</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic no">irr.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация вакансий на 30 дней</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic no">vk.com</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация в популярной группе вашего города</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">подбор резюме</p>
-							<p class="rate-m__text">Подбор до 50 резюме по вашим критериям с работных сайтов и смс рассылка с приглашением по ним</p>
+							<p class="rate-m__text rate__once ">Подбор до 50 резюме по вашим критериям с работных сайтов и смс рассылка с приглашением по ним</p>
+							<p class="rate-m__text rate__once none">Подбор до 50 резюме по вашим критериям с работных сайтов и смс рассылка с приглашением по ним</p>
 						</div>
 						<div class="rate__item rate__buy-w">
 							<select class="rate__select"  name="" id="">
@@ -1000,7 +1022,8 @@
 				</div>
 				<div class="rate-m__card">
 					<h4 class="rate-m__name">Максимальный</h4>
-					<span class="rate-m__price">9 371 руб</span>
+					<span class="rate__price rate-m__price rate__once ">9 371 руб</span>
+					<span class="rate__price rate-m__price rate__once none">15 610 руб</span>
 					<span class="rate-m__undertext">на месяц</span>
 					<div class="rate-m__list">
 						<div class="rate-m__item">
@@ -1009,43 +1032,53 @@
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">hh.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Стандарт + вакансия, обновление раз в 3 дня</p>
 						</div>
 						<div class="rate-m__item">
-							<p class="rate-m__topic ">rabota.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__topic">rabota.ru</p>
+							<p class="rate-m__text rate__once">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Оптимальная вакансия, автообновление раз в 3 дня</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">zarplata.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация Бизнес, ежедневное обновление</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">wiweb.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Поднятие каждые 7 дней</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">youla.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация вакансий на 30 дней</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">superjob.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Бизнес вакансия, автообновление каждые 7 дней</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">avito.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация с услугой "X5" (до 5 раз больше просмотров)</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">irr.ru</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация вакансий на 30 дней</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">vk.com</p>
-							<p class="rate-m__text">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once ">Публикация вакансий на 30 дней</p>
+							<p class="rate-m__text rate__once none">Публикация в популярной группе вашего города</p>
 						</div>
 						<div class="rate-m__item">
 							<p class="rate-m__topic ">подбор резюме</p>
-							<p class="rate-m__text">Подбор до 90 резюме по вашим критериям с работных сайтов и смс рассылка с приглашением по ним</p>
+							<p class="rate-m__text rate__once ">Подбор до 30 резюме по вашим критериям с работных сайтов и смс рассылка с приглашением по ним</p>
+							<p class="rate-m__text rate__once none">Подбор до 30 резюме по вашим критериям с работных сайтов и смс рассылка с приглашением по ним</p>
 						</div>
 						<div class="rate__item rate__buy-w">
 							<select class="rate__select"  name="" id="">
@@ -1094,7 +1127,7 @@
 		<div class="container">
 			<h2 class="personal__title">И еще больше решений для <span>поиска персонала</span></h2>
 			<p class="personal__text">
-				Jobers.ru – это простой в использовании инструмент для поиска сотрудников
+				Jobers.<span>ru</span> – это простой в использовании инструмент для поиска сотрудников
 			</p>
 			<div class="personal__w">
 				<div class="personal-card">
@@ -1193,7 +1226,9 @@
 								<p class="cases-card__price">стоимость кандидата</p>
 							</div>
 							<div class="cases-card__next">
-								<img src="@img/arrow-next.svg" alt="">
+								<a href="/">
+									<img src="@img/arrow-next.svg" alt="">
+								</a>
 							</div>
 						</div>
 					</div>
@@ -1211,7 +1246,9 @@
 								<p class="cases-card__price">стоимость кандидата</p>
 							</div>
 							<div class="cases-card__next">
-								<img src="@img/arrow-next.svg" alt="">
+								<a href="/">
+									<img src="@img/arrow-next.svg" alt="">
+								</a>
 							</div>
 						</div>
 					</div>

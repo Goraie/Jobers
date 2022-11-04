@@ -5,6 +5,7 @@
 	--btn-bg: #DEE8F1;
 	--bg: #F1F2F6;
 	--fz: 16px;
+	--box-sh: 0px 17px 76px 0px rgb(0 0 0 / 10%);
 	--font: 'ProximaNova', Arial, sans-Serif;
 	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
@@ -455,7 +456,7 @@ a.header-mob__link_callback{
 
 .footer{
 	background: #fff;
-	padding: 40px 0 60px;
+	padding: 40px 0 90px;
 }
 .footer .container{
 	display: flex;
@@ -495,10 +496,10 @@ a.header-mob__link_callback{
 }
 .footer__title{
 	font-size: 22px;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 .footer__item{
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	font-size: 16px;
 }
 .footer__cards img{
@@ -843,6 +844,7 @@ a.callback__link{
 	color: #fff;
 	display: flex;
 	align-items: center;
+	line-height: 1;
 }
 .cta__email button{
 	color: #fff;
@@ -850,6 +852,7 @@ a.callback__link{
 	display: flex;
 	align-items: center;
 	background: transparent;
+	line-height: 1;
 }
 .cta__btn span{
 	margin-right: 10px;
