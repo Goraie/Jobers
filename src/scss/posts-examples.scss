@@ -26,6 +26,10 @@
 		width: 450px;
 		height: 500px;
 		position: relative;
+		overflow: hidden;
+	}
+	&__wrapp{
+		position: relative;
 	}
 	&__exit{
 		display: none;
@@ -37,9 +41,7 @@
 		height: 32px;
 		background: url('../img/close.svg') no-repeat center center / cover;
 	}
-	.swiper-wrapper{
-		overflow: hidden;
-	}
+
 	.swiper-slide{
 		img{
 			height: 100%;

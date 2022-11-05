@@ -1,6 +1,6 @@
 const swiper = new Swiper('.postEx__swiper', {
 		speed: 400,
-		effect: 'fade',
+		spaceBetween: 150,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: 'true'

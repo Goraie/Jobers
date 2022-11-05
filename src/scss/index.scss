@@ -461,8 +461,11 @@ a.offer__btn{
 			background: #fff;
 		}
 	}
-	&__name{
-
+	a.rate__buy{
+		color: var(--accent);
+		&:hover{
+			color: #fff;
+		}
 	}
 	a.rate__link{
 		font-size: 14px;
@@ -2033,6 +2036,9 @@ a.more-link{
 			padding: 0 5px;
 		}
 	}
+	.start-employee__title{
+		padding: 0 10px;
+	}
 	.call-tracking{
 		padding: 0;
 		.container{
@@ -2076,3 +2082,4 @@ a.more-link{
 		}
 	}
 }
+

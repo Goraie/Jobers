@@ -11,7 +11,7 @@
 	position: relative;
 	.report__bnt-right, .report__bnt-left{
 		// display: none;
-		background: url('../img/arrow-more.svg') no-repeat center center / 12px,#fff;
+		background: url('../img/arrow-more.svg') no-repeat center center / 16px,#fff;
 		width: 60px;
 		height: 60px;
 		border-radius: 30px;
@@ -23,7 +23,7 @@
 		box-shadow: 0 0 5px rgba(0,0,0,.09);
 		opacity: 1;
 		&:hover{
-			background: url('../img/arrow-more-white.svg') no-repeat center center / 12px,#0E65F3;
+			background: url('../img/arrow-more-white.svg') no-repeat center center / 16px,#0E65F3;
 		}
 		&.swiper-button-disabled{
 			cursor: default;
