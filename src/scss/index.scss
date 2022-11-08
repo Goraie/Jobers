@@ -663,6 +663,7 @@ a.managment__btn{
 // collect
 
 .collect{
+	position: relative;
 	margin: 90px 0 100px;
 	&__w{
 		box-shadow: var(--box-sh);
@@ -690,9 +691,16 @@ a.managment__btn{
 		padding: 20px 50px;
 	}
 	.overlay{
-		opacity: 0;
+		opacity: 1;
 		z-index: -1;
-		// z-index: 50000;
+		position: fixed;
+		&.active{
+			opacity: 1;
+			top: 0;
+			left: 0;
+			z-index: 50000;
+			height: 100vh;
+		}
 		&_cont{
 			display: flex;
 			justify-content: center;

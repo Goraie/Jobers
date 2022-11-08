@@ -40,7 +40,7 @@ function setPrice(rateCols, selectClass, btnClass){
 		select.addEventListener('change', () => getPrice(col,btnClass, selectClass))
 	})
 }
-function getPrice(col = '', btnClass = '', selectClass = '', quaries = 0){
+function getPrice(col, btnClass, selectClass, quaries = 0){
 	const btn = col.querySelector(btnClass)
 	let num = 0
 	col.querySelectorAll('.rate__price').forEach(el => {
@@ -52,10 +52,11 @@ function getPrice(col = '', btnClass = '', selectClass = '', quaries = 0){
 		}
 	});
 	if(quaries){
-		const name = col.querySelector('.rate__name').innerText
+		let name = col.querySelector('.rate__name').innerText
 		return {btn, num, name}
 	}
 }
+
 function mainPrice(price, num){
 	return Math.round(price*num*(1- ( num == 10 ? 0.15 : num >= 5 ? 0.1 : 0)))
 }
@@ -65,8 +66,6 @@ function getSelectValue(col,selectClass){
 }
 
 addHash(rateCols)
-addHash(rateColsMobile)
-
 
 function addHash(cols){
 	cols.forEach(col => {
@@ -92,44 +91,6 @@ function translateTariffNames(name){
 		}
 	}
 }
- 
-
-// const rateBtns = document.querySelectorAll('.rate__btn'),
-// 			tariff = document.querySelectorAll('.rate__tariff .rate__once'),
-// 			tariffMobile = document.querySelectorAll('.rate-m__card .rate__once'),
-// 			rateSelect = document.querySelector('.rate__btn_m')
-			
-// const rateCols = document.querySelectorAll('.rate__tariff')
-
-// rateBtns.forEach(item => {
-// 	item.addEventListener('click', () => {
-// 		if(!item.classList.contains('active')){
-// 			rateBtns.forEach(elem => {
-// 				elem.classList.toggle('active')
-// 			})
-// 			tariff.forEach(el => el.classList.toggle('none'))
-// 			changeData('.rate__buy','.rate__select')
-// 		}
-// 	})
-// })
-// function changeData(btnClass,selectClass){
-// 	rateCols.forEach(item => {
-// 		const btn = item.querySelector(btnClass),
-// 					select = item.querySelector(selectClass),
-// 					priceArr = item.querySelector('.rate__price')
-// 	})
-// }
-
-// function setPrice(priceArr, select, btn){
-// 	let price = 0
-// 	priceArr.forEach(elem => {
-// 		if(!elem.classList.contains('none')){
-// 			price = +(elem.innerText.replace(' ','').replace(' руб', '')) * select.value*( +(select.value) >= 5 ? 0.9 : +(select.value) === 10 ? 0.85 : 1)
-// 		}
-// 	})
-// 	btn.innerText = `Подключить за ${price} ₽`
-// }
-
 
 
 function animateSlider(el, duration, dir) {
@@ -159,6 +120,7 @@ function animateSlider(el, duration, dir) {
     requestAnimationFrame(step);
   });
 }
+
 animateSlider(document.querySelector('.sites__slider-w'),
 							window.innerWidth > 992 ? 20000 : 50000 ,
 							window.innerWidth > 992 ? 'v' : 'h' )
@@ -168,3 +130,11 @@ animateSlider(
 	window.innerWidth > 992 ? 20000 : 50000 ,
 	window.innerWidth > 992 ? 'v' : 'h' )
 )
+
+const collectBtn = document.querySelector('.collect__btn'),
+			collectOverlay = document.querySelector('.collect .overlay')
+
+collectBtn.addEventListener('click', (e) => {
+	console.log(e);
+	collectOverlay.classList.toggle('active')
+})

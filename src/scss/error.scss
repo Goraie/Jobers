@@ -173,7 +173,7 @@ body{
 		}
 		&__text{
 			font-size: 18px;
-			margin: 5px 0 20px;
+			margin: 15px 0 30px;
 			max-width: 380px;
 			span{
 				display: inline;
@@ -181,6 +181,9 @@ body{
 					display: none;
 				}
 			}
+		}
+		&__bottom{
+			margin-top: 60px;
 		}
 		&__cont{
 			margin: 20px auto 0;
@@ -192,6 +195,7 @@ body{
 			&-w{
 				width: 160px;
 				height: 160px;
+				box-shadow: 0px 34px 115px rgba(14, 101, 243, 0.28);
 			}
 			font-size: 16px;
 		}
@@ -206,8 +210,19 @@ body{
 		&__title{
 			font-size: 37px;
 		}
+		&__logo{
+			img{
+				width: 115px;
+			}
+		}
+		&__w{
+			padding-top: 30px;
+		}
+		&__bottom{
+			margin-top: -10px;
+		}
 		&__text{
-			margin: 5px 0 30px;
+			margin: 15px 0 40px;
 			font-size: 16px;
 		}
 		&__btn{
@@ -223,10 +238,6 @@ body{
 	.error{
 		&__title{
 			font-size: 37px;
-		}
-		&__text{
-			margin: 5px 0 30px;
-			font-size: 16px;
 		}
 		&__btn{
 			&-w{
