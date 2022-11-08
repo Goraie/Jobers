@@ -202,6 +202,10 @@ a.offer__btn{
 .managment__btn{
 	margin-top: 15px;
 	border: none;
+	display: block;
+}
+a.managment__btn{
+	color: #fff;
 }
 .managment__btn:hover{
 	transform: scale(0.94);
@@ -333,7 +337,7 @@ a.offer__btn{
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
-		border: 1px solid var(--accent);
+		border: 2px solid var(--accent);
 		overflow: hidden;
 		box-sizing: content-box;
 		height: 60px;
@@ -425,7 +429,7 @@ a.offer__btn{
 	&__item{
 		height: 78px;
 		padding: 8px 0 12px;
-		width: 220px;
+		width: 240px;
 		margin: 0 auto;
 		&:not(:last-of-type){
 			&.rate__item_info{
@@ -435,9 +439,9 @@ a.offer__btn{
 					position: absolute;
 					z-index: 2;
 					display: block;
-					background: var(--btn-bg);
+					background: #D1DBE3;
 					width: 100%;
-					height: 2px;
+					height: 1px;
 				}
 			}
 		}
@@ -485,6 +489,7 @@ a.offer__btn{
 		height: 16px;
 		display: block;
 		margin: auto;
+		color: var(--hover);
 		font-size: 14px;
 		line-height: 1.3;
 	}
@@ -658,7 +663,7 @@ a.offer__btn{
 // collect
 
 .collect{
-	margin: 120px 0 100px;
+	margin: 90px 0 100px;
 	&__w{
 		box-shadow: var(--box-sh);
 		display: flex;
@@ -683,6 +688,83 @@ a.offer__btn{
 	&__btn{
 		border: none;
 		padding: 20px 50px;
+	}
+	.overlay{
+		opacity: 0;
+		z-index: -1;
+		// z-index: 50000;
+		&_cont{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+.quiz{
+	background: #fff;
+	width: 960px;
+	padding: 0 0 40px;
+	&-top{
+		padding: 35px 45px 40px;
+		background: #ececec;
+		&__cont{
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			align-items: flex-start;
+		}
+		&__span{
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 1.55;
+		}
+		&__text{
+			width: 90%;
+			font-size: 14px;
+			line-height: 1.55;
+			font-weight: 300;
+			color: #000;
+			display: flex;
+			align-items: flex-start;
+			&::before{
+				content: '';
+				width: 16px;
+				height: 16px;
+				background: url('@img/quiz.svg') no-repeat center center / cover;
+				display: block;
+				margin-right: 10px;
+			}
+		}
+	}
+	&-content{
+
+	}
+	&__disable{
+		display: none;
+	}
+	&-bottom{
+		padding: 0 45px;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__btn{
+		padding: 15px 25px;
+		border-radius: 35px;
+		border: none;
+		width: fit-content;
+		outline: none;
+		background: var(--accent);
+		color: #fff;
+		display: block;
+		transition: background 0.25s ease-out, opacity 0.25s ease-out;
+		&_disabled{
+			background: #cbcbcb;
+			opacity: 0.6;
+		}
 	}
 }
 
@@ -928,23 +1010,35 @@ a.more-link{
 		color: var(--hover);
 		max-width: 300px;
 	}
-	&__discover{
-		display: flex;
-		justify-content: space-between;
+	&__w{
+		width: 100%;
 	}
 	&__pay{
 		color: var(--accent);
 		font-size: 24px;
 		font-weight: 600;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		&::after{
+			content: '';
+			width: 30px;
+			height: 21px;
+			display: block;
+			background: url('@img/arrow-next.svg') no-repeat center center / cover;
+		}
 	}
 	&__price{
 		font-size: 18px;
 		color: var(--hover);
 	}
 	&__next{
+		display: none;
 		img{
 			width: 35px;
 			height: 35px;
+			margin-top: -6px;
 		}
 	}
 }
@@ -988,7 +1082,6 @@ a.more-link{
 		}
 		span{
 			display: block;
-			color: var(--hover);
 		}
 	}
 	&__titw{
@@ -1749,7 +1842,7 @@ a.more-link{
 	}
 }
 @media(max-width: 576.98px){
-	.offer__title, .start-employee__title, .mail__title, .sites__title, .download__title,
+	.start-employee__title, .mail__title, .sites__title, .download__title,
 	.personal__title, .work-with__title, .cases__title, .rate__title {
 		font-size: 37px;
 	}
@@ -1946,9 +2039,12 @@ a.more-link{
 	}
 }
 @media(max-width: 454.98px){
-	.offer__title, .start-employee__title, .mail__title, .sites__title, .download__title,
+	.start-employee__title, .mail__title, .sites__title, .download__title,
 	.personal__title, .work-with__title, .cases__title, .rate__title {
 		font-size: 35px;
+	}
+	.offer__title{
+		font-size: 37px;
 	}
 	.offer{
 		padding: 120px 0 60px;
@@ -1979,10 +2075,10 @@ a.more-link{
 	}
 	.sites{
 		.container{
-			padding: 0 5px;
+			padding: 0 15px;
 		}
 		&__text{
-			width: 270px;
+			width: 260px;
 		}
 		.sites__content .sites__el::before {
 			width: 20px;
@@ -2014,7 +2110,8 @@ a.more-link{
 			}
 		}
 		&__title{
-			font-size: 16px;
+			font-size: 36px;
+			line-height: 1.45;
 		}
 	}
 	.collect{
@@ -2072,7 +2169,7 @@ a.more-link{
 	}
 	.garanties{
 		.container{
-			padding: 0 5px;
+			padding: 0 10px;
 		}
 		&__w{
 			padding: 20px 20px 40px 20px;

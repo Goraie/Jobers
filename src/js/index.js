@@ -15,6 +15,7 @@ rateBtns.forEach(item => {
 			setPrice(rateCols,'.rate__select','.rate__buy')
 		}
 	})
+	setPrice(rateCols,'.rate__select','.rate__buy')
 })
 let startValue = rateBtnMobile.value
 rateBtnMobile.addEventListener('change', () => {
@@ -24,7 +25,6 @@ rateBtnMobile.addEventListener('change', () => {
 		startValue = rateBtnMobile.value
 	}
 })
-
 
 
 function changeTariffData(tariff) {
@@ -40,14 +40,21 @@ function setPrice(rateCols, selectClass, btnClass){
 		select.addEventListener('change', () => getPrice(col,btnClass, selectClass))
 	})
 }
-function getPrice(col, btnClass, selectClass){
+function getPrice(col = '', btnClass = '', selectClass = '', quaries = 0){
 	const btn = col.querySelector(btnClass)
+	let num = 0
 	col.querySelectorAll('.rate__price').forEach(el => {
 		if(!el.classList.contains('none')){
-			const num = el.innerText.replace(' руб','').replace(' ','')
-			btn.innerText = `Подключить за ${mainPrice(+num,getSelectValue(col,selectClass))} ₽`
+			num = el.innerText.replace(' руб','').replace(' ','')
+			if(!quaries){
+				btn.innerText = `Подключить за ${mainPrice(+num,getSelectValue(col,selectClass))} ₽`
+			}
 		}
 	});
+	if(quaries){
+		const name = col.querySelector('.rate__name').innerText
+		return {btn, num, name}
+	}
 }
 function mainPrice(price, num){
 	return Math.round(price*num*(1- ( num == 10 ? 0.15 : num >= 5 ? 0.1 : 0)))
@@ -56,6 +63,36 @@ function getSelectValue(col,selectClass){
 	const select = col.querySelector(selectClass)
 	return select.value
 }
+
+addHash(rateCols)
+addHash(rateColsMobile)
+
+
+function addHash(cols){
+	cols.forEach(col => {
+		let {btn} = getPrice(col, '.rate__buy', '', 1)
+		btn.addEventListener('click', (e) => {
+			let {num, name} = getPrice(col, '.rate__buy', '', 1)
+			e.preventDefault()
+			let baseUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + 'register.html';
+			let URL = baseUrl + 
+			'?tariff_code=' + `${translateTariffNames(name)}` +
+			'&cost=' + `${mainPrice(+num,getSelectValue(col,'.rate__select'))}`
+			console.log(URL);
+			window.location.href = URL
+		})
+	})
+}
+function translateTariffNames(name){
+	let ru = ['Минимальный', 'Оптимальный', 'Максимальный'],
+			en = ['starting', 'advanced', 'maximum']
+	for(let i = 0; i < ru.length; i++){
+		if(ru[i] === name){
+			return en[i]
+		}
+	}
+}
+ 
 
 // const rateBtns = document.querySelectorAll('.rate__btn'),
 // 			tariff = document.querySelectorAll('.rate__tariff .rate__once'),

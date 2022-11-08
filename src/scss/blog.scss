@@ -12,7 +12,7 @@ body{
 }
 .blog__list{
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 }
 
@@ -20,16 +20,13 @@ body{
 	max-width: calc(100%/3 - 20px);
 	margin-bottom: 90px;
 	cursor: pointer;
+	margin-right: 20px;
 	background: #fff;
 	border-radius: 10px;
 	transition: opacity 0.25s ease-out;
 }
 .blog-card:hover{
 	opacity: 0.85;
-}
-.blog-card:nth-child(3n - 1){
-	margin-right:20px;
-	margin-left:20px;
 }
 .blog-card__i{
 	margin-bottom: 20px;

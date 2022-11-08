@@ -88,7 +88,6 @@ function setTranslateValue(item, valY, valX = 0){
 }
 const mobileScrollHeight = Math.max(mobileMenu.scrollHeight + 25, window.innerHeight)
 
-mobileMenu.style.height = mobileScrollHeight + 'px'
 setTranslateValue(mobileMenu, -mobileScrollHeight)
 
 menuIcon.addEventListener('click', () => {
@@ -133,21 +132,18 @@ email.addEventListener('click', (e) => {
 	if(!mailWrap.classList.contains('active')){
 		mailWrap.classList.add('active')
 		mailOverlay.classList.add('active')
-		document.querySelector('body').style.overflow = 'hidden'
 	}
 })
 
 mailCLose.addEventListener('click', () => {
 	mailWrap.classList.remove('active')
 	mailOverlay.classList.remove('active')
-	document.querySelector('body').style.overflow = 'visible'
 })
 
 window.addEventListener('click', (e) => {
 	if(e.target.classList.contains('overlay')){
 		mailWrap.classList.remove('active')
 		mailOverlay.classList.remove('active')
-		document.querySelector('body').style.overflow = 'visible'
 	}
 })
 // callback popup
@@ -164,28 +160,24 @@ callback.addEventListener('click', (e) => {
 	if(!callbackWrap.classList.contains('active')){
 		callbackWrap.classList.add('active')
 		callbackOverlay.classList.add('active')
-		document.querySelector('body').style.overflow = 'hidden'
 	}
 })
 headerPhone.addEventListener('click', (e) => {
 	if(!headerPhone.classList.contains('active')){
 		callbackWrap.classList.add('active')
 		callbackOverlay.classList.add('active')
-		document.querySelector('body').style.overflow = 'hidden'
 	}
 })
 
 callbackCLose.addEventListener('click', () => {
 	callbackWrap.classList.remove('active')
 	callbackOverlay.classList.remove('active')
-	document.querySelector('body').style.overflow = 'visible'
 })
 
 window.addEventListener('click', (e) => {
 	if(e.target.classList.contains('overlay')){
 		callbackWrap.classList.remove('active')
 		callbackOverlay.classList.remove('active')
-		document.querySelector('body').style.overflow = 'visible'
 	}
 })
 

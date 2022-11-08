@@ -4,6 +4,7 @@
 	--accent: #0E65F3;
 	--btn-bg: #DEE8F1;
 	--bg: #F1F2F6;
+	--hover: #656d7e;
 	--fz: 16px;
 	--box-sh: 0px 17px 76px 0px rgb(0 0 0 / 10%);
 	--font: 'ProximaNova', Arial, sans-Serif;
@@ -338,6 +339,8 @@ a.header__reg:hover{
 	position: fixed;
 	background: #fff;
 	width: 100vw;
+	height: 100vh;
+	overflow-y: scroll;
 	top: 0;
 	left: 0;
 	z-index: 555;
@@ -684,7 +687,8 @@ a.header-mob__link_callback{
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
+	height: fit-content;
 	display: none;
 }
 .mail__text-form{
@@ -708,26 +712,32 @@ a.header-mob__link_callback{
 .mail, .callback{
 	padding: 40px 45px;
 	background: #fff;
-	border-radius: 10px;
 	position: relative;
 	z-index: 2;
 	width: 760px;
 	text-align: center;
 	margin: auto;
+	overflow: scroll;
+	&__w{
+		width: 100%;
+		height: 100vh;
+		padding: 60px 20px;
+		overflow-y: scroll;
+	}
 }
 .callback{
 	width: 560px;
 }
 .mail__title{
 	font-size: 30px;
-	margin-bottom: 10px;
+	margin-bottom: 24px;
 }
 .mail-wrap__i, .callback-wrap__i{
 	position: absolute;
 	top: 20px;
-	right: 40px;
-	width: 36px;
-	height: 36px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
 	cursor: pointer;
 }
 .mail__form, .mail__item, .mail__input{
@@ -735,21 +745,30 @@ a.header-mob__link_callback{
 	width: 100%;
 }
 .mail__form, .callback__form{
-	margin-top: 30px;
+	margin-top: 24px;
 }
 .mail__placeholder{
-	opacity: 0.8;
+	color: var(--hover);
 	font-size: 20px;
+	margin-bottom: 5px;
+	line-height: 1.55;
+	font-weight: 300; 	
 }
 .mail__input{
 	height: 60px;
 	padding: 0 20px;
 	border-radius: 5px;
 	border: 1px solid #656d7e;
+	font-size: 16px;
+	font-weight: 400;
 	&:focus-visible{
 		outline: var(--accent);
 		border: 1px solid var(--accent);
 	}
+}
+.mail__text{
+	font-size: 16px;
+	line-height: 1.45;
 }
 .mail__textarea{
 	width: 100%;
@@ -762,20 +781,22 @@ a.header-mob__link_callback{
 		border: 1px solid var(--accent);
 	}
 }
-.mail__item:not(:last-of-type){
+.mail__item{
 	margin-bottom: 25px;
 }
 .mail__cont{
 	font-size: 14px;
-	max-width: 480px;
-	margin: 0 auto;
+	line-height: 1.55;
+	margin: 20px auto 0;
+	max-width: 455px;
+	text-align: center;
 	a{
 		color: var(--accent);
 	}
 }
 .callback__btn{
 	width: 100%;
-	margin-top: 25px;
+	margin-top: 0;
 	background: var(--accent);
 	border: none;
 	border-radius: 5px;
@@ -921,11 +942,13 @@ a.callback__link{
 
 .privacy-policy{
 	background: #fff;
-	font-size: 20px;
-	font-weight: 300;
-	line-height: 1.55;
 	margin-bottom: 80px;
 	padding-top: 135px;
+	p{
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 1.55;
+	}
 	.container{
 		width: 960px;
 	}
@@ -939,6 +962,7 @@ a.callback__link{
 	&__point{
 		font-weight: 700;
 		margin: 30px 0 2px;
+		line-height: 1.55;
 		font-size: 20px;
 	}
 	&__list{

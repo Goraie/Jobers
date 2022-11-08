@@ -11,6 +11,13 @@
 	.cta__wrap{
 		padding: 40px 40px;
 	}
+	.mail, .callback{
+		max-width: 620px;
+		width: 100%;
+	}
+	.mail__title{
+		font-size: 32px;
+	}
 	.privacy-policy{
 		font-size: 18px;
 		.container{
@@ -51,7 +58,7 @@
 }
 @media (max-width: 1100.98px){
 	.header__logo img{
-		width: 120px;
+		height: 50px;
 	}
 	.header__item:not(:last-of-type) {
 		margin-right: 13px;
@@ -85,6 +92,9 @@
 		align-items: center;
 		margin-bottom: 40px;
 		font-size: 44px;
+	}
+	.go-top{
+		z-index: 650;
 	}
 	.cta__wrap{
 		width: 600px;
@@ -121,6 +131,15 @@
 	}
 	.header__tel{
 		display: none;
+	}
+	.header .container{
+		align-items: flex-start;
+	}
+	.header__logo{
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		z-index: 1000000;
 	}
 	.header__mobile{
 		display: block;
@@ -177,6 +196,16 @@
 		&__point{
 			font-size: 16px;
 		}
+	}
+	.overlay{
+		background: rgba(0,0,0,.9);
+	}
+	.mail, .callback{
+		padding: 20px;
+	}
+	.mail-wrap__i, .callback-wrap__i{
+		width: 16px;
+		height: 16px;
 	}
 }
 @media (max-width: 600px){

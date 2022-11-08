@@ -1,30 +1,33 @@
 <section class="mail-wrap">
-	<div class="overlay"><img src="@img/close.svg" alt="" class="mail-wrap__i"></div>
-	<div class="mail">
-		<h3 class="mail__title">Отправить сообщение</h3>
-		<p class="mail__text">Введите ваше сообщение и менеджер ответит вам в ближайшее время</p>
-		<form class="mail__form">
-			<div class="mail__item">
-				<p class="mail__placeholder">Ваш телефон</p>
-				<form class="mail__text-form">
-					<input id="phone-email" name="phone-call" type="tel"  class="mail__input mail__input_tel">
-				</form>
+	<div class="overlay"><img src="@img/close-white.svg" alt="" class="mail-wrap__i"></div>
+	<div class="mail__w">
+		<div class="mail">
+			<h3 class="mail__title">Отправить сообщение</h3>
+			<p class="mail__text">Введите ваше сообщение и менеджер ответит вам в ближайшее время</p>
+			<div class="mail__form ">
+				<div class="mail__item">
+					<p class="mail__placeholder">Ваш телефон</p>
+					<form class="mail__text-form">
+						<input id="phone-email" name="phone-call" type="tel"  class="mail__input mail__input_tel">
+					</form>
+				</div>
+				<div class="mail__item">
+					<p class="mail__placeholder">Ваше Имя</p>
+					<input type="text" class="mail__input mail__input_name" placeholder="Иван Смирнов">
+				</div>
+				<div class="mail__item">
+					<p class="mail__placeholder">Ваш email</p>
+					<input type="tel" class="mail__input mail__input_email" placeholder="example@site.ru">
+				</div>
+				<div class="mail__item">
+					<p class="mail__placeholder">Текст сообщения</p>
+					<textarea cols="30" rows="10" class="mail__textarea" placeholder="Текст сообщения"></textarea>
+				</div>
+				<button class="callback__btn">Отправить сообщение</button>
+				<div class="mail__cont">
+					<p>При отправке формы вы подтверждаете согласие c <a href="/">пользовательским соглашением</a> и <a href="/privacy_policy.html">политикой о данных пользователя</a></p>
+				</div>
 			</div>
-			<div class="mail__item">
-				<p class="mail__placeholder">Ваше Имя</p>
-				<input type="text" class="mail__input mail__input_name" placeholder="Иван Смирнов">
-			</div>
-			<div class="mail__item">
-				<p class="mail__placeholder">Ваш email</p>
-				<input type="tel" class="mail__input mail__input_email" placeholder="example@site.ru">
-			</div>
-			<div class="mail__item">
-				<p class="mail__placeholder">Текст сообщения</p>
-				<textarea cols="30" rows="10" class="mail__textarea" placeholder="Текст сообщения"></textarea>
-			</div>
-			<div class="mail__cont">
-				<p>При отправке сообщения вы подтверждаете согласие c <a href="/">пользовательским соглашением</a> и <a href="/privacy_policy.html">политикой о данных пользователя</a></p>
-			</div>
-		</form>
+		</div>	
 	</div>
 </section>
