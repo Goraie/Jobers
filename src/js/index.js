@@ -135,6 +135,7 @@ const collectBtn = document.querySelector('.collect__btn'),
 			collectOverlay = document.querySelector('.collect .overlay')
 
 collectBtn.addEventListener('click', (e) => {
-	console.log(e);
-	collectOverlay.classList.toggle('active')
+	collectOverlay.classList.add('active')
 })
+
+coll
