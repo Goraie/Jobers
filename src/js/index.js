@@ -136,6 +136,121 @@ const collectBtn = document.querySelector('.collect__btn'),
 
 collectBtn.addEventListener('click', (e) => {
 	collectOverlay.classList.add('active')
+	activeQuiz(i)
+	document.querySelector('body').style.overflow = 'hidden'
 })
 
-coll
+collectOverlay.addEventListener('click', (e) => {
+	if(e.target.classList[0] === 'overlay_cont'){
+		collectOverlay.classList.remove('active')
+		document.querySelector('body').style.overflow = 'visible'
+	}
+})
+
+const quizNext = document.querySelector('.quiz__btn_next')
+const quizNextText = document.querySelector('.quiz__btn_next span')
+const quizPrev = document.querySelector('.quiz__btn_prev')
+const quizItems = document.querySelectorAll('.quiz__item')
+const quizTop = document.querySelector('.quiz-top')
+const quizCounter = document.querySelector('.quiz-top__span')
+const quizProgress = document.querySelector('.quiz__progress')
+const quizProgressSpan = document.querySelector('.quiz__progress span')
+let i = 0;
+
+
+function activeQuiz(i){
+	addDisabled()
+	addActive(i)
+	quizCounter.innerText = `${calcActive() + 1}/6`
+	quizProgressSpan.style.width = (quizProgress.offsetWidth / 6)*calcActive() + 'px'
+	if(i === 6) {
+		quizTop.style.display = 'none'
+		quizProgress.style.display = 'none'
+	}
+	if(quizTop.style.display = 'none' && i != 6){
+		quizTop.style.display = 'block'
+		quizProgress.style.display = 'block'
+	}
+	quizNext.addEventListener('click', () => {
+		if(i<6){
+			if(i < 5){
+				quizNextText.textContent = 'Вперед'
+			} else if( i === 5 ){
+				quizNextText.textContent = 'Далее'
+			}
+			i = i + 1
+			activeQuiz(i)
+			return false
+		}else {
+			document.location.href = document.location.href + '/thank-you.html'
+		}
+	})
+	if(i>0){
+		quizPrev.classList.remove('quiz__btn_disabled')
+	} else {
+		quizPrev.classList.add('quiz__btn_disabled')
+	}
+	quizPrev.addEventListener('click', () => {
+		if(i>0){
+			i = i - 1
+			activeQuiz(i)
+			return false
+		}
+	})
+}
+
+function calcActive(){
+	let i = 0
+	for(let j = 0; j < quizItems.length; j++){
+		if(!quizItems[j].classList.contains('quiz-disabled')){
+			i = j
+		}
+	}
+	return i
+}
+
+function addDisabled(){
+	quizItems.forEach(e => {
+		e.classList.add('quiz-disabled')
+	});
+}
+function addActive(index){
+	quizItems[index].classList.remove('quiz-disabled')
+}
+
+
+
+
+
+
+function outputUpdate(vol) {
+	const output = document.querySelector('#volume');
+	const k = document.querySelector('#fader').offsetWidth / 100
+	output.value = vol;
+	output.style.left = k*vol - 4 + 'px';
+	if(output.value > 16){
+		output.style.left = k*vol - 8 + 'px';
+	}
+	if(output.value > 24){
+		output.style.left = k*vol - 10 + 'px';
+	}
+	if(output.value > 32){
+		output.style.left = k*vol - 16 + 'px';
+	}
+	if(output.value > 48){
+		output.style.left = k*vol - 20 + 'px';
+	}
+	if(output.value > 58){
+		output.style.left = k*vol - 24 + 'px';
+	}
+	if(output.value > 95){
+		output.style.left = k*vol - 28 + 'px';
+	}
+}
+
+for (let e of document.querySelectorAll('#fader.slider-progress')) {
+  e.style.setProperty('--value', e.value);
+  e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+  e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+  e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+}

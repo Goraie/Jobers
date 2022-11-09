@@ -727,6 +727,7 @@ a.header-mob__link_callback{
 }
 .callback{
 	width: 560px;
+	overflow: visible;
 }
 .mail__title{
 	font-size: 30px;
@@ -743,6 +744,43 @@ a.header-mob__link_callback{
 .mail__form, .mail__item, .mail__input{
 	text-align: left;
 	width: 100%;
+}
+.mail__input_tel{
+	width: 100%;
+}
+.mail__form, .callback__form, .registration__form, .quiz-content__form{
+	& .iti{
+		width: 100%;
+	}
+	& .iti__flag-container{
+		z-index: 7000000;
+	}
+	& .iti__selected-flag{
+		padding: 0 20px;
+		z-index: 70000;
+		background: transparent;
+		&:hover{
+			background: transparent;
+		}
+	}
+	& .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+		background: transparent;
+	}
+	& .iti--container{
+		top: 65px !important;
+		position: absolute;
+		min-width: 260px;
+		max-width: 410px;
+		height: 200px;
+		left: 0 !important;
+		border-radius: 5px;
+		box-shadow: 0 0 1px rgb(0 0 0 / 10%);
+		border: 1px solid #eee;
+		overflow: hidden;
+	}
+}
+.mail__input_w, .registration__input_w, .callback_w, .quiz-content_w{
+	position: relative;
 }
 .mail__form, .callback__form{
 	margin-top: 24px;
@@ -985,4 +1023,10 @@ a.callback__link{
 			}
 		}
 	}
+}
+
+.iti__flag {background-image: url("@img/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("@img/flags@2x.png");}
 }

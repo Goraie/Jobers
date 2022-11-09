@@ -1163,97 +1163,123 @@
 								прохождения опроса вы получите на почту сформированный тариф под вашу задачу</p>
 							<span class="quiz-top__span">1/6</span>
 						</div>
-						<div class="quiz-top__progress"><span></span></div>
 					</div>
+					<div class="quiz__progress"><span></span></div>
 					<div class="quiz-content">
-						<div class=" quiz-content_1">
-							<h3 class="quiz__disable quiz-content__title">
+						<div class=" quiz__item quiz-content_1">
+							<h3 class="quiz-content__title">
 								На какую должность ищите сотрудника?
 							</h3>
-							<p class="quiz__disable quiz-content__text">
+							<p class="quiz-content__text">
 								Указывайте общепринятые названия, не используйте формулировки из должностного расписания
 							</p>
-							<input type="text" class="quiz__disable quiz-content__input" placeholder="Например: менеджер по продажам">
+							<input type="text" class="quiz-content__input" placeholder="Например: менеджер по продажам">
 						</div>
-						<div class="quiz__disable quiz-content_2">
-							<h3 class="quiz__disable quiz-content__title">
+						<div class="quiz-disabled quiz__item quiz-content_2">
+							<h3 class="quiz-content__title">
 								Сколько сотрудников необходимо?
 							</h3>
-							<input type="range" min="0" max="100" step="1" class="quiz__disable quiz-content__range">
+							<div class="slider">
+								<output for="fader" id="volume">0</output>
+								<input type="range" id="fader" class="styled-slider slider-progress" min="0" max="100" value="0" step="1" oninput="outputUpdate(value)">
+							</div>
+							<div class="quiz-content__range_w">
+								<span>1</span>
+								<span>100</span>
+							</div>
 						</div>
-						<div class="quiz__disable quiz-content_3">
-							<h3 class="quiz__disable quiz-content__title">
+						<div class="quiz-disabled quiz__item quiz-content_3">
+							<h3 class="quiz-content__title">
 								В каком городе набираете сотрудников?
 							</h3>
-							<p class="quiz__disable quiz-content__text">
+							<p class="quiz-content__text">
 								Если поиск идет в нескольких городах - перечислите через запятую
 							</p>
-							<input type="text" class="quiz__disable quiz-content__input" placeholder="Например: Санкт-Петербург">
+							<input type="text" class="quiz-content__input" placeholder="Например: Санкт-Петербург">
 						</div>
-						<div class="quiz__disable quiz-content_4">
-							<h3 class="quiz__disable quiz-content__title">
+						<div class="quiz-disabled quiz__item quiz-content_4">
+							<h3 class="quiz-content__title">
 								Требуется ли обновление вакансии?
 							</h3>
-							<p class="quiz__disable quiz-content__text">
+							<p class="quiz-content__text">
 								Обновление вакансии необходимо при большой конкуренции среди работодателей, когда необходимо большое
 								количество откликов
 							</p>
-							<div class="quiz__disable quiz-content__input_w">
-								<input type="radio" class="quiz__disable quiz-content__radio">
-								<input type="radio" class="quiz__disable quiz-content__radio">
-							</div>
+							<form action="#" class="quiz-content__input_w">
+								<input id="quiz-4-yes" class="quiz-content__click" name="quiz-4" type="radio">
+								<label class="quiz-content__radio" for="quiz-4-yes">Да</label>
+								<input id="quiz-4-no" class="quiz-content__click" name="quiz-4" type="radio">
+								<label class="quiz-content__radio" for="quiz-4-no">Нет</label>
+							</form>
 						</div>
-						<div class="quiz__disable quiz-content_5">
-							<h3 class="quiz__disable quiz-content__title">
+						<div class="quiz-disabled quiz__item quiz-content_5">
+							<h3 class="quiz-content__title">
 								На каких ведущих сайтах требуется размещение?
 							</h3>
-							<p class="quiz__disable quiz-content__text">
+							<p class="quiz-content__text">
 								Выберите лидирующие сайты на которых необходимо разместиться
 							</p>
-							<div class="quiz__disable quiz-content__input_w">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-							</div>
+							<form action="#" class="quiz-content__input_w">
+								<input id="quiz-5-1" class="quiz-content__click" name="quiz-5" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-5-1">hh.ru</label>
+								<input id="quiz-5-2" class="quiz-content__click" name="quiz-5" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-5-2">rabota.ru</label>
+								<input id="quiz-5-3" class="quiz-content__click" name="quiz-5" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-5-3">avito.ru</label>
+								<input id="quiz-5-4" class="quiz-content__click" name="quiz-5" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-5-4">superjob.ru</label>
+								<input id="quiz-5-5" class="quiz-content__click" name="quiz-5" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-5-5">youla.ru</label>
+								<input id="quiz-5-6" class="quiz-content__click" name="quiz-5" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-5-6">irr.ru</label>
+								<input id="quiz-5-7" class="quiz-content__click" name="quiz-5" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-5-7">zarplata.ru</label>
+								<input id="quiz-5-8" class="quiz-content__click" name="quiz-5" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-5-8">careerist.ru</label>
+							</form>
 						</div>
-						<div class="quiz__disable quiz-content_6">
-							<h3 class="quiz__disable quiz-content__title">
+						<div class="quiz-disabled quiz__item quiz-content_6">
+							<h3 class="quiz-content__title">
 								Дополнительные услуги
 							</h3>
-							<p class="quiz__disable quiz-content__text">
+							<p class="quiz-content__text">
 								Выберите необходимые дополнительные услуги
 							</p>
-							<div class="quiz__disable quiz-content__input_w">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-								<input type="checkbox" class="quiz__disable quiz-content__checkbox">
-							</div>
+							<form action="#" class="quiz-content__input_w">
+								<input id="quiz-6-1" class="quiz-content__click" name="quiz-6" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-6-1">Рерайтинг вакансии</label>
+								<input id="quiz-6-2" class="quiz-content__click" name="quiz-6" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-6-2">Смс рассылка по базе данных</label>
+								<input id="quiz-6-3" class="quiz-content__click" name="quiz-6" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-6-3">Подбор резюме по параметрам вакансии</label>
+								<input id="quiz-6-4" class="quiz-content__click" name="quiz-6" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-6-4">Колл. трекинг</label>
+								<input id="quiz-6-5" class="quiz-content__click" name="quiz-6" type="checkbox">
+								<label class="quiz-content__radio" for="quiz-6-">Размещение в соц. сетях</label>
+							</form>
 						</div>
-						<div class="quiz__disable quiz-content__final">
-							<h3 class="quiz__disable quiz-content__title">
+						<div class="quiz-disabled quiz__item quiz-content__final">
+							<h3 class="quiz-content__title">
 								Ваш телефон
 							</h3>
-							<input type="tel" class="quiz__disable quiz-content__tel">
-							<h3 class="quiz__disable quiz-content__title">
+							<div class="quiz-content__form">
+								<div class="quiz-content_w">
+									<input type="tel" id="phone-quiz" class="mail__input mail__input_tel quiz-content__tel quiz-content__input" placeholder="(999) 999-99-99">
+								</div>
+							</div>
+							<h3 class="quiz-content__title">
 								Ваш email для отправки тарифа
 							</h3>
-							<input type="email" class="quiz__disable quiz-content__tel" placeholder="example@site.ru">
-							<h3 class="quiz__disable quiz-content__title">
+							<input type="email" class="quiz-content__email quiz-content__input" placeholder="example@site.ru">
+							<h3 class="quiz-content__title">
 								Ваше имя
 							</h3>
-							<input type="text" class="quiz__disable quiz-content__tel" placeholder="Иван Смирнов">
+							<input type="text" class="quiz-content__name quiz-content__input" placeholder="Иван Смирнов">
 						</div>
 					</div>
 					<div class="quiz-bottom">
-						<button class="quiz__btn quiz__btn_disabled quiz__btn_prev">Назад</button>
-						<button class="quiz__btn quiz__btn_next">Вперёд</button>
+						<button class="quiz__btn quiz__btn_disabled quiz__btn_prev"><img src="@img/arrow-quiz.svg" alt="">Назад</button>
+						<button class="quiz__btn quiz__btn_next"><span>Вперёд</span><img src="@img/arrow-quiz.svg" alt=""></button>
 					</div>
 				</div>
 			</div>

@@ -19,6 +19,48 @@ function isWebp() {
 
 isWebp()
 
+const inputEmail = document.querySelector("#phone-email"),
+			inputReg = document.querySelector("#phone-reg"),
+			inputCall = document.querySelector("#phone-call"),
+			inputQuiz = document.querySelector("#phone-quiz")
+const inputs = [
+	[inputEmail,'.mail__input_w'],
+	[inputReg, '.registration__input_w'],
+	[inputCall, '.callback_w'],
+	[inputQuiz, '.quiz-content_w']
+]
+inputs.forEach(item => {
+	window.intlTelInput(item[0], {
+		// allowDropdown: false,
+		autoHideDialCode: true,
+		autoPlaceholder: "(999) 999 99-99",
+		dropdownContainer: document.querySelector(item[1]),
+		// excludeCountries: ["us"],
+		formatOnDisplay: true,
+		geoIpLookup: function(callback) {
+			$.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+				var countryCode = (resp && resp.country) ? resp.country : "";
+				callback(countryCode);
+			});
+		},
+		customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+			return "e.g. " + selectedCountryPlaceholder;
+		},
+		// hiddenInput: "full_number",
+		initialCountry: "ru",
+		singleDialCode: true,
+		// localizedCountries: { 'de': 'Deutschland' },
+		nationalMode: false,
+		// onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+		placeholderNumberType: "MOBILE",
+		preferredCountries: ['ru', 'by'],
+		separateDialCode: true,
+		utilsScript: "../js/utils.js",
+	});
+	item[0].style.paddingLeft = '90px'
+})
+
+
 const menu = document.querySelectorAll('.header__item')
 
 function menuSelect() {
