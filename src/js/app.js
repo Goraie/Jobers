@@ -21,13 +21,11 @@ isWebp()
 
 const inputEmail = document.querySelector("#phone-email"),
 			inputReg = document.querySelector("#phone-reg"),
-			inputCall = document.querySelector("#phone-call"),
-			inputQuiz = document.querySelector("#phone-quiz")
+			inputCall = document.querySelector("#phone-call")
 const inputs = [
 	[inputEmail,'.mail__input_w'],
 	[inputReg, '.registration__input_w'],
-	[inputCall, '.callback_w'],
-	[inputQuiz, '.quiz-content_w']
+	[inputCall, '.callback_w']
 ]
 inputs.forEach(item => {
 	window.intlTelInput(item[0], {
@@ -63,30 +61,42 @@ inputs.forEach(item => {
 
 const menu = document.querySelectorAll('.header__item')
 
+menuSelect()
 function menuSelect() {
 	menu.forEach(item => {
 		if(item.querySelector('.header__dropdown')){
 			let el = item.querySelector('.header__dropdown')
 			item.addEventListener('mouseenter', (e) => {
-				const target = e.target, x = e.x, y = e.y
 				el.style.display = 'block'
 				el.classList.add('active')
+				checkMouseLeaveMoment(item, 200)
 			})
 			item.addEventListener('mouseleave' ,() => {
 				el.classList.remove('active')
 				el.style.display = 'none'
 			})
-			// setTimeout(() => {
-			// 	item.addEventListener('mouseleave', () => {
-			// 		el.classList.remove('active')
-			// 		el.style.display = 'none'
-			// 		// el.style.display = 'none'
-			// 	})
-			// }, 120)
 		}
 	})
 }
-menuSelect()
+
+function sleep(time){
+	let k = Date.now()
+	let def = 0
+	do{
+		def = Date.now() - k
+	} while(def < time)
+	delete k
+	delete def
+}
+
+function checkMouseLeaveMoment(item,time){
+	item.addEventListener('mousemove', (e) => {
+		if(e.toElement.className !== 'header__item'){
+			sleep(time)
+		}
+	})
+}
+
 
 // Аккордион в футере на мобильной версии
 const acc = document.querySelectorAll('.footer-mobile__acc');
@@ -191,7 +201,8 @@ window.addEventListener('click', (e) => {
 // callback popup
 
 const callback = document.querySelector('.cta__phone'),
-callbackWrap = document.querySelector('.callback-wrapp'),
+			callbackWrap = document.querySelector('.callback-wrapp'),
+			headerMobileCallback = document.querySelector('.header-mob__link_callback'),
 			callbackOverlay = document.querySelector('.callback-wrapp .overlay'),
 			callbackCLose = document.querySelector('.callback-wrap__i'),
 			headerPhone = document.querySelector('.header__phone')
@@ -200,6 +211,13 @@ callbackWrap = document.querySelector('.callback-wrapp'),
 
 callback.addEventListener('click', (e) => {
 	if(!callbackWrap.classList.contains('active')){
+		callbackWrap.classList.add('active')
+		callbackOverlay.classList.add('active')
+	}
+})
+headerMobileCallback.addEventListener('click', (e) => {
+	if(!callbackWrap.classList.contains('active')){
+		e.preventDefault()
 		callbackWrap.classList.add('active')
 		callbackOverlay.classList.add('active')
 	}

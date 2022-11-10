@@ -77,7 +77,6 @@ function addHash(cols){
 			let URL = baseUrl + 
 			'?tariff_code=' + `${translateTariffNames(name)}` +
 			'&cost=' + `${mainPrice(+num,getSelectValue(col,'.rate__select'))}`
-			console.log(URL);
 			window.location.href = URL
 		})
 	})
@@ -254,3 +253,33 @@ for (let e of document.querySelectorAll('#fader.slider-progress')) {
   e.style.setProperty('--max', e.max == '' ? '100' : e.max);
   e.addEventListener('input', () => e.style.setProperty('--value', e.value));
 }
+
+const inputQuiz = document.querySelector("#phone-quiz")
+window.intlTelInput(inputQuiz, {
+	// allowDropdown: false,
+	autoHideDialCode: true,
+	autoPlaceholder: "(999) 999 99-99",
+	dropdownContainer: document.querySelector('.quiz-content_w'),
+	// excludeCountries: ["us"],
+	formatOnDisplay: true,
+	geoIpLookup: function(callback) {
+		$.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+			var countryCode = (resp && resp.country) ? resp.country : "";
+			callback(countryCode);
+		});
+	},
+	customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+		return "e.g. " + selectedCountryPlaceholder;
+	},
+	// hiddenInput: "full_number",
+	initialCountry: "ru",
+	singleDialCode: true,
+	// localizedCountries: { 'de': 'Deutschland' },
+	nationalMode: false,
+	// onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+	placeholderNumberType: "MOBILE",
+	preferredCountries: ['ru', 'by'],
+	separateDialCode: true,
+	utilsScript: "../js/utils.js",
+});
+inputQuiz.style.paddingLeft = '90px'

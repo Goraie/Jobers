@@ -467,6 +467,9 @@ a.managment__btn{
 	}
 	a.rate__buy{
 		color: var(--accent);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		&:hover{
 			color: #fff;
 		}
@@ -1346,8 +1349,7 @@ a.more-link{
 		width: 100%;
 		justify-content: space-between;
 		align-items: center;
-		&::after{
-			content: '';
+		a{
 			width: 30px;
 			height: 21px;
 			display: block;
@@ -1971,7 +1973,7 @@ a.more-link{
 	}
 }
 @media(max-width: 768.98px){
-	.offer__title, .start-employee__title, .mail__title, .sites__title, .download__title,
+	.offer__title, .start-employee__title, .sites__title, .download__title,
 	.personal__title, .work-with__title, .cases__title, .rate__title {
 		font-size: 44px;
 	}
@@ -2105,6 +2107,9 @@ a.more-link{
 		&__text{
 			font-size: 16px;
 		}
+		&__i{
+			padding-left: 0;
+		}
 	}
 	.work-with{
 		&__text{
@@ -2167,7 +2172,7 @@ a.more-link{
 	}
 }
 @media(max-width: 576.98px){
-	.start-employee__title, .mail__title, .sites__title, .download__title,
+	.start-employee__title, .sites__title, .download__title,
 	.personal__title, .work-with__title, .cases__title, .rate__title {
 		font-size: 37px;
 	}
@@ -2192,6 +2197,9 @@ a.more-link{
 	.start-employee{
 		&__under{
 			font-size: 16px;
+		}
+		&__title{
+			padding: 0 10px;
 		}
 	}
 	.ident-tasks{
@@ -2364,7 +2372,7 @@ a.more-link{
 	}
 }
 @media(max-width: 454.98px){
-	.start-employee__title, .mail__title, .sites__title, .download__title,
+	.start-employee__title, .sites__title, .download__title,
 	.personal__title, .work-with__title, .cases__title, .rate__title {
 		font-size: 35px;
 	}
@@ -2390,6 +2398,7 @@ a.more-link{
 		}
 		&__title{
 			text-align: center;
+			padding: 0;
 		}
 	}
 	.managment{
@@ -2464,7 +2473,7 @@ a.more-link{
 	.call-tracking{
 		padding: 0;
 		.container{
-			padding: 0 5px;
+			padding: 0 10px;
 		}
 	}
 	.work-with{
