@@ -41,7 +41,7 @@ function setPrice(rateCols, selectClass, btnClass){
 	})
 }
 function getPrice(col, btnClass, selectClass, quaries = 0){
-	const btn = col.querySelector(btnClass)
+	const btn = col.querySelector(btnClass).querySelector('span')
 	let num = 0
 	col.querySelectorAll('.rate__price').forEach(el => {
 		if(!el.classList.contains('none')){

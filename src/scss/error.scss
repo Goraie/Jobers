@@ -248,7 +248,6 @@ body{
 	.error{
 		.container{
 			width: 324px;
-			padding: 0;
 		}
 		&__title{
 			font-size: 37px;
@@ -294,6 +293,10 @@ body{
 	.error{
 		.container{
 			width: 100%;
+			padding: 0 25px;
+		}
+		&__text{
+			margin-bottom: 25px;
 		}
 		&__i{
 			display: none;

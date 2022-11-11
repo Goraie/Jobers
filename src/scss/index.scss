@@ -470,6 +470,10 @@ a.managment__btn{
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		span{
+			line-height: 16px;
+			display: block;
+		}
 		&:hover{
 			color: #fff;
 		}
@@ -514,7 +518,7 @@ a.managment__btn{
 		font-weight: 700;
 		text-transform: uppercase;
 		text-align: center;
-		padding: 15px 3px;
+		// padding: 15px 3px;
 		margin: 20px auto 0;
 		height: 50px;
 		display: block;
@@ -2368,6 +2372,9 @@ a.more-link{
 		}
 		&__item{
 			font-size: 13px;
+			p{
+				max-width: 90%;
+			}
 		}
 	}
 }

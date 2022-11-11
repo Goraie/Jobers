@@ -178,24 +178,28 @@ loginBtn.addEventListener('click', (e) => {
 const email = document.querySelector('.cta__email'),
 			mailOverlay = document.querySelector('.mail-wrap .overlay'),
 			mailWrap = document.querySelector('.mail-wrap'),
-			mailCLose = document.querySelector('.mail-wrap__i')
+			mailCLose = document.querySelector('.mail-wrap__i'),
+			body = document.querySelector('body')
 
 email.addEventListener('click', (e) => {
 	if(!mailWrap.classList.contains('active')){
 		mailWrap.classList.add('active')
 		mailOverlay.classList.add('active')
+		body.style.overflow = 'hidden'
 	}
 })
 
 mailCLose.addEventListener('click', () => {
 	mailWrap.classList.remove('active')
 	mailOverlay.classList.remove('active')
+	body.style.overflow = 'visible'
 })
 
 window.addEventListener('click', (e) => {
 	if(e.target.classList.contains('overlay')){
 		mailWrap.classList.remove('active')
 		mailOverlay.classList.remove('active')
+		body.style.overflow = 'visible'
 	}
 })
 // callback popup
@@ -213,6 +217,7 @@ callback.addEventListener('click', (e) => {
 	if(!callbackWrap.classList.contains('active')){
 		callbackWrap.classList.add('active')
 		callbackOverlay.classList.add('active')
+		body.style.overflow = 'hidden'
 	}
 })
 headerMobileCallback.addEventListener('click', (e) => {
@@ -220,24 +225,28 @@ headerMobileCallback.addEventListener('click', (e) => {
 		e.preventDefault()
 		callbackWrap.classList.add('active')
 		callbackOverlay.classList.add('active')
+		body.style.overflow = 'hidden'
 	}
 })
 headerPhone.addEventListener('click', (e) => {
 	if(!headerPhone.classList.contains('active')){
 		callbackWrap.classList.add('active')
 		callbackOverlay.classList.add('active')
+		body.style.overflow = 'hidden'
 	}
 })
 
 callbackCLose.addEventListener('click', () => {
 	callbackWrap.classList.remove('active')
 	callbackOverlay.classList.remove('active')
+	body.style.overflow = 'visible'
 })
 
 window.addEventListener('click', (e) => {
 	if(e.target.classList.contains('overlay')){
 		callbackWrap.classList.remove('active')
 		callbackOverlay.classList.remove('active')
+		body.style.overflow = 'visible'
 	}
 })
 
