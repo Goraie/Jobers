@@ -369,10 +369,13 @@ a.managment__btn{
 			height: 100%;
 			padding: 15px 20px;
 			width: 200px;
+			max-width: 100%;
 			color: #fff;
 			background: var(--accent);
 			text-align: center;
 			border: none;
+			border-right: 15px solid transparent;
+			box-sizing: border-box;
 			font-size: var(--hover);
 			display: none;
 			&:focus-visible{
